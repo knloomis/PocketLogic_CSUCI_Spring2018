@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#384258</item>
+        <item name="colorPrimaryDark">#202020</item>
+        <item name="colorAccent">#76AB65</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">24sp</item><!-- text size in menu-->
+        <item name="android:listPreferredItemHeightSmall">100dp</item><!-- item size in menu-->
+    </style>
+
+    <style name="InputStyle">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">35dp</item>
+    </style>
+
+    <style name="AppTheme.PopUp">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+</resources>

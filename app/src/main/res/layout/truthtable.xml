@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tlTable01"
+        android:layout_width="300dp"
+        android:layout_height="415dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:paddingTop="1dp"
+        android:stretchColumns="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="3dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="B"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="C"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="D"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_marginLeft="3dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="?"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="@color/colorAccent"
+            android:paddingBottom="3dp"
+            android:paddingRight="1dp">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="5dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

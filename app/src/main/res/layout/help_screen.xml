@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_help_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/close2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/fullLayout"
+        android:layout_width="338dp"
+        android:layout_height="494dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_help_back">
+
+        <LinearLayout
+            android:id="@+id/playLayout"
+            android:layout_width="350dp"
+            android:layout_height="134dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="153dp">
+
+            <TextView
+                android:id="@+id/howToPlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/aclonica"
+                android:text="How to Play"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="115dp"
+                tools:layout_editor_absoluteY="93dp" />
+
+            <TextView
+                android:id="@+id/playInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:text="Nullam laoreet nulla id volutpat pharetra. Phasellus sit amet ante inte risus elementum pellentesque. Morbi commodo diam tellus, vel hendrerit ipsum laoreet at. Sed tempor leo vel volutpat fringilla. Nulla tellus ligula, rutrum vitae tempus eget, euismod in nulla. "
+
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="123dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gatesLayout"
+            android:layout_width="350dp"
+            android:layout_height="134dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="301dp">
+
+            <TextView
+                android:id="@+id/referenceText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Logic Gates Guide"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="115dp"
+                tools:layout_editor_absoluteY="93dp" />
+
+            <TextView
+                android:id="@+id/referenceInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="261dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:text="Nullam laoreet nulla id volutpat pharetra. Phasellus sit amet ante inte risus elementum pellentesque. Morbi commodo diam tellus, vel hendrerit ipsum laoreet at. Sed tempor leo vel volutpat fringilla. Nulla tellus ligula, rutrum vitae tempus eget, euismod in nulla. "
+
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="123dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
