@@ -15,6 +15,8 @@ import android.widget.Button;
  * Created by Vitaliy Six on 2018/3/10.
  */
 
+// help 
+
 public class help extends Activity {
 
     @Override
