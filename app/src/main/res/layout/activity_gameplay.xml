@@ -31,579 +31,735 @@
     <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1d1d1e">
+    android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/C35"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/underlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="590dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/grid_underlayer" />
 
-    <ImageView
-        android:id="@+id/C34"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C29"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C33"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D75"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C32"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/D74"
+            app:layout_constraintTop_toBottomOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon_top" />
 
-    <ImageView
-        android:id="@+id/C31"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D76"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C30"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/D75"
+            app:layout_constraintTop_toBottomOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon_top" />
 
-    <ImageView
-        android:id="@+id/C29"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D77"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C28"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/D76"
+            app:layout_constraintTop_toBottomOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon_top" />
 
-    <ImageView
-        android:id="@+id/C27"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D78"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C26"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/D77"
+            app:layout_constraintTop_toBottomOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon_top" />
 
-    <ImageView
-        android:id="@+id/C25"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C0"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
 
-    <ImageView
-        android:id="@+id/C24"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C10"
+            app:layout_constraintEnd_toEndOf="@+id/C10"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C23"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C1"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
 
-    <ImageView
-        android:id="@+id/C22"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C10"
+            app:layout_constraintStart_toStartOf="@+id/C18"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C21"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C2"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
 
-    <ImageView
-        android:id="@+id/C20"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C10"
+            app:layout_constraintStart_toStartOf="@+id/C19"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C19"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D1"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C18"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C5"
+            app:layout_constraintStart_toStartOf="@+id/C5"
+            app:srcCompat="@drawable/hexagon_bottom" />
 
-    <ImageView
-        android:id="@+id/C14"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C3"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
 
-    <ImageView
-        android:id="@+id/C15"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C10"
+            app:layout_constraintStart_toStartOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C16"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C4"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
 
-    <ImageView
-        android:id="@+id/C17"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/C10"
+            app:layout_constraintStart_toStartOf="@+id/C21"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C10"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/D74"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
 
-    <ImageView
-        android:id="@+id/C12"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:layout_marginTop="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/C28"
+            app:layout_constraintTop_toBottomOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon_top" />
 
-    <ImageView
-        android:id="@+id/C13"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C27"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/C28"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C11"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C32"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="40dp" android:layout_marginLeft="40dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C27"
+            app:layout_constraintTop_toTopOf="@+id/C28"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C9"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C33"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
 
-    <ImageView
-        android:id="@+id/C0"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C32"
+            app:layout_constraintTop_toTopOf="@+id/C27"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C1"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C28"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:layout_marginTop="70dp"
 
-    <ImageView
-        android:id="@+id/C3"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/C29"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C2"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
-        app:srcCompat="@drawable/empty_grid_space" />
 
-    <ImageView
-        android:id="@+id/C4"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C30"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
 
-    <ImageView
-        android:id="@+id/C6"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C29"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C7"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C31"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
 
-    <ImageView
-        android:id="@+id/C8"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/empty_grid_space" />
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C30"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:srcCompat="@drawable/hexagon" />
 
-    <ImageView
-        android:id="@+id/C5"
-        android:layout_width="83dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/empty_grid_space" />
+        <ImageView
+            android:id="@+id/C20"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C21"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/C20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C19"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:layout_marginTop="8dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/C20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C18"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/C19"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C22"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C21"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C15"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="40dp" android:layout_marginRight="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C20"
+            app:layout_constraintEnd_toEndOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C14"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C20"
+            app:layout_constraintEnd_toEndOf="@+id/C15"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C17"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C20"
+            app:layout_constraintStart_toStartOf="@+id/C16"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C16"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="40dp" android:layout_marginLeft="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C20"
+            app:layout_constraintStart_toStartOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C24"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="40dp" android:layout_marginRight="40dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/C20"
+            app:layout_constraintTop_toTopOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C23"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/C24"
+            app:layout_constraintTop_toTopOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C25"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C24"
+            app:layout_constraintTop_toTopOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C26"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C25"
+            app:layout_constraintTop_toTopOf="@+id/C20"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C34"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C33"
+            app:layout_constraintTop_toTopOf="@+id/C28"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C35"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:layout_marginTop="70dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C34"
+            app:layout_constraintTop_toTopOf="@+id/C28"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C10"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="38dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C15"
+            app:layout_constraintEnd_toStartOf="@+id/C16"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C9"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C15"
+            app:layout_constraintEnd_toEndOf="@+id/C10"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C11"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C15"
+            app:layout_constraintStart_toStartOf="@+id/C10"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C12"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C15"
+            app:layout_constraintStart_toStartOf="@+id/C11"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C13"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C15"
+            app:layout_constraintStart_toStartOf="@+id/C12"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C7"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="40dp" android:layout_marginLeft="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintStart_toStartOf="@+id/C11"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C8"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintStart_toStartOf="@+id/C7"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C6"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintEnd_toEndOf="@+id/C7"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/C5"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintEnd_toEndOf="@+id/C6"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D6"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintEnd_toEndOf="@+id/C5"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D7"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C11"
+            app:layout_constraintStart_toStartOf="@+id/C8"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D9"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C22"
+            app:layout_constraintStart_toStartOf="@+id/C17"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D71"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@+id/C24"
+            app:layout_constraintStart_toStartOf="@+id/C26"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D73"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/C35"
+            app:layout_constraintTop_toTopOf="@+id/C35"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D8"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C19"
+            app:layout_constraintEnd_toEndOf="@+id/C5"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D70"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/C28"
+            app:layout_constraintEnd_toEndOf="@+id/C5"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D72"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@+id/C32"
+            app:layout_constraintEnd_toEndOf="@+id/C32"
+            app:srcCompat="@drawable/hexagon" />
+
+        <ImageView
+            android:id="@+id/D0"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
+
+            android:layout_marginBottom="40dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/D6"
+            app:layout_constraintEnd_toEndOf="@+id/D6"
+            app:srcCompat="@drawable/hexagon_bottom" />
+
+        <ImageView
+            android:id="@+id/D2"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/D6"
+            app:layout_constraintStart_toStartOf="@+id/D1"
+            app:srcCompat="@drawable/hexagon_bottom" />
+
+        <ImageView
+            android:id="@+id/D3"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/D6"
+            app:layout_constraintStart_toStartOf="@+id/D2"
+            app:srcCompat="@drawable/hexagon_bottom" />
+
+        <ImageView
+            android:id="@+id/D4"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/D6"
+            app:layout_constraintStart_toStartOf="@+id/D3"
+            app:srcCompat="@drawable/hexagon_bottom" />
+
+        <ImageView
+            android:id="@+id/D5"
+            android:layout_width="82dp"
+            android:layout_height="47dp"
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/D6"
+            app:layout_constraintStart_toStartOf="@+id/D4"
+            app:srcCompat="@drawable/hexagon_bottom" />
+
+        <!--
+            <ImageView
+                android:id="@+id/border"
+                android:layout_width="370dp"
+                android:layout_height="580dp"
+                android:layout_marginBottom="70dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/border" />
+        -->
 
 
 
