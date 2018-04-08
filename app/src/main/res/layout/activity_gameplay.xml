@@ -752,9 +752,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@+id/D2"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/D0"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/switch_off" />
@@ -765,9 +765,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@+id/D3"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/D1"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/switch_off" />
@@ -778,9 +778,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@+id/D4"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/D2"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/switch_off" />
@@ -791,9 +791,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@+id/D5"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/D3"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/switch_off" />

@@ -1,6 +1,5 @@
 package com.pocketlogic.pocketlogic;
 
-
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -26,22 +25,21 @@ public class gameplay extends AppCompatActivity {
     NavigationView leftNavigationView;
     DrawerLayout drawer;
     int num_grid_tiles = 36;
-    int num_tile_types = 7;
+    int num_tile_types = 8;
     int num_switches = 4;
 
-    int inputNumA = 0;
-    int inputNumB = 0;
-    int inputNumC = 0;
-    int inputNumD = 0;
+    int inputA = 0;
+    int inputB = 0;
+    int inputC = 0;
+    int inputD = 0;
 
     TruthTable table;
-
 
     // Create an array to hold all the gates in the game
     gate grid[] = new gate[num_grid_tiles];
     gate switches[] = new gate[num_switches];
-    int[] drawables = new int[]{R.drawable.and, R.drawable.or, R.drawable.xor, R.drawable.nor, R.drawable.xnor, R.drawable.not, R.drawable.hexagon};
-
+    int[] drawables = new int[]{R.drawable.and, R.drawable.or, R.drawable.xor, R.drawable.nor, R.drawable.xnor, R.drawable.nand, R.drawable.not, R.drawable.hexagon};
+    int[] switch_graphics = new int[]{R.drawable.switch_0, R.drawable.switch_1};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +49,21 @@ public class gameplay extends AppCompatActivity {
 
         table = new TruthTable();
 
-        for (int index = 0; index < num_grid_tiles; index++)
-        {
+        // Initiate the rest of the tiles
+        for (int index = 5; index < num_grid_tiles; index++) {
             grid[index] = new gate(true);
         }
 
-        for(int index = 0; index < num_switches; index++){
+        // TODO: Set "switch" or "locked" based on imported level settings array
+        for (int index = 0; index < num_switches; index++) {
+            grid[index] = new gate(false);
             switches[index] = new gate(false);
         }
-        //grid[5].type = 6;
+
+        // Please for the love of god delete the following code once we get the switch array working
+
+
+        // end of aforementioned screwed code
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -78,10 +82,10 @@ public class gameplay extends AppCompatActivity {
                 int id = item.getItemId();
 
                 switch(id){
-//            case R.id.drawerTruthTable:
+//               case R.id.drawerTruthTable:
 //                break;
                     case R.id.drawerHelp:
-                        //finish();
+                        // finish();
                         Intent help = new Intent(gameplay.this, help.class);
                         startActivity(help);
                         overridePendingTransition(0,0);
@@ -153,46 +157,57 @@ public class gameplay extends AppCompatActivity {
         final ImageView C0 = (ImageView) findViewById(R.id.C0);
         C0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C0.setImageResource(drawables[(grid[0].type++) % num_tile_types]);
+                C0.setImageResource(switch_graphics[(grid[0].type++) % 2]);
+                // C0 is locked.
+                // This row is reserved for switches.
+                // TODO: This tile may or may not contain a switch depending on level preset values
             }
         });
 
         final ImageView C1 = (ImageView) findViewById(R.id.C1);
         C1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C1.setImageResource(drawables[(grid[1].type++) % num_tile_types]);
+                // C1.setImageResource(drawables[(grid[1].type++) % num_tile_types]);
+                // This row is reserved for switches.
+                // TODO: This tile may or may not contain a switch depending on level preset values
             }
         });
 
         final ImageView C2 = (ImageView) findViewById(R.id.C2);
         C2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C2.setImageResource(drawables[(grid[2].type++) % num_tile_types]);
+                // C2.setImageResource(drawables[(grid[2].type++) % num_tile_types]);
+                // This row is reserved for switches.
+                // TODO: This tile may or may not contain a switch depending on level preset values
             }
         });
 
         final ImageView C3 = (ImageView) findViewById(R.id.C3);
         C3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C3.setImageResource(drawables[(grid[3].type++) % num_tile_types]);
+                // C3.setImageResource(drawables[(grid[3].type++) % num_tile_types]);
+                // This row is reserved for switches.
+                // TODO: This tile may or may not contain a switch depending on level preset values
             }
         });
 
         final ImageView C4 = (ImageView) findViewById(R.id.C4);
         C4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C4.setImageResource(drawables[(grid[4].type++) % num_tile_types]);
+                // C4.setImageResource(drawables[(grid[4].type++) % num_tile_types]);
+                // This row is reserved for switches.
+                // TODO: This tile may or may not contain a switch depending on level preset values
             }
         });
 
-        final ImageView C5 = (ImageView) findViewById(R.id.C5);
+        final ImageView C5 = findViewById(R.id.C5);
         C5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C5.setImageResource(drawables[(grid[5].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C6 = (ImageView) findViewById(R.id.C6);
+        final ImageView C6 = findViewById(R.id.C6);
         C6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C6.setImageResource(drawables[(grid[6].type++) % num_tile_types]);
@@ -438,7 +453,7 @@ public class gameplay extends AppCompatActivity {
             public void onClick(View v) {
                 switches[0].rotateImageType();
                 switchA.setImageResource(switches[0].getImageType());
-                inputNumA = switches[0].getType();
+                inputA = switches[0].getType();
                 table.switchOutputValue(3);
                 output.setImageResource(table.getImageType());
 
@@ -451,7 +466,7 @@ public class gameplay extends AppCompatActivity {
             public void onClick(View v) {
                 switches[1].rotateImageType();
                 switchB.setImageResource(switches[1].getImageType());
-                inputNumB = switches[1].getType();
+                inputB = switches[1].getType();
                 table.switchOutputValue(2);
                 output.setImageResource(table.getImageType());
             }
@@ -462,7 +477,7 @@ public class gameplay extends AppCompatActivity {
             public void onClick(View v) {
                 switches[2].rotateImageType();
                 switchC.setImageResource(switches[2].getImageType());
-                inputNumC = switches[2].getType();
+                inputC = switches[2].getType();
                 table.switchOutputValue(1);
                 output.setImageResource(table.getImageType());
             }
@@ -473,7 +488,7 @@ public class gameplay extends AppCompatActivity {
             public void onClick(View v) {
                 switches[3].rotateImageType();
                 switchD.setImageResource(switches[3].getImageType());
-                inputNumD = switches[3].getType();
+                inputD = switches[3].getType();
                 table.switchOutputValue(0);
                 output.setImageResource(table.getImageType());
             }
