@@ -34,6 +34,8 @@ public class gameplay extends AppCompatActivity {
     int inputNumC = 0;
     int inputNumD = 0;
 
+    TruthTable table;
+
 
     // Create an array to hold all the gates in the game
     gate grid[] = new gate[num_grid_tiles];
@@ -46,6 +48,8 @@ public class gameplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
         addListeners();
+
+        table = new TruthTable();
 
         for (int index = 0; index < num_grid_tiles; index++)
         {
@@ -417,6 +421,7 @@ public class gameplay extends AppCompatActivity {
         */
 
         final ImageView output = (ImageView) findViewById(R.id.output);
+        //output.setImageResource(table.getImageType());
         output.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //here to bring up truth table eval
@@ -434,6 +439,8 @@ public class gameplay extends AppCompatActivity {
                 switches[0].rotateImageType();
                 switchA.setImageResource(switches[0].getImageType());
                 inputNumA = switches[0].getType();
+                table.switchOutputValue(3);
+                output.setImageResource(table.getImageType());
 
             }
         });
@@ -445,6 +452,8 @@ public class gameplay extends AppCompatActivity {
                 switches[1].rotateImageType();
                 switchB.setImageResource(switches[1].getImageType());
                 inputNumB = switches[1].getType();
+                table.switchOutputValue(2);
+                output.setImageResource(table.getImageType());
             }
         });
 
@@ -454,6 +463,8 @@ public class gameplay extends AppCompatActivity {
                 switches[2].rotateImageType();
                 switchC.setImageResource(switches[2].getImageType());
                 inputNumC = switches[2].getType();
+                table.switchOutputValue(1);
+                output.setImageResource(table.getImageType());
             }
         });
 
@@ -463,6 +474,8 @@ public class gameplay extends AppCompatActivity {
                 switches[3].rotateImageType();
                 switchD.setImageResource(switches[3].getImageType());
                 inputNumD = switches[3].getType();
+                table.switchOutputValue(0);
+                output.setImageResource(table.getImageType());
             }
         });
 
