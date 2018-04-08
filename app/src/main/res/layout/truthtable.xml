@@ -10,7 +10,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/tlTable01"
         android:layout_width="300dp"
-        android:layout_height="610dp"
+        android:layout_height="645dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -404,7 +404,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -415,7 +415,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -466,7 +466,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -477,7 +477,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -499,7 +499,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -528,7 +528,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -590,7 +590,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -652,7 +652,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -714,7 +714,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -776,7 +776,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -838,7 +838,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -911,7 +911,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -973,7 +973,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -995,7 +995,7 @@
                 android:background="@color/white"
                 android:fontFamily="@font/roboto"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
