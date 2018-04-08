@@ -17,14 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".selectLevel2" />
-        <activity android:name=".activeLevel" />
-        <activity android:name=".activeLevel2" />
         <activity android:name=".evaluation" />
         <activity
             android:name=".help"
             android:theme="@style/AppTheme.PopUp" />
         <activity android:name=".highscores" />
-        <activity android:name=".ingameMenu" />
         <activity android:name=".winScreen" />
         <activity
             android:name=".RestartConfirmPopupActivity"
