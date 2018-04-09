@@ -154,16 +154,16 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D1"
+            android:id="@+id/inputA"
             android:layout_width="82dp"
-            android:layout_height="47dp"
+            android:layout_height="94dp"
 
             android:layout_marginBottom="40dp"
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/C5"
             app:layout_constraintStart_toStartOf="@+id/C5"
-            app:srcCompat="@drawable/hexagon_bottom" />
+            app:srcCompat="@drawable/switch_0" />
 
         <ImageView
             android:id="@+id/C3"
@@ -691,9 +691,9 @@
             app:srcCompat="@drawable/hexagon_bottom" />
 
         <ImageView
-            android:id="@+id/D2"
+            android:id="@+id/inputB"
             android:layout_width="82dp"
-            android:layout_height="47dp"
+            android:layout_height="94dp"
 
             android:layout_marginBottom="40dp"
             android:layout_marginStart="80dp"
@@ -701,13 +701,13 @@
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/D6"
-            app:layout_constraintStart_toStartOf="@+id/D1"
-            app:srcCompat="@drawable/hexagon_bottom" />
+            app:layout_constraintStart_toStartOf="@+id/inputA"
+            app:srcCompat="@drawable/switch_0" />
 
         <ImageView
-            android:id="@+id/D3"
+            android:id="@+id/inputC"
             android:layout_width="82dp"
-            android:layout_height="47dp"
+            android:layout_height="94dp"
 
             android:layout_marginBottom="40dp"
             android:layout_marginStart="80dp"
@@ -715,13 +715,13 @@
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/D6"
-            app:layout_constraintStart_toStartOf="@+id/D2"
-            app:srcCompat="@drawable/hexagon_bottom" />
+            app:layout_constraintStart_toStartOf="@+id/inputB"
+            app:srcCompat="@drawable/switch_0" />
 
         <ImageView
-            android:id="@+id/D4"
+            android:id="@+id/inputD"
             android:layout_width="82dp"
-            android:layout_height="47dp"
+            android:layout_height="94dp"
 
             android:layout_marginBottom="40dp"
             android:layout_marginStart="80dp"
@@ -729,8 +729,8 @@
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/D6"
-            app:layout_constraintStart_toStartOf="@+id/D3"
-            app:srcCompat="@drawable/hexagon_bottom" />
+            app:layout_constraintStart_toStartOf="@+id/inputC"
+            app:srcCompat="@drawable/switch_0" />
 
         <ImageView
             android:id="@+id/D5"
@@ -743,13 +743,13 @@
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/D6"
-            app:layout_constraintStart_toStartOf="@+id/D4"
+            app:layout_constraintStart_toStartOf="@+id/inputD"
             app:srcCompat="@drawable/hexagon_bottom" />
 
-        <ImageView
-            android:id="@+id/inputA"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
+     <!--   <ImageView
+            android:id="@+id/input1"
+            android:layout_width="82dp"
+            android:layout_height="94dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -760,7 +760,7 @@
             app:srcCompat="@drawable/switch_off" />
 
         <ImageView
-            android:id="@+id/inputB"
+            android:id="@+id/input2"
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -797,6 +797,7 @@
             app:layout_constraintStart_toEndOf="@+id/D3"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/switch_off" />
+            -->
 
         <ImageView
             android:id="@+id/output"

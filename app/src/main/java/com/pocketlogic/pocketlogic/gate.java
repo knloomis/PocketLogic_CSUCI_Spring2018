@@ -25,7 +25,7 @@ public class gate {
             drawables = new int[]{R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.xor, R.drawable.nor, R.drawable.xnor, R.drawable.not};
             num_types = 7;
         }else{
-            drawables = new int[]{R.drawable.switch_off, R.drawable.switch_on};
+            drawables = new int[]{R.drawable.switch_0, R.drawable.switch_1};
             num_types = 2;
         }
 
