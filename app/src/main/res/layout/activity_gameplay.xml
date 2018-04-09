@@ -60,7 +60,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D75"
+            android:id="@+id/D15"
             android:layout_width="82dp"
             android:layout_height="47dp"
 
@@ -68,12 +68,12 @@
             android:layout_marginTop="40dp"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="@+id/D74"
+            app:layout_constraintStart_toStartOf="@+id/D14"
             app:layout_constraintTop_toBottomOf="@+id/C27"
             app:srcCompat="@drawable/hexagon_top" />
 
         <ImageView
-            android:id="@+id/D76"
+            android:id="@+id/D16"
             android:layout_width="82dp"
             android:layout_height="47dp"
 
@@ -81,12 +81,12 @@
             android:layout_marginTop="40dp"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="@+id/D75"
+            app:layout_constraintStart_toStartOf="@+id/D15"
             app:layout_constraintTop_toBottomOf="@+id/C27"
             app:srcCompat="@drawable/hexagon_top" />
 
         <ImageView
-            android:id="@+id/D77"
+            android:id="@+id/D17"
             android:layout_width="82dp"
             android:layout_height="47dp"
 
@@ -94,12 +94,12 @@
             android:layout_marginTop="40dp"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="@+id/D76"
+            app:layout_constraintStart_toStartOf="@+id/D16"
             app:layout_constraintTop_toBottomOf="@+id/C27"
             app:srcCompat="@drawable/hexagon_top" />
 
         <ImageView
-            android:id="@+id/D78"
+            android:id="@+id/D18"
             android:layout_width="82dp"
             android:layout_height="47dp"
 
@@ -107,7 +107,7 @@
             android:layout_marginTop="40dp"
             android:cropToPadding="false"
             android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="@+id/D77"
+            app:layout_constraintStart_toStartOf="@+id/D17"
             app:layout_constraintTop_toBottomOf="@+id/C27"
             app:srcCompat="@drawable/hexagon_top" />
 
@@ -194,7 +194,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D74"
+            android:id="@+id/D14"
             android:layout_width="82dp"
             android:layout_height="47dp"
 
@@ -620,7 +620,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D71"
+            android:id="@+id/D11"
             android:layout_width="82dp"
             android:layout_height="94dp"
             android:layout_marginBottom="70dp"
@@ -632,7 +632,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D73"
+            android:id="@+id/D13"
             android:layout_width="82dp"
             android:layout_height="94dp"
             android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
@@ -655,7 +655,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D70"
+            android:id="@+id/D10"
             android:layout_width="82dp"
             android:layout_height="94dp"
             android:layout_marginBottom="70dp"
@@ -667,7 +667,7 @@
             app:srcCompat="@drawable/hexagon" />
 
         <ImageView
-            android:id="@+id/D72"
+            android:id="@+id/D12"
             android:layout_width="82dp"
             android:layout_height="94dp"
             android:layout_marginBottom="70dp"
@@ -745,6 +745,71 @@
             app:layout_constraintBottom_toTopOf="@+id/D6"
             app:layout_constraintStart_toStartOf="@+id/D4"
             app:srcCompat="@drawable/hexagon_bottom" />
+
+        <ImageView
+            android:id="@+id/inputA"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/D2"
+            app:layout_constraintStart_toEndOf="@+id/D0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/switch_off" />
+
+        <ImageView
+            android:id="@+id/inputB"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/D3"
+            app:layout_constraintStart_toEndOf="@+id/D1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/switch_off" />
+
+        <ImageView
+            android:id="@+id/inputC"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/D4"
+            app:layout_constraintStart_toEndOf="@+id/D2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/switch_off" />
+
+        <ImageView
+            android:id="@+id/inputD"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/D5"
+            app:layout_constraintStart_toEndOf="@+id/D3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/switch_off" />
+
+        <ImageView
+            android:id="@+id/output"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/D18"
+            app:layout_constraintStart_toStartOf="@+id/D16"
+            app:srcCompat="@drawable/on_unlit" />
 
         <!--
             <ImageView
