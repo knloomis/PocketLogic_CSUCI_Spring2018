@@ -1,5 +1,4 @@
-@@ -1,105 +0,0 @@
-package com.pocketlogic.pocketlogic; 
+package com.pocketlogic.pocketlogic;
  
 import android.view.View; 
  
