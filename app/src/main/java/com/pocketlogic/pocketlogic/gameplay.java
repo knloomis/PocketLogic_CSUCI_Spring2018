@@ -50,20 +50,16 @@ public class gameplay extends AppCompatActivity {
         table = new TruthTable();
 
         // Initiate the rest of the tiles
-        for (int index = 5; index < num_grid_tiles; index++) {
+        for (int index = 0; index < num_grid_tiles; index++) {
             grid[index] = new gate(true);
         }
 
         // TODO: Set "switch" or "locked" based on imported level settings array
         for (int index = 0; index < num_switches; index++) {
-            grid[index] = new gate(false);
             switches[index] = new gate(false);
         }
 
-        // Please for the love of god delete the following code once we get the switch array working
 
-
-        // end of aforementioned screwed code
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -155,6 +151,7 @@ public class gameplay extends AppCompatActivity {
 //final int curr_num = 0;
 //final ImageView currView = cells[curr_num];
         final ImageView C0 = (ImageView) findViewById(R.id.C0);
+        C0.setImageResource(switch_graphics[0]); // TODO: set me to some default later on
         C0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C0.setImageResource(switch_graphics[(grid[0].type++) % 2]);
@@ -174,8 +171,10 @@ public class gameplay extends AppCompatActivity {
         });
 
         final ImageView C2 = (ImageView) findViewById(R.id.C2);
+        C2.setImageResource(switch_graphics[0]); // TODO: set me to some default later on
         C2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                C2.setImageResource(switch_graphics[(grid[2].type++) % 2]);
                 // C2.setImageResource(drawables[(grid[2].type++) % num_tile_types]);
                 // This row is reserved for switches.
                 // TODO: This tile may or may not contain a switch depending on level preset values
@@ -192,8 +191,10 @@ public class gameplay extends AppCompatActivity {
         });
 
         final ImageView C4 = (ImageView) findViewById(R.id.C4);
+        C4.setImageResource(switch_graphics[0]); // TODO: set me to some default later on
         C4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                C4.setImageResource(switch_graphics[(grid[4].type++) % 2]);
                 // C4.setImageResource(drawables[(grid[4].type++) % num_tile_types]);
                 // This row is reserved for switches.
                 // TODO: This tile may or may not contain a switch depending on level preset values
@@ -214,213 +215,181 @@ public class gameplay extends AppCompatActivity {
             }
         });
 
-        final ImageView C7 = (ImageView) findViewById(R.id.C7);
+        final ImageView C7 = findViewById(R.id.C7);
         C7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C7.setImageResource(drawables[(grid[7].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C8 = (ImageView) findViewById(R.id.C8);
+        final ImageView C8 = findViewById(R.id.C8);
         C8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C8.setImageResource(drawables[(grid[8].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C9 = (ImageView) findViewById(R.id.C9);
+        final ImageView C9 = findViewById(R.id.C9);
         C9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C9.setImageResource(drawables[(grid[9].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C10 = (ImageView) findViewById(R.id.C10);
+        final ImageView C10 = findViewById(R.id.C10);
         C10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C10.setImageResource(drawables[(grid[10].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C11 = (ImageView) findViewById(R.id.C11);
+        final ImageView C11 = findViewById(R.id.C11);
         C11.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C11.setImageResource(drawables[(grid[11].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C12 = (ImageView) findViewById(R.id.C12);
+        final ImageView C12 = findViewById(R.id.C12);
         C12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C12.setImageResource(drawables[(grid[12].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C13 = (ImageView) findViewById(R.id.C13);
+        final ImageView C13 = findViewById(R.id.C13);
         C13.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C13.setImageResource(drawables[(grid[13].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C14 = (ImageView) findViewById(R.id.C14);
+        final ImageView C14 = findViewById(R.id.C14);
         C14.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C14.setImageResource(drawables[(grid[14].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C15 = (ImageView) findViewById(R.id.C15);
+        final ImageView C15 = findViewById(R.id.C15);
         C15.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C15.setImageResource(drawables[(grid[15].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C16 = (ImageView) findViewById(R.id.C16);
+        final ImageView C16 = findViewById(R.id.C16);
         C16.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C16.setImageResource(drawables[(grid[16].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C17 = (ImageView) findViewById(R.id.C17);
+        final ImageView C17 = findViewById(R.id.C17);
         C17.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C17.setImageResource(drawables[(grid[17].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C18 = (ImageView) findViewById(R.id.C18);
+        final ImageView C18 = findViewById(R.id.C18);
         C18.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C18.setImageResource(drawables[(grid[18].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C19 = (ImageView) findViewById(R.id.C19);
+        final ImageView C19 = findViewById(R.id.C19);
         C19.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C19.setImageResource(drawables[(grid[19].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C20 = (ImageView) findViewById(R.id.C20);
+        final ImageView C20 = findViewById(R.id.C20);
         C20.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C20.setImageResource(drawables[(grid[20].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C21 = (ImageView) findViewById(R.id.C21);
+        final ImageView C21 = findViewById(R.id.C21);
         C21.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C21.setImageResource(drawables[(grid[21].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C22 = (ImageView) findViewById(R.id.C22);
+        final ImageView C22 = findViewById(R.id.C22);
         C22.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C22.setImageResource(drawables[(grid[22].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C23 = (ImageView) findViewById(R.id.C23);
+        final ImageView C23 = findViewById(R.id.C23);
         C23.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C23.setImageResource(drawables[(grid[23].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C24 = (ImageView) findViewById(R.id.C24);
+        final ImageView C24 = findViewById(R.id.C24);
         C24.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C24.setImageResource(drawables[(grid[24].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C25 = (ImageView) findViewById(R.id.C25);
+        final ImageView C25 = findViewById(R.id.C25);
         C25.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C25.setImageResource(drawables[(grid[25].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C26 = (ImageView) findViewById(R.id.C26);
+        final ImageView C26 = findViewById(R.id.C26);
         C26.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C26.setImageResource(drawables[(grid[26].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C27 = (ImageView) findViewById(R.id.C27);
+        final ImageView C27 = findViewById(R.id.C27);
         C27.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C27.setImageResource(drawables[(grid[27].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C28 = (ImageView) findViewById(R.id.C28);
+        final ImageView C28 = findViewById(R.id.C28);
         C28.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C28.setImageResource(drawables[(grid[28].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C29 = (ImageView) findViewById(R.id.C29);
+        final ImageView C29 = findViewById(R.id.C29);
         C29.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C29.setImageResource(drawables[(grid[29].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C30 = (ImageView) findViewById(R.id.C30);
+        final ImageView C30 = findViewById(R.id.C30);
         C30.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C30.setImageResource(drawables[(grid[30].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C31 = (ImageView) findViewById(R.id.C31);
+        final ImageView C31 = findViewById(R.id.C31);
         C31.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 C31.setImageResource(drawables[(grid[31].type++) % num_tile_types]);
             }
         });
 
-        final ImageView C32 = (ImageView) findViewById(R.id.C32);
-        C32.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                C32.setImageResource(drawables[(grid[32].type++) % num_tile_types]);
-            }
-        });
-
-        final ImageView C33 = (ImageView) findViewById(R.id.C33);
-        C33.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                C33.setImageResource(drawables[(grid[33].type++) % num_tile_types]);
-            }
-        });
-
-        final ImageView C34 = (ImageView) findViewById(R.id.C34);
-        C34.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                C34.setImageResource(drawables[(grid[34].type++) % num_tile_types]);
-            }
-        });
-
-        final ImageView C35 = (ImageView) findViewById(R.id.C35);
-        C35.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                grid[35].rotateImageType();
-                C35.setImageResource(grid[35].getImageType());
-            }
-        });
-
-
-
-        //TO DO: fix broken code lol
         // inside of each listener to onClick should include method call to updateOutputValue
 
        /*
@@ -435,7 +404,7 @@ public class gameplay extends AppCompatActivity {
 
         */
 
-        final ImageView output = (ImageView) findViewById(R.id.output);
+        final ImageView output = findViewById(R.id.output);
         //output.setImageResource(table.getImageType());
         output.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -444,58 +413,6 @@ public class gameplay extends AppCompatActivity {
                 startActivity(eval);
             }
         });
-
-
-
-
-        final ImageView switchA = (ImageView) findViewById(R.id.inputA);
-        switchA.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                switches[0].rotateImageType();
-                switchA.setImageResource(switches[0].getImageType());
-                inputA = switches[0].getType();
-                table.switchOutputValue(3);
-                output.setImageResource(table.getImageType());
-
-            }
-        });
-
-
-        final ImageView switchB = (ImageView) findViewById(R.id.inputB);
-        switchB.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                switches[1].rotateImageType();
-                switchB.setImageResource(switches[1].getImageType());
-                inputB = switches[1].getType();
-                table.switchOutputValue(2);
-                output.setImageResource(table.getImageType());
-            }
-        });
-
-        final ImageView switchC = (ImageView) findViewById(R.id.inputC);
-        switchC.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                switches[2].rotateImageType();
-                switchC.setImageResource(switches[2].getImageType());
-                inputC = switches[2].getType();
-                table.switchOutputValue(1);
-                output.setImageResource(table.getImageType());
-            }
-        });
-
-        final ImageView switchD = (ImageView) findViewById(R.id.inputD);
-        switchD.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                switches[3].rotateImageType();
-                switchD.setImageResource(switches[3].getImageType());
-                inputD = switches[3].getType();
-                table.switchOutputValue(0);
-                output.setImageResource(table.getImageType());
-            }
-        });
-
-
     }
-
 }
 
