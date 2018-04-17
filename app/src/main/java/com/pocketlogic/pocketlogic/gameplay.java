@@ -36,12 +36,11 @@ public class gameplay extends AppCompatActivity {
 
     TruthTable table;
 
-
     // Create an array to hold all the gates in the game
     Level level = new Level();
     Tile grid[] = new Tile[num_grid_tiles];
     gate switches[] = new gate[num_switches];
-    int[] drawables = new int[]{R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.switch_0, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
+    int[] drawables = new int[]{R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.nand, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
