@@ -22,7 +22,7 @@ public class gate extends Tile {
 
     public gate() {
 
-        // \/ UNCOMMENT THIS \/
+
         drawables = new int[] {R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.nand, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
     }
 
@@ -33,7 +33,7 @@ public class gate extends Tile {
         }else{
             this.type = 0;
         }
-        // \/ UNCOMMENT THIS \/
+
         drawables = new int[] {R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.switch_0, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
 
     }

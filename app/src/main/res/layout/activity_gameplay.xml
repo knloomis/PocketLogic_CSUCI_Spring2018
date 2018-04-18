@@ -853,7 +853,7 @@
             app:layout_constraintStart_toStartOf="@+id/C33"
             app:layout_constraintTop_toTopOf="@+id/C30"
             app:layout_constraintVertical_bias="0.443"
-            app:srcCompat="@drawable/on_unlit" />
+            app:srcCompat="@drawable/lightbulb_0_unlit" />
 
         <!--
             <ImageView

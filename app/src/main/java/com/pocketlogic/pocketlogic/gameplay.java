@@ -8,6 +8,17 @@ import android.os.Bundle;
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
+import android.content.Intent;
+import android.support.v4.view.GravityCompat;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+/*
+//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occurr...
+
+import android.content.Context;
+import android.view.View;
+import android.widget.ImageView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,14 +31,33 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+ */
 
 public class gameplay extends AppCompatActivity {
     NavigationView rightNavigationView;
     NavigationView leftNavigationView;
     DrawerLayout drawer;
     int num_grid_tiles = 36;
-    int num_tile_types = 7;
+ //   int num_tile_types = 7;
     int num_switches = 4;
+
+    final int[][] INPUTS1 ={{1}, {0}};
+    final int[][] INPUTS2 ={{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+    final int[][] INPUTS3 ={{0, 0, 0}, {0, 0, 1},
+            {0, 1, 0}, {0, 1, 1}, {1, 0, 0},
+            {1, 0, 1}, {1, 1, 0}, {1, 1, 1}};
+    final int[][] INPUTS4 = {{0, 0, 0, 0},
+            {0, 0, 0, 1}, {0, 0, 1, 0},
+            {0, 0, 1, 1}, {0, 1, 0, 0},
+            {0, 1, 0, 1}, {0, 1, 1, 0},
+            {0, 1, 1, 1}, {1, 0, 0, 0},
+            {1, 0, 0, 1}, {1, 0, 1, 0},
+            {1, 0, 1, 1}, {1, 1, 0, 0},
+            {1, 1, 0, 1}, {1, 1, 1, 0},
+            {1, 1, 1, 1},};
+
+    private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
+
 
  /*   int inputNumA = 0;
     int inputNumB = 0;
@@ -35,7 +65,7 @@ public class gameplay extends AppCompatActivity {
     int inputNumD = 0;
     */
 
-    TruthTable table;
+    Output output;
 
     // Create an array to hold all the gates in the game
     //Level level = new Level();
@@ -52,8 +82,6 @@ public class gameplay extends AppCompatActivity {
         setContentView(R.layout.activity_gameplay);
         addListeners();
 
-        table = new TruthTable();
-
         for (int index = 0; index < num_grid_tiles; index++)
         {
             grid[index] = new gate();
@@ -62,6 +90,9 @@ public class gameplay extends AppCompatActivity {
         for(int index = 0; index < num_switches; index++){
             switches[index] = new Switch();
         }
+
+        output = new Output(getOutputValueOfRow(getCurrRowNum()));
+
         //grid[5].type = 6;
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -448,8 +479,9 @@ public class gameplay extends AppCompatActivity {
                 switchA.setImageResource(switches[0].getNextImage());
                 // inputNumA = switches[0].getType();
 
-                table.switchOutputValue(3);
-                outputButton.setImageResource(table.getImageType());
+                //output.switchOutputValue(3);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
 
             }
         });
@@ -462,8 +494,9 @@ public class gameplay extends AppCompatActivity {
                 switchB.setImageResource(switches[1].getNextImage());
                 // inputNumB = switches[1].getType();
 
-                table.switchOutputValue(2);
-                outputButton.setImageResource(table.getImageType());
+                //output.switchOutputValue(2);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
@@ -474,8 +507,9 @@ public class gameplay extends AppCompatActivity {
                 switchC.setImageResource(switches[2].getNextImage());
                 // X inputNumC = switches[2].getType();
 
-                table.switchOutputValue(1);
-                outputButton.setImageResource(table.getImageType());
+                //output.switchOutputValue(1);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
@@ -486,12 +520,27 @@ public class gameplay extends AppCompatActivity {
                 switchD.setImageResource(switches[3].getNextImage());
                 // inputNumD = switches[3].getType();
 
-                table.switchOutputValue(0);
-                outputButton.setImageResource(table.getImageType());
+                //output.switchOutputValue(0);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
 
     }
+
+    public int getCurrRowNum() {
+        String binaryString = "";
+        for(int i = 0; i < 4; i++) {
+            binaryString += switches[i].getType();
+        }
+
+        return(Integer.parseInt(binaryString, 2));
+    }
+
+    public int getOutputValueOfRow(int row){
+        return outputValues[row];
+    }
+
 
 }
