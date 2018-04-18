@@ -2,109 +2,115 @@ package com.pocketlogic.pocketlogic;
 
 public class Tile
 {
-    private int type;
-    private Tile inputA;
-    private Tile inputB;
-    private boolean value;
+    protected int[] drawables;
+    protected int type;
 
-    private int[] gateDrawables = {R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.switch_0, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
-    private int[] switchDrawables = {};
-    private int[] lightDrawables = {};
+    public int getNext() {
+        return 0;
+    }
 
-    public Tile(int type)
+    public int getNextImage() {
+        //getNext();
+        return R.drawable.hexagon;
+
+    }
+
+    public int eval() {
+        return -1;
+    }
+
+    public int AND(int A, int B)
     {
-        if (type >= 0 && type <= 7){
-            this.type = type;
+        if((A == -1) || (B == -1)) {
+            return -1;
         }else{
-            this.type = 0;
+            boolean boolA = getBoolean(A);
+            boolean boolB = getBoolean(B);
+
+            if(boolA && boolB) {
+                return 1;
+            }else {
+                return 0;
+            }
+        }
+
+    }
+    public int OR(int A, int B)
+    {
+        if((A == -1) || (B == -1)) {
+            return -1;
+        }else {
+            boolean boolA = getBoolean(A);
+            boolean boolB = getBoolean(B);
+
+            if (boolA || boolB) {
+                return 1;
+            }else {
+                return 0;
+            }
         }
     }
 
-    public Tile(boolean value)
+    public int NOT(int A)
     {
-        this.type = -1;
-        this.value = value;
-    }
-
-    public int nextType()
-    {
-        if (this.type < 7) this.type++;
-        else this.type = 0;
-        //this.type = (this.type++) % 7;
-
-        return this.type;
-    }
-
-    public String getTypeString()
-    {
-        //for debug
-        switch (this.type)
-        {
-            case -2 : return "LIGHT";
-            case -1 : return "SWITCH";
-            case  0 : return "BLANK";
-            case  1 : return "AND";
-            case  2 : return "OR";
-            case  3 : return "NOT";
-            case  4 : return "NAND";
-            case  5 : return "NOR";
-            case  6 : return "XOR";
-            case  7 : return "XNOR";
-            default : return "INVALID";
+        int result = -1;
+        if(A == -1) {
+            return -1;
+        }else {
+            switch(A) {
+                case 0: result = 1;
+                case 1: result = 0;
+            }
+            return result;
         }
     }
 
-    public void setInputs(Tile inputA, Tile inputB)
+    public int NAND(int A, int B)
     {
-        this.inputA = inputA;
-        this.inputB = inputB;
+        int value = AND(A, B);
+        switch(value) {
+            case 0: return 1;
+            case 1: return 0;
+            default: return -1;
+        }
     }
-
-    public boolean eval()
+    public int NOR(int A, int B)
     {
-        switch (this.type)
-        {
-            case -1 : return this.value;
-            case  1 : return this.AND (this.inputA.eval(), this.inputB.eval());
-            case  2 : return this.OR (this.inputA.eval(), this.inputB.eval());
-            case  3 : return this.NOT (this.inputA.eval());
-            case  4 : return this.NAND (this.inputA.eval(), this.inputB.eval());
-            case  5 : return this.NOR (this.inputA.eval(), this.inputB.eval());
-            case  6 : return this.XNOR (this.inputA.eval(), this.inputB.eval());
-            case  7 : return this.XNOR (this.inputA.eval(), this.inputB.eval());
-            default : return false;
+        int value = OR(A, B);
+        switch(value) {
+            case 0: return 1;
+            case 1: return 0;
+            default: return -1;
+        }
+    }
+    public int XOR(int A, int B)
+    {
+        if(A == -1 || B == -1) {
+            return -1;
+        } else if(A == B) {
+            return 0;
+        }else {
+            return 1;
+        }
+    }
+    public int XNOR(int A, int B)
+    {
+        int xorValue = XOR(A, B);
+        switch(xorValue) {
+            case 0: return 1;
+            case 1: return 0;
+            default: return -1;
         }
     }
 
-    private boolean AND(boolean A, boolean B)
-    {
-        if (A && B) return true;
-        return false;
-    }
-    private boolean OR(boolean A, boolean B)
-    {
-        if (A || B) return true;
-        return false;
-    }
-    private boolean NOT(boolean A)
-    {
-        return !(A);
-    }
-    private boolean NAND(boolean A, boolean B)
-    {
-        return !(AND(A, B));
-    }
-    private boolean NOR(boolean A, boolean B)
-    {
-        return !(OR(A, B));
-    }
-    private boolean XOR(boolean A, boolean B)
-    {
-        if (A != B) return true;
-        return false;
-    }
-    private boolean XNOR(boolean A, boolean B)
-    {
-        return !(XOR(A, B));
+    private boolean getBoolean(int number) {
+        boolean result;
+        switch(number) {
+            case 0: result = false; break;
+            case 1: result = true; break;
+            default: result = false; break;
+        }
+
+        return result;
     }
 }
