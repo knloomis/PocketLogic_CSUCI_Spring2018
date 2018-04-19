@@ -105,9 +105,14 @@ public class gate extends Tile {
     }
 
     public boolean changeInputConnection(Tile inputTile){
-        if(inputTile == this || this.type == 0){
+        if(inputTile == this || this.type == 0 || inputTile.type == 0){
             return false;
         }
+ /*       if(this.type == 0){
+            //want remove all output connections of parameter, right?
+            inputTile.clearOutputConnections();
+        }
+        */
 
         boolean addedAsInput = false;
         //idea:
@@ -136,6 +141,20 @@ public class gate extends Tile {
             }
         }
         return addedAsInput;
+    }
+
+    public void clearOutputConnections(){
+        for(Tile currOutput : outputTiles){
+            currOutput.clearInputConnection(this);
+        }
+    }
+
+    public void clearInputConnection(Tile inputToRemove){
+        if(inputA == inputToRemove){
+            inputA = null;
+        }else if(inputB == inputToRemove){
+            inputB = null;
+        }
     }
 
     /*
