@@ -3,6 +3,8 @@ package com.pocketlogic.pocketlogic;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Created by vulpi on 4/1/2018.
  */
@@ -12,6 +14,7 @@ public class gate extends Tile {
     //private int type;
     private Tile inputA;
     private Tile inputB;
+    //private ArrayList<Tile> outputTiles = new ArrayList<Tile>();
     //private int[] drawables = new int[] {R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.switch_0, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
 
 //    X private boolean value;
@@ -49,6 +52,10 @@ public class gate extends Tile {
         else this.type = 0;
 
         return this.type;
+    }
+
+    public int getImage(){
+        return drawables[type];
     }
 
     public String getTypeString()
@@ -96,5 +103,64 @@ public class gate extends Tile {
             default : return -1;
         }
     }
+
+    public boolean changeInputConnection(Tile inputTile){
+        if(inputTile == this || this.type == 0){
+            return false;
+        }
+
+        boolean addedAsInput = false;
+        //idea:
+        //1. if highlight self, then touch self, do nothing; OR if are an empty block, do nothing
+        //2. if clicked second and first guy was already one of the inputs, delete that connection
+        //3. else if is not one of connections and there's an empty connection, set as that connection
+
+        if(inputTile == inputA || inputTile == inputB){
+            if(inputTile == inputA){
+                inputA = null;
+                inputTile.removeOutput(this);
+            }else{
+                inputB = null;
+                inputTile.removeOutput(this);
+            }
+
+        }else{
+            if(inputA == null){
+                inputA = inputTile;
+                inputA.addOutput(this);
+                addedAsInput = true;
+            }else if(inputB == null){
+                inputB = inputTile;
+                inputB.addOutput(this);
+                addedAsInput = true;
+            }
+        }
+        return addedAsInput;
+    }
+
+    /*
+    public void changeOutputConnection(Tile outputTile){
+        if(outputTile == this){
+            return;
+        }
+        if(outputTile.getType() == 0){
+            for(Tile currOutputTile : outputTiles){
+                currOutputTile.changeInputConnection(this);
+            }
+        }else{
+            outputTiles.add(outputTile);
+        }
+    }
+    */
+
+    public void addOutput(Tile newOutput){
+        outputTiles.add(newOutput);
+    }
+
+    public void removeOutput(Tile tileToRemove){
+        outputTiles.remove(tileToRemove);
+    }
+
+
 
 }

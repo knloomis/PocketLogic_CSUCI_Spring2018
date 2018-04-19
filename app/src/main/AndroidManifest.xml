@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".selectLevel2" />
         <activity android:name=".activeLevel" />
-        <activity android:name=".activeLevel2" />
         <activity android:name=".evaluation" />
         <activity
             android:name=".help"

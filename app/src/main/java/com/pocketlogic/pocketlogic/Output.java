@@ -1,5 +1,7 @@
 package com.pocketlogic.pocketlogic;
 
+import java.util.ArrayList;
+
 /**
  * Created by vulpi on 4/5/2018.
  */
@@ -57,6 +59,14 @@ public class Output extends Tile {
             return input.eval();
         }
 
+    }
+
+    public void addOutput(Tile newOutput){
+        ;
+    }
+
+    public ArrayList<Tile> getOutputs(){
+        return null;
     }
 
 }
