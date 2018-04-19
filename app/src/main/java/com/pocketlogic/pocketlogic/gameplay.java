@@ -8,6 +8,17 @@ import android.os.Bundle;
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
+import android.content.Intent;
+import android.support.v4.view.GravityCompat;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+/*
+//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occurr...
+
+import android.content.Context;
+import android.view.View;
+import android.widget.ImageView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,28 +31,50 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+ */
 
 public class gameplay extends AppCompatActivity {
     NavigationView rightNavigationView;
     NavigationView leftNavigationView;
     DrawerLayout drawer;
     int num_grid_tiles = 36;
-    int num_tile_types = 7;
+ //   int num_tile_types = 7;
     int num_switches = 4;
 
-    int inputNumA = 0;
+    final int[][] INPUTS1 ={{1}, {0}};
+    final int[][] INPUTS2 ={{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+    final int[][] INPUTS3 ={{0, 0, 0}, {0, 0, 1},
+            {0, 1, 0}, {0, 1, 1}, {1, 0, 0},
+            {1, 0, 1}, {1, 1, 0}, {1, 1, 1}};
+    final int[][] INPUTS4 = {{0, 0, 0, 0},
+            {0, 0, 0, 1}, {0, 0, 1, 0},
+            {0, 0, 1, 1}, {0, 1, 0, 0},
+            {0, 1, 0, 1}, {0, 1, 1, 0},
+            {0, 1, 1, 1}, {1, 0, 0, 0},
+            {1, 0, 0, 1}, {1, 0, 1, 0},
+            {1, 0, 1, 1}, {1, 1, 0, 0},
+            {1, 1, 0, 1}, {1, 1, 1, 0},
+            {1, 1, 1, 1},};
+
+    private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
+
+
+ /*   int inputNumA = 0;
     int inputNumB = 0;
     int inputNumC = 0;
     int inputNumD = 0;
+    */
 
-    TruthTable table;
-
+    Output output;
 
     // Create an array to hold all the gates in the game
-    gate grid[] = new gate[num_grid_tiles];
-    gate switches[] = new gate[num_switches];
-    int[] drawables = new int[]{R.drawable.and, R.drawable.or, R.drawable.xor, R.drawable.nor, R.drawable.xnor, R.drawable.not, R.drawable.hexagon};
-
+    //Level level = new Level();
+    Tile grid[] = new Tile[num_grid_tiles];
+    //gate switches[] = new gate[num_switches];
+    //int[] drawables = new int[]{R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.nand, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
+    // TO DO: set switches as Switch type
+    Switch switches[] = new Switch[num_switches];
+    //int[] drawables = new int[]{R.drawable.hexagon, R.drawable.and, R.drawable.or, R.drawable.not, R.drawable.nand, R.drawable.nor, R.drawable.xor, R.drawable.xnor};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +82,17 @@ public class gameplay extends AppCompatActivity {
         setContentView(R.layout.activity_gameplay);
         addListeners();
 
-        table = new TruthTable();
-
         for (int index = 0; index < num_grid_tiles; index++)
         {
-            grid[index] = new gate(true);
+            grid[index] = new gate();
         }
 
         for(int index = 0; index < num_switches; index++){
-            switches[index] = new gate(false);
+            switches[index] = new Switch();
         }
+
+        output = new Output(getOutputValueOfRow(getCurrRowNum()));
+
         //grid[5].type = 6;
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -149,257 +183,262 @@ public class gameplay extends AppCompatActivity {
         }
         */
 //final int curr_num = 0;
-//final ImageView currView = cells[curr_num];
         final ImageView C0 = (ImageView) findViewById(R.id.C0);
         C0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C0.setImageResource(drawables[(grid[0].type++) % num_tile_types]);
+                C0.setImageResource(grid[0].getNextImage());
             }
         });
 
         final ImageView C1 = (ImageView) findViewById(R.id.C1);
         C1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C1.setImageResource(drawables[(grid[1].type++) % num_tile_types]);
+                C1.setImageResource(grid[1].getNextImage());
             }
         });
 
         final ImageView C2 = (ImageView) findViewById(R.id.C2);
         C2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C2.setImageResource(drawables[(grid[2].type++) % num_tile_types]);
+                C2.setImageResource(grid[2].getNextImage());
             }
         });
 
         final ImageView C3 = (ImageView) findViewById(R.id.C3);
         C3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C3.setImageResource(drawables[(grid[3].type++) % num_tile_types]);
+                C3.setImageResource(grid[3].getNextImage());
             }
         });
 
         final ImageView C4 = (ImageView) findViewById(R.id.C4);
         C4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C4.setImageResource(drawables[(grid[4].type++) % num_tile_types]);
+                C4.setImageResource(grid[4].getNextImage());
             }
         });
 
         final ImageView C5 = (ImageView) findViewById(R.id.C5);
         C5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C5.setImageResource(drawables[(grid[5].type++) % num_tile_types]);
+                C5.setImageResource(grid[5].getNextImage());
             }
         });
 
         final ImageView C6 = (ImageView) findViewById(R.id.C6);
         C6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C6.setImageResource(drawables[(grid[6].type++) % num_tile_types]);
+                C6.setImageResource(grid[6].getNextImage());
             }
         });
 
         final ImageView C7 = (ImageView) findViewById(R.id.C7);
         C7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C7.setImageResource(drawables[(grid[7].type++) % num_tile_types]);
+                C7.setImageResource(grid[7].getNextImage());
             }
         });
 
         final ImageView C8 = (ImageView) findViewById(R.id.C8);
         C8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C8.setImageResource(drawables[(grid[8].type++) % num_tile_types]);
+                C8.setImageResource(grid[8].getNextImage());
             }
         });
 
         final ImageView C9 = (ImageView) findViewById(R.id.C9);
         C9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C9.setImageResource(drawables[(grid[9].type++) % num_tile_types]);
+                C9.setImageResource(grid[9].getNextImage());
             }
         });
 
         final ImageView C10 = (ImageView) findViewById(R.id.C10);
         C10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C10.setImageResource(drawables[(grid[10].type++) % num_tile_types]);
+                C10.setImageResource(grid[10].getNextImage());
             }
         });
 
         final ImageView C11 = (ImageView) findViewById(R.id.C11);
         C11.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C11.setImageResource(drawables[(grid[11].type++) % num_tile_types]);
+                C11.setImageResource(grid[11].getNextImage());
             }
         });
 
         final ImageView C12 = (ImageView) findViewById(R.id.C12);
         C12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C12.setImageResource(drawables[(grid[12].type++) % num_tile_types]);
+                C12.setImageResource(grid[12].getNextImage());
             }
         });
 
         final ImageView C13 = (ImageView) findViewById(R.id.C13);
         C13.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C13.setImageResource(drawables[(grid[13].type++) % num_tile_types]);
+                C13.setImageResource(grid[13].getNextImage());
             }
         });
 
         final ImageView C14 = (ImageView) findViewById(R.id.C14);
         C14.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C14.setImageResource(drawables[(grid[14].type++) % num_tile_types]);
+                C14.setImageResource(grid[14].getNextImage());
             }
         });
 
         final ImageView C15 = (ImageView) findViewById(R.id.C15);
         C15.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C15.setImageResource(drawables[(grid[15].type++) % num_tile_types]);
+                C15.setImageResource(grid[15].getNextImage());
             }
         });
 
         final ImageView C16 = (ImageView) findViewById(R.id.C16);
         C16.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C16.setImageResource(drawables[(grid[16].type++) % num_tile_types]);
+                C16.setImageResource(grid[16].getNextImage());
             }
         });
 
         final ImageView C17 = (ImageView) findViewById(R.id.C17);
         C17.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C17.setImageResource(drawables[(grid[17].type++) % num_tile_types]);
+                C17.setImageResource(grid[17].getNextImage());
             }
         });
 
         final ImageView C18 = (ImageView) findViewById(R.id.C18);
         C18.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C18.setImageResource(drawables[(grid[18].type++) % num_tile_types]);
+                C18.setImageResource(grid[18].getNextImage());
             }
         });
 
         final ImageView C19 = (ImageView) findViewById(R.id.C19);
         C19.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C19.setImageResource(drawables[(grid[19].type++) % num_tile_types]);
+                C19.setImageResource(grid[19].getNextImage());
             }
         });
 
         final ImageView C20 = (ImageView) findViewById(R.id.C20);
         C20.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C20.setImageResource(drawables[(grid[20].type++) % num_tile_types]);
+                C20.setImageResource(grid[20].getNextImage());
             }
         });
 
         final ImageView C21 = (ImageView) findViewById(R.id.C21);
         C21.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C21.setImageResource(drawables[(grid[21].type++) % num_tile_types]);
+                C21.setImageResource(grid[21].getNextImage());
             }
         });
 
         final ImageView C22 = (ImageView) findViewById(R.id.C22);
         C22.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C22.setImageResource(drawables[(grid[22].type++) % num_tile_types]);
+                C22.setImageResource(grid[22].getNextImage());
             }
         });
 
         final ImageView C23 = (ImageView) findViewById(R.id.C23);
         C23.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C23.setImageResource(drawables[(grid[23].type++) % num_tile_types]);
+                C23.setImageResource(grid[23].getNextImage());
             }
         });
 
         final ImageView C24 = (ImageView) findViewById(R.id.C24);
         C24.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C24.setImageResource(drawables[(grid[24].type++) % num_tile_types]);
+                C24.setImageResource(grid[24].getNextImage());
             }
         });
 
         final ImageView C25 = (ImageView) findViewById(R.id.C25);
         C25.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C25.setImageResource(drawables[(grid[25].type++) % num_tile_types]);
+                C25.setImageResource(grid[25].getNextImage());
             }
         });
 
         final ImageView C26 = (ImageView) findViewById(R.id.C26);
         C26.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C26.setImageResource(drawables[(grid[26].type++) % num_tile_types]);
+                C26.setImageResource(grid[26].getNextImage());
             }
         });
 
         final ImageView C27 = (ImageView) findViewById(R.id.C27);
         C27.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C27.setImageResource(drawables[(grid[27].type++) % num_tile_types]);
+                C27.setImageResource(grid[27].getNextImage());
             }
         });
 
         final ImageView C28 = (ImageView) findViewById(R.id.C28);
         C28.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C28.setImageResource(drawables[(grid[28].type++) % num_tile_types]);
+                C28.setImageResource(grid[28].getNextImage());
             }
         });
 
         final ImageView C29 = (ImageView) findViewById(R.id.C29);
         C29.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C29.setImageResource(drawables[(grid[29].type++) % num_tile_types]);
+                C29.setImageResource(grid[29].getNextImage());
             }
         });
 
         final ImageView C30 = (ImageView) findViewById(R.id.C30);
         C30.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C30.setImageResource(drawables[(grid[30].type++) % num_tile_types]);
+                C30.setImageResource(grid[30].getNextImage());
             }
         });
 
         final ImageView C31 = (ImageView) findViewById(R.id.C31);
         C31.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C31.setImageResource(drawables[(grid[31].type++) % num_tile_types]);
+                C31.setImageResource(grid[31].getNextImage());
             }
         });
 
         final ImageView C32 = (ImageView) findViewById(R.id.C32);
         C32.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C32.setImageResource(drawables[(grid[32].type++) % num_tile_types]);
+                C32.setImageResource(grid[32].getNextImage());
             }
         });
 
         final ImageView C33 = (ImageView) findViewById(R.id.C33);
         C33.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C33.setImageResource(drawables[(grid[33].type++) % num_tile_types]);
+                C33.setImageResource(grid[33].getNextImage());
             }
         });
 
         final ImageView C34 = (ImageView) findViewById(R.id.C34);
         C34.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                C34.setImageResource(drawables[(grid[34].type++) % num_tile_types]);
+                C34.setImageResource(grid[34].getNextImage());
             }
         });
 
         final ImageView C35 = (ImageView) findViewById(R.id.C35);
         C35.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                grid[35].rotateImageType();
-                C35.setImageResource(grid[35].getImageType());
+                C35.setImageResource(grid[35].getNextImage());
+            }
+        });
+
+        C35.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View v) {
+                Toast.makeText(getApplicationContext(), "Long Clicked!", Toast.LENGTH_LONG).show();
+                return true;
             }
         });
 
@@ -420,9 +459,9 @@ public class gameplay extends AppCompatActivity {
 
         */
 
-        final ImageView output = (ImageView) findViewById(R.id.output);
+        final ImageView outputButton = (ImageView) findViewById(R.id.output);
         //output.setImageResource(table.getImageType());
-        output.setOnClickListener(new View.OnClickListener() {
+        outputButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //here to bring up truth table eval
                 Intent eval = new Intent(getApplicationContext(), evaluation.class);
@@ -436,11 +475,13 @@ public class gameplay extends AppCompatActivity {
         final ImageView switchA = (ImageView) findViewById(R.id.inputA);
         switchA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                switches[0].rotateImageType();
-                switchA.setImageResource(switches[0].getImageType());
-                inputNumA = switches[0].getType();
-                table.switchOutputValue(3);
-                output.setImageResource(table.getImageType());
+                //switches[0].rotateImageType();
+                switchA.setImageResource(switches[0].getNextImage());
+                // inputNumA = switches[0].getType();
+
+                //output.switchOutputValue(3);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
 
             }
         });
@@ -449,38 +490,57 @@ public class gameplay extends AppCompatActivity {
         final ImageView switchB = (ImageView) findViewById(R.id.inputB);
         switchB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                switches[1].rotateImageType();
-                switchB.setImageResource(switches[1].getImageType());
-                inputNumB = switches[1].getType();
-                table.switchOutputValue(2);
-                output.setImageResource(table.getImageType());
+                //switches[1].rotateImageType();
+                switchB.setImageResource(switches[1].getNextImage());
+                // inputNumB = switches[1].getType();
+
+                //output.switchOutputValue(2);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
         final ImageView switchC = (ImageView) findViewById(R.id.inputC);
         switchC.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                switches[2].rotateImageType();
-                switchC.setImageResource(switches[2].getImageType());
-                inputNumC = switches[2].getType();
-                table.switchOutputValue(1);
-                output.setImageResource(table.getImageType());
+                //switches[2].rotateImageType();
+                switchC.setImageResource(switches[2].getNextImage());
+                // X inputNumC = switches[2].getType();
+
+                //output.switchOutputValue(1);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
         final ImageView switchD = (ImageView) findViewById(R.id.inputD);
         switchD.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                switches[3].rotateImageType();
-                switchD.setImageResource(switches[3].getImageType());
-                inputNumD = switches[3].getType();
-                table.switchOutputValue(0);
-                output.setImageResource(table.getImageType());
+                //switches[3].rotateImageType();
+                switchD.setImageResource(switches[3].getNextImage());
+                // inputNumD = switches[3].getType();
+
+                //output.switchOutputValue(0);
+                output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                outputButton.setImageResource(output.getImage());
             }
         });
 
 
     }
 
-}
+    public int getCurrRowNum() {
+        String binaryString = "";
+        for(int i = 0; i < 4; i++) {
+            binaryString += switches[i].getType();
+        }
 
+        return(Integer.parseInt(binaryString, 2));
+    }
+
+    public int getOutputValueOfRow(int row){
+        return outputValues[row];
+    }
+
+
+}
