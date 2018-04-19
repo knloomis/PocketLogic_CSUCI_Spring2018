@@ -1,11 +1,24 @@
 package com.pocketlogic.pocketlogic;
 
+import java.util.ArrayList;
+
 public class Tile
 {
     protected int[] drawables;
     protected int type;
+    protected ArrayList<Tile> outputTiles = new ArrayList<Tile>();
+    protected int positionNum;
+
+    public void setPositionNum(int num){
+        this.positionNum = num;
+    }
+
+    public int getPositionNum(){
+        return this.positionNum;
+    }
 
     public int getNext() {
+
         return 0;
     }
 
@@ -13,6 +26,28 @@ public class Tile
         //getNext();
         return R.drawable.hexagon;
 
+    }
+
+    public int getImage(){
+        return R.drawable.hexagon;
+    }
+
+    public void addOutput(Tile newOutput){
+        //outputTiles.add(newOutput);
+        ;
+    }
+
+    public ArrayList<Tile> getOutputs(){
+        //return outputTiles;
+        return null;
+    }
+
+    public void removeOutput(Tile tileToRemove){
+        ;
+    }
+
+    public int getType(){
+        return this.type;
     }
 
     public int eval() {
@@ -113,4 +148,16 @@ public class Tile
 
         return result;
     }
+
+    public boolean changeInputConnection(Tile inputTile){
+        return false;
+    }
+
+    public void changeOutputConnection(Tile outputTile){
+        ;
+    }
+
+    public void clearOutputConnections(){ ; }
+    public void clearInputConnection(Tile inputToRemove){ ; }
+
 }
