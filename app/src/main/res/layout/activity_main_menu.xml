@@ -58,6 +58,7 @@
             android:layout_marginStart="8dp"
             android:backgroundTint="#59a47d"
             android:fontFamily="@font/roboto"
+            android:textStyle="bold"
             android:text="Scores"
             android:textColor="@android:color/white"
             android:textSize="17sp"
@@ -80,6 +81,7 @@
             android:backgroundTint="#59a47d"
             android:fontFamily="@font/roboto"
             android:text="Help"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,11 +99,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#3582e1"
         android:fontFamily="@font/roboto"
-        android:text="Select"
+        android:text="PLAY"
         android:textColor="@android:color/white"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -128,11 +131,21 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="322dp"
-        android:layout_height="580dp"
-        app:srcCompat="@drawable/mascot_0"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="45dp" />
+        android:layout_width="310dp"
+        android:layout_height="442dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315"
+        app:srcCompat="@drawable/mascot_0" />
 
 
 </android.support.constraint.ConstraintLayout>

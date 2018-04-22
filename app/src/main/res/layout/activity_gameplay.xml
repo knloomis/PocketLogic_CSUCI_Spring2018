@@ -9,7 +9,7 @@
     <android.support.design.widget.NavigationView
         android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="#222"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
         app:menu="@menu/drawer_menu"
@@ -31,7 +31,7 @@
     <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="#212223">
 
         <ImageView
             android:id="@+id/underlayer"
@@ -844,15 +844,16 @@
 
         <ImageView
             android:id="@+id/output"
-            android:layout_width="76dp"
-            android:layout_height="85dp"
+            android:layout_width="96dp"
+            android:layout_height="112dp"
+            android:contentDescription="lightbulb"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="@+id/bottomSeparator"
             app:layout_constraintEnd_toStartOf="@+id/D13"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="@+id/C33"
             app:layout_constraintTop_toTopOf="@+id/C30"
-            app:layout_constraintVertical_bias="0.443"
+            app:layout_constraintVertical_bias="0.457"
             app:srcCompat="@drawable/lightbulb_0_unlit" />
 
         <!--
@@ -871,10 +872,12 @@
         -->
 
         <LinearLayout
+            android:id="@+id/lines_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/lines_layout" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
 
 
 </android.support.constraint.ConstraintLayout>
