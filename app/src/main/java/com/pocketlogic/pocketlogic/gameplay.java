@@ -177,8 +177,6 @@ public class gameplay extends AppCompatActivity {
     public void addListeners() {
         final Context context = this;
 
-        //ImageView[] cells = new ImageView[num_grid_tiles];
-        //final ImageView[] final_images = tileImages;
         for(int curr_cell = 0; curr_cell < num_grid_tiles; curr_cell++){
             final int final_curr_cell = curr_cell;
             int resourceID = getGateResourceID(curr_cell);
@@ -198,9 +196,6 @@ public class gameplay extends AppCompatActivity {
                     if(activeTile == null){
                         activeTile = thisTile;
                     }else{
-                        //activeTile.changeOutputConnection(grid[35]);
-                        //grid[35].changeInputConnection(activeTile);
-                        // TilePair currPair = new TilePair(activeTile, thisTile);
 
                         if(activeTile.changeInputConnection(thisTile)){
                             connectedTiles.add(new TilePair(activeTile, thisTile));
@@ -231,6 +226,31 @@ public class gameplay extends AppCompatActivity {
                 startActivity(eval);
             }
         });
+        outputButton.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View v) {
+                Tile thisTile = output;
+                //logic: onLongClick, if no one active, set as active
+                // if someone active, set as their output; OR if was someone's output and clicked them again, remove connection
+                if(activeTile != null){
+
+                    if(thisTile.changeInputConnection(activeTile)){
+                        connectedTiles.add(new TilePair(activeTile, thisTile));
+                        Toast.makeText(getApplicationContext(), "Added pair to list", Toast.LENGTH_SHORT).show();
+                    }else{
+                        connectedTiles.remove(getPairInList(activeTile, thisTile));
+                        Toast.makeText(getApplicationContext(), "Removed pair from list", Toast.LENGTH_SHORT).show();
+                    }
+
+                    drawLines();
+                    activeTile = null;
+
+                }
+
+                return true;
+            }
+        });
+
+
 
         for(int curr_cell = 0; curr_cell < num_switches; curr_cell++) {
             final int final_curr_cell = curr_cell;
@@ -242,6 +262,20 @@ public class gameplay extends AppCompatActivity {
                     switchImages[final_curr_cell].setImageResource(switches[final_curr_cell].getNextImage());
                     output.setValue(getOutputValueOfRow(getCurrRowNum()));
                     outputButton.setImageResource(output.getImage());
+                }
+            });
+
+            switchImages[curr_cell].setOnLongClickListener(new View.OnLongClickListener() {
+                public boolean onLongClick(View v) {
+                    Tile thisTile = switches[final_curr_cell];
+                    //logic: onLongClick, if no one active, set as active
+                    // if someone active, set as their output; OR if was someone's output and clicked them again, remove connection
+                    if(activeTile == null){
+                        activeTile = thisTile;
+                    }
+
+
+                    return true;
                 }
             });
         }
@@ -283,6 +317,7 @@ public class gameplay extends AppCompatActivity {
         //linePaint.setAntiAlias(true);
     }
 
+    // What actually updates all lines shown on the screen
     public void updateLinesDisplayed(){
         lineLayout.setBackgroundDrawable(new BitmapDrawable(canvasBitmap));
     }
@@ -295,7 +330,7 @@ public class gameplay extends AppCompatActivity {
         clearAllLinesDisplayed();
 
         for(TilePair currPair: connectedTiles){
-            Toast.makeText(getApplicationContext(), "Got a pair!", Toast.LENGTH_SHORT).show();
+ //           Toast.makeText(getApplicationContext(), "Got a pair!", Toast.LENGTH_SHORT).show();
             Tile first = currPair.getInputTile();
             Tile second = currPair.getOutputTile();
 
@@ -309,11 +344,14 @@ public class gameplay extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"null!", Toast.LENGTH_SHORT).show();
             }
 
+            int[] img1_coordinates = new int[2];
+
+
 //            //TO DO: change below to dynamically show color of current outputValue of input tile of pair:
             linePaint.setColor(getResources().getColor(R.color.red));
             //Toast.makeText(getApplicationContext(), ""+ firstImage.getX() +"; " + firstImage.getY() + "; " + secondImage.getX() + "; " + secondImage.getY(), Toast.LENGTH_SHORT).show();
 //
-           canvas.drawLine(firstImage.getX(), firstImage.getY(), secondImage.getX(), secondImage.getY(), linePaint);
+           canvas.drawLine((firstImage.getLeft() + firstImage.getWidth())/2.F, (firstImage.getBottom() + firstImage.getHeight())/2.F, (secondImage.getLeft()+ secondImage.getWidth())/2.F, (secondImage.getBottom()+ secondImage.getWidth())/2.F, linePaint);
         }
 
         updateLinesDisplayed();
@@ -437,6 +475,19 @@ public class gameplay extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    public Output getOutput(){
+
+        return output;
+    }
+
+    public int[] getOutputValues(){
+        return outputValues;
+    }
+
+    public Switch[] getInputs(){
+        return switches;
     }
 
 }
