@@ -126,5 +126,13 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="322dp"
+        android:layout_height="580dp"
+        app:srcCompat="@drawable/mascot_0"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="45dp" />
+
 
 </android.support.constraint.ConstraintLayout>
