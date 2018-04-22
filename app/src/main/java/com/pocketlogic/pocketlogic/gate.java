@@ -105,8 +105,14 @@ public class gate extends Tile {
     }
 
     public boolean changeInputConnection(Tile inputTile){
-        if(inputTile == this || this.type == 0 || inputTile.type == 0){
+        if(inputTile == this || this.type == 0){
             return false;
+        }else if(inputTile instanceof gate) {
+            if(inputTile.type == 0){
+                return false;
+            }
+
+
         }
  /*       if(this.type == 0){
             //want remove all output connections of parameter, right?

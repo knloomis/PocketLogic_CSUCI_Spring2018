@@ -16,8 +16,8 @@ import android.widget.Button;
 
 public class evaluation extends AppCompatActivity {
 
-    double height_modifier = .9;
-    double width_modifier = .9;
+    double height_modifier = 1;
+    double width_modifier = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

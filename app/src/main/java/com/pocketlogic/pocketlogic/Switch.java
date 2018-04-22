@@ -50,4 +50,24 @@ public class Switch extends Tile{
         return this.type;
     }
 
+    public void clearOutputConnections(){
+        for(Tile currOutput : outputTiles){
+            currOutput.clearInputConnection(this);
+        }
+    }
+
+    public void addOutput(Tile newOutput){
+        outputTiles.add(newOutput);
+    }
+
+    public void removeOutput(Tile tileToRemove){
+        outputTiles.remove(tileToRemove);
+    }
+
+    public boolean changeInputConnection(Tile inputTile){
+
+        return inputTile.changeInputConnection(this);
+    }
+
+
 }
