@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class evaluation extends AppCompatActivity {
 
     Button win;
+    Button back;
 
     double height_modifier = 1;
     double width_modifier = 1;
@@ -66,7 +67,7 @@ public class evaluation extends AppCompatActivity {
             }
         });
 
-        Button back = (Button) findViewById(R.id.btn_eval_back);
+        back = (Button) findViewById(R.id.btn_eval_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,13 +79,17 @@ public class evaluation extends AppCompatActivity {
     public void showResults(boolean[] results){
         boolean allMatch = true;
         for(boolean result: results){
-            Toast.makeText(getApplicationContext(), "Result: " + result, Toast.LENGTH_LONG).show();
             allMatch &= result;
         }
 
         if(allMatch){
+            Toast.makeText(getApplicationContext(), "Result: true", Toast.LENGTH_LONG).show();
             //code to make finish button visible
             win.setVisibility(View.VISIBLE);
+            back.setVisibility(View.GONE);
+
+        }else{
+            Toast.makeText(getApplicationContext(), "Result: false", Toast.LENGTH_LONG).show();
         }
     }
 }

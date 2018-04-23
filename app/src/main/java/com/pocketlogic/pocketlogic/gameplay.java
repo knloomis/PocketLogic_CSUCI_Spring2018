@@ -78,7 +78,7 @@ public class gameplay extends AppCompatActivity {
             {1, 1, 1, 1},};
 
     //private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
-    private int[] outputValues = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
+    private int[] outputValues = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1};
 
     // Create an array to hold all the gates in the game
     //Level level = new Level();
@@ -225,9 +225,9 @@ public class gameplay extends AppCompatActivity {
                 //here to bring up truth table eval
                 // Maybe instead, run eval really quick here, then send string results to new activity?
                 Intent eval = new Intent(getApplicationContext(), evaluation.class);
-                //boolean[] evalResults = getAllEvalResults();
+                boolean[] evalResults = getAllEvalResults();
 
-                boolean[] evalResults = fakeResults();
+               // boolean[] evalResults = fakeResults();
                 for(int i = 0; i < Math.pow(2, num_switches); i++){
                     eval.putExtra("" + i, evalResults[i]);
                 }

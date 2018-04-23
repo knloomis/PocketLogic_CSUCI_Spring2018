@@ -3,23 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#222">
 
     <TextView
         android:id="@+id/winText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/roboto"
         android:text="You Won!"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/white"
         android:textSize="42sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/winFace"
         android:layout_width="150sp"
         android:layout_height="150sp"
         android:layout_marginEnd="16dp"
@@ -40,33 +41,35 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/winFace">
 
         <TextView
             android:id="@+id/yourScoreText"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/roboto"
             android:text="Your Score:"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/white"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="251dp" />
+            tools:layout_editor_absoluteY="251dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/yourScoreNumText"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/roboto"
             android:text="300"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/white"
             android:textSize="30sp"
             tools:layout_editor_absoluteX="186dp"
-            tools:layout_editor_absoluteY="251dp" />
+            tools:layout_editor_absoluteY="251dp"
+            android:visibility="gone"/>
 
 
     </LinearLayout>
@@ -88,26 +91,28 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/roboto"
             android:text="High Score:"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/white"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="251dp" />
+            tools:layout_editor_absoluteY="251dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/highScoreNumText"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/roboto"
             android:text="400"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/white"
             android:textSize="30sp"
             tools:layout_editor_absoluteX="186dp"
-            tools:layout_editor_absoluteY="251dp" />
+            tools:layout_editor_absoluteY="251dp"
+            android:visibility="gone"/>
 
 
     </LinearLayout>
@@ -120,7 +125,8 @@
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayoutTop"
-        app:srcCompat="@drawable/line" />
+        app:srcCompat="@drawable/line"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/lineBottom"
@@ -130,7 +136,8 @@
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayoutBottom"
-        app:srcCompat="@drawable/line" />
+        app:srcCompat="@drawable/line"
+        android:visibility="gone"/>
 
 
     <LinearLayout
@@ -142,7 +149,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" >
 
         <Button
             android:id="@+id/btn_win_main"
@@ -151,8 +158,8 @@
             android:layout_marginBottom="16dp"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:fontFamily="@font/aclonica"
+            android:backgroundTint="#59a47d"
+            android:fontFamily="@font/roboto"
             android:text="Main Menu"
             android:textColor="@android:color/white"
             android:textSize="18sp"
@@ -166,8 +173,8 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:fontFamily="@font/aclonica"
+            android:backgroundTint="#59a47d"
+            android:fontFamily="@font/roboto"
             android:text="Next Level"
             android:textColor="@android:color/white"
             android:textSize="18sp"
