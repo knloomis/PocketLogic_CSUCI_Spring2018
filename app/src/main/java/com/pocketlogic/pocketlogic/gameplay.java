@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
 import android.text.Layout;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
@@ -112,6 +113,7 @@ public class gameplay extends AppCompatActivity {
 
         for(int index = 0; index < num_switches; index++){
             switches[index] = new Switch();
+            switches[index].setPositionNum(index);
         }
 
         output = new Output(getOutputValueOfRow(getCurrRowNum()));
@@ -186,6 +188,18 @@ public class gameplay extends AppCompatActivity {
             tileImages[curr_cell].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     tileImages[final_curr_cell].setImageResource(grid[final_curr_cell].getNextImage());
+                    if(grid[final_curr_cell].getType() == 0){
+                        TilePair pair = getPairWithTileInList(grid[final_curr_cell]);
+                        if(pair != null){
+                            //TO DO: looks like this is not actually removing the connection
+                            pair.getOutputTile().changeInputConnection(pair.getInputTile());
+
+                            // Visually, removes the line between a pair if one of them becomes a blank tile
+                            connectedTiles.remove(getPairWithTileInList(grid[final_curr_cell]));
+                            drawLines();
+                        }
+
+                    }
                 }
             });
 
@@ -271,6 +285,7 @@ public class gameplay extends AppCompatActivity {
                     switchImages[final_curr_cell].setImageResource(switches[final_curr_cell].getNextImage());
                     output.setValue(getOutputValueOfRow(getCurrRowNum()));
                     outputButton.setImageResource(output.getImage());
+
                 }
             });
 
@@ -324,6 +339,8 @@ public class gameplay extends AppCompatActivity {
         linePaint.setColor(Color.RED);
         linePaint.setStrokeWidth(10);
         //linePaint.setAntiAlias(true);
+
+
     }
 
     // What actually updates all lines shown on the screen
@@ -343,11 +360,26 @@ public class gameplay extends AppCompatActivity {
             Tile first = currPair.getInputTile();
             Tile second = currPair.getOutputTile();
 
-            int firstNum = first.getPositionNum();
-            int secondNum = second.getPositionNum();
+/*
 
-            ImageView firstImage = tileImages[firstNum];
-            ImageView secondImage = tileImages[secondNum];
+
+            ImageView firstImage;
+            ImageView secondImage;
+
+            if(first instanceof Switch){
+                firstImage = switchImages[first.getPositionNum()];
+            }else if(first instanceof Gate){
+                firstImage = tileImages[first.getPositionNum()];
+            }else{
+                firstImage = outputButton;
+            }
+
+            if(second instanceof Switch){
+                secondImage = switchImages[first.getPositionNum()];
+            }else{
+                secondImage = tileImages[first.getPositionNum()];
+            }
+
 
             if(firstImage == null ){
                 Toast.makeText(getApplicationContext(),"null!", Toast.LENGTH_SHORT).show();
@@ -355,12 +387,13 @@ public class gameplay extends AppCompatActivity {
 
             int[] img1_coordinates = new int[2];
 
+     */
 
 //            //TO DO: change below to dynamically show color of current outputValue of input tile of pair:
             linePaint.setColor(getResources().getColor(R.color.red));
-            //Toast.makeText(getApplicationContext(), ""+ firstImage.getX() +"; " + firstImage.getY() + "; " + secondImage.getX() + "; " + secondImage.getY(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), ""+ first.getX() +"; " + first.getY() + "; " + second.getX() + "; " + second.getY(), Toast.LENGTH_SHORT).show();
 //
-           canvas.drawLine((firstImage.getLeft() + firstImage.getWidth())/2.F, (firstImage.getBottom() + firstImage.getHeight())/2.F, (secondImage.getLeft()+ secondImage.getWidth())/2.F, (secondImage.getBottom()+ secondImage.getWidth())/2.F, linePaint);
+           canvas.drawLine(first.getX(), first.getY(), second.getX(), second.getY(), linePaint);
         }
 
         updateLinesDisplayed();
@@ -534,8 +567,18 @@ public class gameplay extends AppCompatActivity {
         return results;
     }
 
-    boolean[] fakeResults(){
+    public boolean[] fakeResults(){
         return new boolean[] {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
     }
+
+    public TilePair getPairWithTileInList(Tile tile){
+        for(TilePair currPair: connectedTiles){
+            if(currPair.hasTile(tile)){
+                return currPair;
+            }
+        }
+        return null;
+    }
+
 
 }

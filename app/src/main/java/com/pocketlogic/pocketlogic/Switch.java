@@ -69,5 +69,24 @@ public class Switch extends Tile{
         return inputTile.changeInputConnection(this);
     }
 
+    public int getX(){
+        switch(positionNum){
+            case 0:
+                return 525;
+            case 1:
+                return 1075;
+            case 2:
+                return 1625;
+            case 3:
+                return 2175;
+            default:
+                return 0;
+        }
+    }
+
+    public int getY(){
+        return 50;
+    }
+
 
 }

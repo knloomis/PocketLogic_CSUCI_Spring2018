@@ -104,4 +104,12 @@ public class Output extends Tile {
         return addedAsInput;
     }
 
+    public int getX(){
+        return 1600;
+    }
+
+    public int getY(){
+        return 1125;
+    }
+
 }
