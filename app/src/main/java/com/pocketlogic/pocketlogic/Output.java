@@ -47,7 +47,7 @@ public class Output extends Tile {
     }
 
     public boolean currentValueMatches() {
-        return (this.type == eval());
+        return (this.type == this.eval());
     }
 
     public int eval()

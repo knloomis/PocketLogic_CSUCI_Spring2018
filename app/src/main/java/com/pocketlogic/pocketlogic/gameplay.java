@@ -77,7 +77,8 @@ public class gameplay extends AppCompatActivity {
             {1, 1, 0, 1}, {1, 1, 1, 0},
             {1, 1, 1, 1},};
 
-    private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
+    //private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
+    private int[] outputValues = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
 
     // Create an array to hold all the gates in the game
     //Level level = new Level();
@@ -222,7 +223,15 @@ public class gameplay extends AppCompatActivity {
         outputButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //here to bring up truth table eval
+                // Maybe instead, run eval really quick here, then send string results to new activity?
                 Intent eval = new Intent(getApplicationContext(), evaluation.class);
+                //boolean[] evalResults = getAllEvalResults();
+
+                boolean[] evalResults = fakeResults();
+                for(int i = 0; i < Math.pow(2, num_switches); i++){
+                    eval.putExtra("" + i, evalResults[i]);
+                }
+
                 startActivity(eval);
             }
         });
@@ -488,6 +497,45 @@ public class gameplay extends AppCompatActivity {
 
     public Switch[] getInputs(){
         return switches;
+    }
+
+    public boolean[] getAllEvalResults(){
+        for(Switch currInput: switches) {
+            currInput.setType(0);
+        }
+        switches[3].setType(1);
+        output.setValue(getOutputValueOfRow(getCurrRowNum()));
+
+        boolean[] results = new boolean[(int) Math.pow(2, num_switches)];
+        int currResultIndex = 0;
+
+        //boolean allMatch = true;
+
+        for(int firstBitCount = 0; firstBitCount < 2; firstBitCount++) {
+            for(int secondBitCount = 0; secondBitCount < 2; secondBitCount++) {
+                for(int thirdBitCount = 0; thirdBitCount < 2; thirdBitCount++) {
+                    for(int fourthBitCount = 0; fourthBitCount < 2; fourthBitCount++) {
+                        switches[3].getNext();
+                        output.setValue(getOutputValueOfRow(getCurrRowNum()));
+                        results[currResultIndex] = output.currentValueMatches();
+                        currResultIndex++;
+
+                    }
+                    // CODE HERE: switch third bit
+                    switches[2].getNext();
+                }
+                //CODE HERE: switch second bit
+                switches[1].getNext();
+            }
+            //CODE HERE: switch first bit
+            switches[0].getNext();
+        }
+
+        return results;
+    }
+
+    boolean[] fakeResults(){
+        return new boolean[] {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true};
     }
 
 }

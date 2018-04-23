@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by Vitaliy Six on 2018/3/10.
@@ -16,11 +17,22 @@ import android.widget.Button;
 
 public class evaluation extends AppCompatActivity {
 
+    Button win;
+
     double height_modifier = 1;
     double width_modifier = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        boolean[] resultsFromPrevious = new boolean[(int)Math.pow(2,4)];
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            for(int i = 0; i < Math.pow(2,4); i++){
+                resultsFromPrevious[i] = extras.getBoolean("" + i);
+            }
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evaluation);
         addListeners();
@@ -38,13 +50,15 @@ public class evaluation extends AppCompatActivity {
         params.x=0;
         params.y=-20;
         getWindow().setAttributes(params);
+
+        showResults(resultsFromPrevious);
     }
 
     public void addListeners() {
         final Context context = this;
 
-        Button menu= (Button) findViewById(R.id.btn_eval_close);
-        menu.setOnClickListener(new View.OnClickListener() {
+        win = (Button) findViewById(R.id.btn_eval_close);
+        win.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, winScreen.class);
@@ -59,5 +73,18 @@ public class evaluation extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void showResults(boolean[] results){
+        boolean allMatch = true;
+        for(boolean result: results){
+            Toast.makeText(getApplicationContext(), "Result: " + result, Toast.LENGTH_LONG).show();
+            allMatch &= result;
+        }
+
+        if(allMatch){
+            //code to make finish button visible
+            win.setVisibility(View.VISIBLE);
+        }
     }
 }
