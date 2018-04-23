@@ -366,7 +366,7 @@ public class gameplay extends AppCompatActivity {
             Tile currInput = currPair.getInputTile();
             Tile currOutput = currPair.getOutputTile();
 
-            Toast.makeText(getApplicationContext(), "Input value: " + currInput.eval(), Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(), "Input value: " + currInput.eval(), Toast.LENGTH_SHORT).show();
 
             int inputValue = currInput.eval();
             if(inputValue == 0){

@@ -46,7 +46,7 @@
                 android:layout_height="40dp"
                 android:fontFamily="@font/aclonica"
                 android:text="How to Play"
-                android:textColor="@android:color/holo_blue_light"
+                android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="115dp"
                 tools:layout_editor_absoluteY="93dp" />
@@ -83,7 +83,7 @@
                 android:layout_height="40dp"
                 android:fontFamily="@font/aclonica"
                 android:text="Logic Gates Guide"
-                android:textColor="@android:color/holo_blue_light"
+                android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="115dp"
                 tools:layout_editor_absoluteY="93dp" />

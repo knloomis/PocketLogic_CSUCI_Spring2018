@@ -15,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/aclonica"
         android:text="High Scores"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorAccent"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +44,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 1: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -54,10 +54,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="300"
+                android:fontFamily="@font/roboto"
+                android:text="-"
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -65,10 +65,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -76,9 +76,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="300"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
 
@@ -95,9 +95,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 2: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -105,10 +105,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="10"
+                android:fontFamily="@font/roboto"
+                android:text="-"
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -116,10 +116,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -127,9 +127,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="500"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -145,9 +145,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 3: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -155,10 +155,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="600"
+                android:fontFamily="@font/roboto"
+                android:text="-"
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -166,10 +166,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -177,9 +177,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="600"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -195,9 +195,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 4: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -205,10 +205,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -216,10 +216,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -227,9 +227,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="300"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -245,9 +245,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 5: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -255,10 +255,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -266,10 +266,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -277,9 +277,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="400"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -295,9 +295,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 6: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -305,10 +305,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -316,10 +316,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -327,9 +327,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="200"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -345,9 +345,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 7: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -355,10 +355,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -366,10 +366,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -377,9 +377,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="700"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -395,9 +395,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 8: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -405,10 +405,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -416,10 +416,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -427,9 +427,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="500"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -445,9 +445,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 9: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -455,10 +455,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -466,10 +466,10 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -477,9 +477,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="450"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>
@@ -495,9 +495,9 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="  Level 10: "
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -505,10 +505,10 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="- "
                 android:textAlignment="textEnd"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
             <TextView
@@ -516,10 +516,9 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="/"
                 android:textAlignment="center"
-                android:textColor="@android:color/holo_blue_light"
                 android:textSize="24sp" />
 
             <TextView
@@ -527,9 +526,9 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/roboto"
                 android:text="200"
-                android:textColor="@android:color/holo_blue_light"
+
                 android:textSize="24sp" />
 
         </LinearLayout>

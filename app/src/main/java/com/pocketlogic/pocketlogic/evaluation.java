@@ -83,13 +83,13 @@ public class evaluation extends AppCompatActivity {
         }
 
         if(allMatch){
-            Toast.makeText(getApplicationContext(), "Result: true", Toast.LENGTH_LONG).show();
+       //     Toast.makeText(getApplicationContext(), "Result: true", Toast.LENGTH_LONG).show();
             //code to make finish button visible
             win.setVisibility(View.VISIBLE);
             back.setVisibility(View.GONE);
 
         }else{
-            Toast.makeText(getApplicationContext(), "Result: false", Toast.LENGTH_LONG).show();
+        //    Toast.makeText(getApplicationContext(), "Result: false", Toast.LENGTH_LONG).show();
         }
     }
 }
