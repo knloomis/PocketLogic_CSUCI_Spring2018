@@ -105,8 +105,14 @@ public class gate extends Tile {
     }
 
     public boolean changeInputConnection(Tile inputTile){
-        if(inputTile == this || this.type == 0 || inputTile.type == 0){
+        if(inputTile == this || this.type == 0){
             return false;
+        }else if(inputTile instanceof gate) {
+            if(inputTile.type == 0){
+                return false;
+            }
+
+
         }
  /*       if(this.type == 0){
             //want remove all output connections of parameter, right?
@@ -180,6 +186,102 @@ public class gate extends Tile {
         outputTiles.remove(tileToRemove);
     }
 
+    public int getCellRowNum(){
+        if(positionNum >= 32){
+            return 7;
+        }else if(positionNum >= 27){
+            return 6;
+        }else if(positionNum >= 23){
+            return 5;
+        }else if(positionNum >= 18){
+            return 4;
+        }else if(positionNum >= 14){
+            return 3;
+        }else if(positionNum >= 9){
+            return 2;
+        }else if(positionNum >= 5){
+            return 1;
+        }else if(positionNum >= 0){
+            return 0;
+        }
+        return 0;
+    }
 
+    public int getX(){
+
+        switch(this.getCellColNum()){
+            case 0: return 250;
+            case 1: return 525;
+            case 2: return 800;
+            case 3: return 1075;
+            case 4: return 1350;
+            case 5: return 1625;
+            case 6: return 1900;
+            case 7: return 2175;
+            case 8: return 2450;
+            default: return 0;
+        }
+    }
+
+    public int getY(){
+        switch(this.getCellRowNum()){
+            case 0: return 200;
+            case 1: return 320;
+            case 2: return 450;
+            case 3: return 580;
+            case 4: return 720;
+            case 5: return 860;
+            case 6: return 1000;
+            case 7: return 1125;
+            default: return 0;
+        }
+    }
+
+    public int getCellColNum(){
+ /*       if((positionNum % 9) == 0){
+            return 0;
+        }else if(((positionNum - 1) % 9) == 0){
+            return 1;
+        }else if(((positionNum - 2) % 9) == 0){
+            return 2;
+        }else if(((positionNum - 3) % 9) == 0){
+            return 3;
+        }else if(((positionNum - 4) % 9) == 0){
+            return 4;
+        }else if(((positionNum - 5) % 9) == 0){
+            return 5;
+        }else if(((positionNum - 6) % 9) == 0){
+            return 6;
+        }else if(((positionNum - 7) % 9) == 0){
+            return 7;
+        }else if(((positionNum - 8) % 9) == 0){
+            return 8;
+        }
+        */
+        if (positionNum == 0 || positionNum == 9 || positionNum == 18 || positionNum == 27) {
+            return 0;
+        } else if (positionNum == 1 || positionNum == 10 || positionNum == 19 || positionNum == 28) {
+            return 2;
+        } else if (positionNum == 2 || positionNum == 11 || positionNum == 20 || positionNum == 29) {
+            return 4;
+        } else if (positionNum == 3 || positionNum == 12 || positionNum == 21 || positionNum == 30) {
+            return 6;
+        } else if (positionNum == 4 || positionNum == 13 || positionNum == 22 || positionNum == 31) {
+            return 8;
+        } else if (positionNum == 5 || positionNum == 14 || positionNum == 23 || positionNum == 32) {
+            return 1;
+        } else if (positionNum == 6 || positionNum == 15 || positionNum == 24 || positionNum == 33) {
+            return 3;
+        } else if (positionNum == 7 || positionNum == 16 || positionNum == 25 || positionNum == 34) {
+            return 5;
+        } else if (positionNum == 8 || positionNum == 17 || positionNum == 26 || positionNum == 35) {
+            return 7;
+        }
+        return 0;
+    }
+
+    public String getClassType(){
+        return "Gate";
+    }
 
 }

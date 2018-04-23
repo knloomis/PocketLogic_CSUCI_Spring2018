@@ -160,4 +160,16 @@ public class Tile
     public void clearOutputConnections(){ ; }
     public void clearInputConnection(Tile inputToRemove){ ; }
 
+    public int getX(){
+        return 0;
+    }
+
+    public int getY(){
+        return 0;
+    }
+
+    public String getClassType(){
+        return "Tile";
+    }
+
 }

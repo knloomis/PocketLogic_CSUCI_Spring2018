@@ -24,4 +24,8 @@ public class TilePair {
     public boolean pairMatches(Tile first, Tile second){
         return(first == inputTile && second == outputTile);
     }
+
+    public boolean hasTile(Tile tile){
+        return (inputTile == tile || outputTile == tile);
+    }
 }

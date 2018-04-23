@@ -201,7 +201,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -263,7 +263,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -387,7 +387,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -573,7 +573,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -697,7 +697,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -759,7 +759,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -883,7 +883,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="1"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>
@@ -1069,7 +1069,7 @@
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="20sp" />
         </TableRow>

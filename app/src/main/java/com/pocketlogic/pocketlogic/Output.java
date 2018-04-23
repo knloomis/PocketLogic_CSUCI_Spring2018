@@ -47,7 +47,7 @@ public class Output extends Tile {
     }
 
     public boolean currentValueMatches() {
-        return (this.type == eval());
+        return (this.type == this.eval());
     }
 
     public int eval()
@@ -67,6 +67,53 @@ public class Output extends Tile {
 
     public ArrayList<Tile> getOutputs(){
         return null;
+    }
+
+    public void clearOutputConnections(){
+        for(Tile currOutput : outputTiles){
+            currOutput.clearInputConnection(this);
+        }
+    }
+
+    public boolean changeInputConnection(Tile inputTile){
+        if(inputTile == this){
+            return false;
+        }else if(inputTile instanceof gate) {
+            if(inputTile.type == 0){
+                return false;
+            }
+        }
+
+        boolean addedAsInput = false;
+        //idea:
+        //1. if highlight self, then touch self, do nothing; OR if are an empty block, do nothing
+        //2. if clicked second and first guy was already one of the inputs, delete that connection
+        //3. else if is not one of connections and there's an empty connection, set as that connection
+
+        if(inputTile == input){
+            input = null;
+            inputTile.removeOutput(this);
+
+        }else{
+            if(input == null){
+                input = inputTile;
+                input.addOutput(this);
+                addedAsInput = true;
+            }
+        }
+        return addedAsInput;
+    }
+
+    public int getX(){
+        return 1600;
+    }
+
+    public int getY(){
+        return 1125;
+    }
+
+    public String getClassType(){
+        return "Output";
     }
 
 }

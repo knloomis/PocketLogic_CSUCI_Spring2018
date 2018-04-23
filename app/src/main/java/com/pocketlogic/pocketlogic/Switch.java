@@ -50,4 +50,47 @@ public class Switch extends Tile{
         return this.type;
     }
 
+    public void clearOutputConnections(){
+        for(Tile currOutput : outputTiles){
+            currOutput.clearInputConnection(this);
+        }
+    }
+
+    public void addOutput(Tile newOutput){
+        outputTiles.add(newOutput);
+    }
+
+    public void removeOutput(Tile tileToRemove){
+        outputTiles.remove(tileToRemove);
+    }
+
+    public boolean changeInputConnection(Tile inputTile){
+
+        return inputTile.changeInputConnection(this);
+    }
+
+    public int getX(){
+        switch(positionNum){
+            case 0:
+                return 525;
+            case 1:
+                return 1075;
+            case 2:
+                return 1625;
+            case 3:
+                return 2175;
+            default:
+                return 0;
+        }
+    }
+
+    public int getY(){
+        return 50;
+    }
+
+    public String getClassType(){
+        return "Switch";
+    }
+
+
 }

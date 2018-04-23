@@ -7,4 +7,6 @@
     <color name="green">#1a5113</color>
     <color name="red">#FFD5D5</color>
     <color name="darkBackground">#1d1d1e</color>
+    <color name="switch_purple">#9878db</color>
+    <color name="switch_green">#3adb86</color>
 </resources>
