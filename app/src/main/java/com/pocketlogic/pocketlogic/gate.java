@@ -280,4 +280,8 @@ public class gate extends Tile {
         return 0;
     }
 
+    public String getClassType(){
+        return "Gate";
+    }
+
 }

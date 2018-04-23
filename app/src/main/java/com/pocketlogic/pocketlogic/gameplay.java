@@ -79,7 +79,7 @@ public class gameplay extends AppCompatActivity {
             {1, 1, 1, 1},};
 
     //private int[] outputValues = {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0};
-    private int[] outputValues = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1};
+    private int[] outputValues = {0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1};
 
     // Create an array to hold all the gates in the game
     //Level level = new Level();
@@ -179,6 +179,7 @@ public class gameplay extends AppCompatActivity {
 
     public void addListeners() {
         final Context context = this;
+        final ImageView outputButton = (ImageView) findViewById(R.id.output);
 
         for(int curr_cell = 0; curr_cell < num_grid_tiles; curr_cell++){
             final int final_curr_cell = curr_cell;
@@ -214,11 +215,13 @@ public class gameplay extends AppCompatActivity {
 
                         if(activeTile.changeInputConnection(thisTile)){
                             connectedTiles.add(new TilePair(activeTile, thisTile));
-                            Toast.makeText(getApplicationContext(), "Added pair to list", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Added pair to list", Toast.LENGTH_SHORT).show();
                         }else{
                             connectedTiles.remove(getPairInList(activeTile, thisTile));
-                            Toast.makeText(getApplicationContext(), "Removed pair from list", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Removed pair from list", Toast.LENGTH_SHORT).show();
                         }
+
+                        outputButton.setImageResource(output.getImage());
 
                         drawLines();
                         activeTile = null;
@@ -232,7 +235,6 @@ public class gameplay extends AppCompatActivity {
             });
         }
 
-        final ImageView outputButton = (ImageView) findViewById(R.id.output);
         //output.setImageResource(table.getImageType());
         outputButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -258,11 +260,13 @@ public class gameplay extends AppCompatActivity {
 
                     if(thisTile.changeInputConnection(activeTile)){
                         connectedTiles.add(new TilePair(activeTile, thisTile));
-                        Toast.makeText(getApplicationContext(), "Added pair to list", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Added pair to list", Toast.LENGTH_SHORT).show();
                     }else{
                         connectedTiles.remove(getPairInList(activeTile, thisTile));
-                        Toast.makeText(getApplicationContext(), "Removed pair from list", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Removed pair from list", Toast.LENGTH_SHORT).show();
                     }
+
+                    outputButton.setImageResource(output.getImage());
 
                     drawLines();
                     activeTile = null;
@@ -285,6 +289,8 @@ public class gameplay extends AppCompatActivity {
                     switchImages[final_curr_cell].setImageResource(switches[final_curr_cell].getNextImage());
                     output.setValue(getOutputValueOfRow(getCurrRowNum()));
                     outputButton.setImageResource(output.getImage());
+
+                    drawLines();
 
                 }
             });
@@ -336,7 +342,7 @@ public class gameplay extends AppCompatActivity {
         canvas = new Canvas(canvasBitmap);
 
         linePaint = new Paint();
-        linePaint.setColor(Color.RED);
+        linePaint.setColor(Color.GRAY);
         linePaint.setStrokeWidth(10);
         //linePaint.setAntiAlias(true);
 
@@ -357,43 +363,25 @@ public class gameplay extends AppCompatActivity {
 
         for(TilePair currPair: connectedTiles){
  //           Toast.makeText(getApplicationContext(), "Got a pair!", Toast.LENGTH_SHORT).show();
-            Tile first = currPair.getInputTile();
-            Tile second = currPair.getOutputTile();
+            Tile currInput = currPair.getInputTile();
+            Tile currOutput = currPair.getOutputTile();
 
-/*
+            Toast.makeText(getApplicationContext(), "Input value: " + currInput.eval(), Toast.LENGTH_SHORT).show();
 
-
-            ImageView firstImage;
-            ImageView secondImage;
-
-            if(first instanceof Switch){
-                firstImage = switchImages[first.getPositionNum()];
-            }else if(first instanceof Gate){
-                firstImage = tileImages[first.getPositionNum()];
+            int inputValue = currInput.eval();
+            if(inputValue == 0){
+                linePaint.setColor(getResources().getColor(R.color.switch_green));
+            }else if(inputValue == 1){
+                linePaint.setColor(getResources().getColor(R.color.switch_purple));
             }else{
-                firstImage = outputButton;
-            }
-
-            if(second instanceof Switch){
-                secondImage = switchImages[first.getPositionNum()];
-            }else{
-                secondImage = tileImages[first.getPositionNum()];
+                linePaint.setColor(Color.GRAY);
             }
 
 
-            if(firstImage == null ){
-                Toast.makeText(getApplicationContext(),"null!", Toast.LENGTH_SHORT).show();
-            }
 
-            int[] img1_coordinates = new int[2];
-
-     */
-
-//            //TO DO: change below to dynamically show color of current outputValue of input tile of pair:
-            linePaint.setColor(getResources().getColor(R.color.red));
-            Toast.makeText(getApplicationContext(), ""+ first.getX() +"; " + first.getY() + "; " + second.getX() + "; " + second.getY(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), ""+ currInput.getX() +"; " + currInput.getY() + "; " + currOutput.getX() + "; " + currOutput.getY(), Toast.LENGTH_SHORT).show();
 //
-           canvas.drawLine(first.getX(), first.getY(), second.getX(), second.getY(), linePaint);
+           canvas.drawLine(currInput.getX(), currInput.getY(), currOutput.getX(), currOutput.getY(), linePaint);
         }
 
         updateLinesDisplayed();

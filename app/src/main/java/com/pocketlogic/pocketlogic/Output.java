@@ -112,4 +112,8 @@ public class Output extends Tile {
         return 1125;
     }
 
+    public String getClassType(){
+        return "Output";
+    }
+
 }

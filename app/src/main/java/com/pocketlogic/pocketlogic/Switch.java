@@ -88,5 +88,9 @@ public class Switch extends Tile{
         return 50;
     }
 
+    public String getClassType(){
+        return "Switch";
+    }
+
 
 }

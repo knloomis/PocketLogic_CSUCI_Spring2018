@@ -168,4 +168,8 @@ public class Tile
         return 0;
     }
 
+    public String getClassType(){
+        return "Tile";
+    }
+
 }
