@@ -27,7 +27,7 @@ public class selectLevel2 extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, gameplay.class);
+                Intent intent = new Intent(context, activity.class);
                 startActivity(intent);
             }
         });

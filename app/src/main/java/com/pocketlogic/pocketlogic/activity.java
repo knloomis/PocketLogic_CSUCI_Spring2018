@@ -1,6 +1,104 @@
 package com.pocketlogic.pocketlogic;
 
 
+import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+
+public class activity extends AppCompatActivity {
+
+    private GameDirector gameDirector;
+    NavigationView rightNavigationView;
+    NavigationView leftNavigationView;
+    DrawerLayout nav_drawer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_gameplay);
+
+       // setUpNavDrawers();
+
+        gameDirector = new GameDirector(this,this);
+
+    }
+
+    public void tileClick(View tileImgView) {
+        gameDirector.tileClick(tileImgView.getTag().toString());
+    }
+
+    public void tileSelect(View choiceImgView){
+        gameDirector.tileSelect(choiceImgView.getTag().toString().split("_")[1]);
+    }
+
+    public void switchSelect(View choiceImgView){
+        gameDirector.switchSelect(choiceImgView.getTag().toString().split("_")[1]);
+    }
+
+    public void setUpNavDrawers(){
+
+        nav_drawer = (DrawerLayout) findViewById(R.id.nav_drawer_layout);
+        leftNavigationView = (NavigationView) findViewById(R.id.nav_view_left);
+        leftNavigationView.bringToFront();
+
+        leftNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                // Handle Left navigation view item clicks here.
+                int id = item.getItemId();
+
+                switch(id){
+
+                    case R.id.drawerHelp:
+                        Intent help = new Intent(activity.this, help.class);
+                        startActivity(help);
+                        overridePendingTransition(0,0);
+                        help.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        break;
+                    case R.id.drawerRestart:
+                        Intent restart = new Intent(activity.this, RestartConfirmPopupActivity.class);
+                        startActivity(restart);
+                        overridePendingTransition(0,0);
+                        restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        break;
+                    case R.id.drawerQuit:
+                        Intent quit = new Intent(activity.this, QuitConfirmPopupActivity.class);
+                        startActivity(quit);
+                        overridePendingTransition(0,0);
+                        quit.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        break;
+                    default:
+                        break;
+                }
+
+                nav_drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
+        rightNavigationView = (NavigationView) findViewById(R.id.nav_view_right);
+        rightNavigationView.bringToFront();
+        rightNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                // Handle Right navigation view item clicks here.
+                int id = item.getItemId();
+
+                nav_drawer.closeDrawer(GravityCompat.END);
+                return true;
+            }
+        });
+    }
+
+}
+
+/*
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -26,7 +124,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/*
+
 //COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occurr...
 
 import android.content.Context;
@@ -44,9 +142,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
- */
 
-public class gameplay extends AppCompatActivity {
+
+public class activity extends AppCompatActivity {
+ */ /*
     NavigationView rightNavigationView;
     NavigationView leftNavigationView;
     DrawerLayout drawer;
@@ -103,8 +202,8 @@ public class gameplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
-        //addListeners();
-
+  */      //addListeners();
+/*
         for (int index = 0; index < num_grid_tiles; index++)
         {
             grid[index] = new gate();
@@ -176,7 +275,7 @@ public class gameplay extends AppCompatActivity {
         });
 
     }
-
+            *//*
     public void addListeners() {
         final Context context = this;
         final ImageView outputButton = (ImageView) findViewById(R.id.output);
@@ -569,4 +668,4 @@ public class gameplay extends AppCompatActivity {
     }
 
 
-}
+}*/

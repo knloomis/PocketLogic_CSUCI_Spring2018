@@ -2,7 +2,6 @@ package com.pocketlogic.pocketlogic;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -38,7 +37,7 @@ public class RestartConfirmPopupActivity extends Activity {
             @Override
             public void onClick(View view){
                 //finish();
-                Intent restart = new Intent(getApplicationContext(), gameplay.class);
+                Intent restart = new Intent(getApplicationContext(), activity.class);
                 startActivity(restart);
                 overridePendingTransition(0,0);
                 restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
