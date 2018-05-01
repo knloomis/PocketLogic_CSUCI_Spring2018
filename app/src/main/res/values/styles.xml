@@ -23,4 +23,11 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
+    <style name="TopMenuStyle" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">24sp</item><!-- text size in menu-->
+        <item name="android:listPreferredItemHeightSmall">100dp</item><!-- item size in menu-->
+        <item name="android:height">10dp</item>
+
+    </style>
+
 </resources>

@@ -389,13 +389,13 @@ public class gameplay extends AppCompatActivity {
     public int getSwitchResourceID(int num){
         switch(num){
             case 0:
-                return R.id.inputA;
+                return R.id.switch_1;
             case 1:
-                return R.id.inputB;
+                return R.id.switch_2;
             case 2:
-                return R.id.inputC;
+                return R.id.switch_3;
             case 3:
-                return R.id.inputD;
+                return R.id.switch_4;
             default:
                 return 0;
         }
@@ -467,13 +467,13 @@ public class gameplay extends AppCompatActivity {
             case 31:
                 return R.id.C31;
             case 32:
-                return R.id.tile_14;
+                return R.id.D14;
             case 33:
-                return R.id.tile_24;
+                return R.id.D15;
             case 34:
-                return R.id.tile_34;
+                return R.id.D16;
             case 35:
-                return R.id.tile_44;
+                return R.id.D17;
             default:
                 return 0;
         }
@@ -562,6 +562,27 @@ public class gameplay extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    public void helpPopup(){
+        Intent help = new Intent(gameplay.this, help.class);
+        startActivity(help);
+        overridePendingTransition(0,0);
+        help.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+    }
+
+    public void restartPopup(){
+        Intent restart = new Intent(gameplay.this, RestartConfirmPopupActivity.class);
+        startActivity(restart);
+        overridePendingTransition(0,0);
+        restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+    }
+
+    public void quitPopup(){
+        Intent quit = new Intent(gameplay.this, QuitConfirmPopupActivity.class);
+        startActivity(quit);
+        overridePendingTransition(0,0);
+        quit.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
     }
 
 
