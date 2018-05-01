@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -175,7 +176,7 @@ public class gameplay extends AppCompatActivity {
 
     public void addListeners() {
         final Context context = this;
-        final ImageView outputButton = (ImageView) findViewById(R.id.output);
+        final ImageView outputButton = (ImageView) findViewById(R.id.light_1);
 
         for(int curr_cell = 0; curr_cell < num_grid_tiles; curr_cell++){
             final int final_curr_cell = curr_cell;
@@ -413,13 +414,13 @@ public class gameplay extends AppCompatActivity {
             case 4:
                 return R.id.C4;
             case 5:
-                return R.id.C5;
+                return R.id.tile_11;
             case 6:
-                return R.id.C6;
+                return R.id.tile_21;
             case 7:
-                return R.id.C7;
+                return R.id.tile_31;
             case 8:
-                return R.id.C8;
+                return R.id.tile_41;
             case 9:
                 return R.id.C9;
             case 10:
@@ -433,11 +434,11 @@ public class gameplay extends AppCompatActivity {
             case 14:
                 return R.id.tile_12;
             case 15:
-                return R.id.C15;
+                return R.id.tile_22;
             case 16:
-                return R.id.C16;
+                return R.id.tile_32;
             case 17:
-                return R.id.C17;
+                return R.id.tile_42;
             case 18:
                 return R.id.C18;
             case 19:
@@ -449,7 +450,7 @@ public class gameplay extends AppCompatActivity {
             case 22:
                 return R.id.C22;
             case 23:
-                return R.id.C15;
+                return R.id.tile_22;
             case 24:
                 return R.id.tile_23;
             case 25:
@@ -480,7 +481,7 @@ public class gameplay extends AppCompatActivity {
     }
 
     public int getOutputID(){
-        return R.id.output;
+        return R.id.light_1;
     }
 
     public int getResourceID(Tile tile){
@@ -564,21 +565,22 @@ public class gameplay extends AppCompatActivity {
         return null;
     }
 
-    public void helpPopup(){
+    public void helpPopup(View tileImgView){
         Intent help = new Intent(gameplay.this, help.class);
         startActivity(help);
         overridePendingTransition(0,0);
-        help.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        //help.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+
     }
 
-    public void restartPopup(){
+    public void restartPopup(View tileImgView){
         Intent restart = new Intent(gameplay.this, RestartConfirmPopupActivity.class);
         startActivity(restart);
         overridePendingTransition(0,0);
         restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
     }
 
-    public void quitPopup(){
+    public void quitPopup(View tileImgView){
         Intent quit = new Intent(gameplay.this, QuitConfirmPopupActivity.class);
         startActivity(quit);
         overridePendingTransition(0,0);
