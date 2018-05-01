@@ -7,14 +7,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
-import android.media.Image;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
-import android.text.Layout;
-import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,7 +19,6 @@ import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -435,7 +431,7 @@ public class gameplay extends AppCompatActivity {
             case 13:
                 return R.id.C13;
             case 14:
-                return R.id.C14;
+                return R.id.tile_12;
             case 15:
                 return R.id.C15;
             case 16:
@@ -453,13 +449,13 @@ public class gameplay extends AppCompatActivity {
             case 22:
                 return R.id.C22;
             case 23:
-                return R.id.C23;
+                return R.id.C15;
             case 24:
-                return R.id.C24;
+                return R.id.tile_23;
             case 25:
-                return R.id.C25;
+                return R.id.tile_33;
             case 26:
-                return R.id.C26;
+                return R.id.tile_43;
             case 27:
                 return R.id.C27;
             case 28:
@@ -471,13 +467,13 @@ public class gameplay extends AppCompatActivity {
             case 31:
                 return R.id.C31;
             case 32:
-                return R.id.C32;
+                return R.id.tile_14;
             case 33:
-                return R.id.C33;
+                return R.id.tile_24;
             case 34:
-                return R.id.C34;
+                return R.id.tile_34;
             case 35:
-                return R.id.C35;
+                return R.id.tile_44;
             default:
                 return 0;
         }
