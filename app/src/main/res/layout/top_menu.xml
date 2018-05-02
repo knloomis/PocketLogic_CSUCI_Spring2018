@@ -81,7 +81,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@mipmap/ic_power_settings_new_white_24dp" />
+                android:src="@mipmap/ic_exit_to_app_white_24dp" />
 
             <TextView
                 android:id="@+id/quit_option"
