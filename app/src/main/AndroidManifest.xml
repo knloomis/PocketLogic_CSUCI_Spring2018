@@ -12,7 +12,6 @@
         <activity android:name=".selectLevel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,6 +31,8 @@
             android:name=".QuitConfirmPopupActivity"
             android:theme="@style/AppTheme.PopUp" />
         <activity android:name=".gameplay"></activity>
+        <activity android:name=".GameScene"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

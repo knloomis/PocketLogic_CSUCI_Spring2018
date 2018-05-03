@@ -22,9 +22,9 @@ public class selectLevel2 extends AppCompatActivity {
 
     public void addListeners() {
         final Context context = this;
-
-        Button play= (Button) findViewById(R.id.btn_main2_play);
-        play.setOnClickListener(new View.OnClickListener() {
+    /*
+        //Button play= (Button) findViewById(R.id.btn_main2_play);
+        //play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, gameplay.class);
@@ -32,8 +32,8 @@ public class selectLevel2 extends AppCompatActivity {
             }
         });
 
-        Button back= (Button) findViewById(R.id.btn_main2_back);
-        back.setOnClickListener(new View.OnClickListener() {
+        //Button back= (Button) findViewById(R.id.btn_main2_back);
+        //back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                // Intent intent = new Intent(context, selectLevel.class);
@@ -41,5 +41,6 @@ public class selectLevel2 extends AppCompatActivity {
                 finish();
             }
         });
+        */
     }
 }
