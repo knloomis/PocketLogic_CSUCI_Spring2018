@@ -789,7 +789,7 @@
             app:layout_constraintStart_toStartOf="@+id/tile_34"
             app:layout_constraintTop_toTopOf="@+id/bottomSeparator"
             app:srcCompat="@drawable/lightbulb_0_unlit" />
-        <!--
+
                 <include layout="@layout/top_menu"
                     android:id="@+id/topu_ingame"/>
 
@@ -803,7 +803,7 @@
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-        -->
+
 
 
     </android.support.constraint.ConstraintLayout>
