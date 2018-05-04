@@ -10,6 +10,7 @@ import com.pocketlogic.pocketlogic.PocketLogic.*;
 public class GameScene extends AppCompatActivity {
 
         private Director director;
+        String levelName;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class GameScene extends AppCompatActivity {
             setContentView(R.layout.game);
 
             Intent intent = getIntent();
-            String levelName = intent.getExtras().getString("levelName");
+            levelName = intent.getExtras().getString("levelName");
 
             LevelManager levelManager = new LevelManager();
 
@@ -66,6 +67,7 @@ public class GameScene extends AppCompatActivity {
 
     public void restartPopup(View tileImgView){
         Intent restart = new Intent(this, RestartConfirmPopupActivity.class);
+        restart.putExtra("levelName", levelName);
         startActivity(restart);
         overridePendingTransition(0,0);
         restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

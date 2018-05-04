@@ -16,12 +16,16 @@ public class RestartConfirmPopupActivity extends Activity {
     Button btn_close_no;
     double height_modifier = .5;
     double width_modifier = .7;
+    String levelName;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restart_confirm_popup);
+
+        Intent intent = getIntent();
+        levelName = intent.getExtras().getString("levelName");
 
 
         btn_close_yes = (Button) findViewById(R.id.btn_restart_popup_close_yes);
@@ -39,6 +43,7 @@ public class RestartConfirmPopupActivity extends Activity {
             public void onClick(View view){
                 //finish();
                 Intent restart = new Intent(getApplicationContext(), GameScene.class);
+                restart.putExtra("levelName", levelName);
                 startActivity(restart);
                 overridePendingTransition(0,0);
                 restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
