@@ -55,6 +55,8 @@ public class selectLevel extends AppCompatActivity {
     public void addListeners() {
         final Context context = this;
 
+        /*
+
         Button btn_select= (Button) this.findViewById(R.id.btn_main_select);
         btn_select.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +110,8 @@ public class selectLevel extends AppCompatActivity {
                         .setNegativeButton("No", dialogClickListener).show();
             }
         });
+
+        */
 
         Button btn_scores= (Button) this.findViewById(R.id.btn_main_scores);
         btn_scores.setOnClickListener(new View.OnClickListener() {

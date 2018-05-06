@@ -59,10 +59,7 @@ public class GameScene extends AppCompatActivity {
      //Toast.makeText(this, "levelNum: " + levelNum, Toast.LENGTH_SHORT).show();
             String gameResult = director.getGameResult(); //Win or Lose
             Intent intent = new Intent(this, selectLevel.class);
-            int saved = levelNum;
-            int nextNum = getNextLevelNum();
-       Toast.makeText(this, "orig: " + saved + "; Next: "+ nextNum + "; hm: " + getNextLevelNum(), Toast.LENGTH_SHORT).show();
-            intent.putExtra("levelNum", nextNum);
+            intent.putExtra("levelNum", getNextLevelNum());
             startActivity(intent);
         }
 
@@ -126,7 +123,7 @@ public class GameScene extends AppCompatActivity {
             if(num == 10){
                 return 10;
             }else{
-                return num++;
+                return ++num;
             }
     }
 
@@ -134,7 +131,7 @@ public class GameScene extends AppCompatActivity {
             if(levelNum == 10){
                 return 10;
             }else{
-                return levelNum++;
+                return ++levelNum;
             }
     }
 }
