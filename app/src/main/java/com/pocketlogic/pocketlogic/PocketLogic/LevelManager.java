@@ -27,55 +27,86 @@ public class LevelManager {
     //=====================================    CONSTRUCTOR    ======================================
     public LevelManager() {
 
+        /****define pocket logic 10 levels here *****/
+        /*
         Level level_1 = new Level();
-        level_1.setLevelName("Connor's random level (1 Switch)");
+        level_1.setLevelName("Level 1");
         level_1.setSwitchesAmount(1);
         level_1.setTimeLimit(0);
-        level_1.setTruthTable(Logic.randLevel(1));
+        level_1.setTruthTable(new boolean[]{false, true});
+
+        Level level_1 = new Level();
+        level_2.setLevelName("Level 2");
+        level_2.setSwitchesAmount(1);
+        level_2.setTimeLimit(0);
+        level_2.setTruthTable(new boolean[]{false, false});
+
+        levels.add(level_1);
+        levels.add(level_2);
+*/
+        /********************************************/
+
+
+
+
+        /****examples***/
+
+        Level level_0 = new Level();
+        //level_0.setLevelName("Connor's random level (1 Switch)");
+        level_0.setLevelName("Level 0");
+        level_0.setSwitchesAmount(1);
+        level_0.setTimeLimit(0);
+        level_0.setTruthTable(Logic.randLevel(1));
+
+        Level level_1 = new Level();
+        //level_1.setLevelName("Connor's random level (2 Switch)");
+        level_1.setLevelName("Level 1");
+        level_1.setSwitchesAmount(2);
+        level_1.setTimeLimit(0);
+        level_1.setTruthTable(Logic.randLevel(2));
 
         Level level_2 = new Level();
-        level_2.setLevelName("Connor's random level (2 Switch)");
-        level_2.setSwitchesAmount(2);
+        //level_2.setLevelName("Connor's random level (3 Switch)");
+        level_2.setLevelName("Level 2");
+        level_2.setSwitchesAmount(3);
         level_2.setTimeLimit(0);
-        level_2.setTruthTable(Logic.randLevel(2));
+        level_2.setTruthTable(Logic.randLevel(3));
 
         Level level_3 = new Level();
-        level_3.setLevelName("Connor's random level (3 Switch)");
-        level_3.setSwitchesAmount(3);
+        //level_3.setLevelName("Connor's random level (4 Switch)");
+        level_3.setLevelName("Level 3");
+        level_3.setSwitchesAmount(4);
         level_3.setTimeLimit(0);
-        level_3.setTruthTable(Logic.randLevel(3));
+        level_3.setTruthTable(Logic.randLevel(4));
 
         Level level_4 = new Level();
-        level_4.setLevelName("Connor's random level (4 Switch)");
-        level_4.setSwitchesAmount(4);
+        //level_4.setLevelName("Limitations");
+        level_4.setLevelName("Level 4");
+        level_4.setSwitchesAmount(1);
         level_4.setTimeLimit(0);
-        level_4.setTruthTable(Logic.randLevel(4));
+        level_4.disableTile(2,1);
+        level_4.disableTile(4,1);
+        level_4.disableTile(1,4);
+        level_4.disableTile(5,4);
+        level_4.setDefaultGate(3,2,"NOT");
+        level_4.setAvailableGates(3,2,new String[] {"NOT","AND","NULL"});
+        level_4.setDefaultGate(4,3,"AND");
+        level_4.setAvailableGates(4,3,new String[] {"AND"});
+        level_4.setTruthTable(new boolean[] {true,false});
 
         Level level_5 = new Level();
-        level_5.setLevelName("Limitations");
+        //level_5.setLevelName("Bomb Squad - NOT Gate");
+        level_5.setLevelName("Level 5");
         level_5.setSwitchesAmount(1);
-        level_5.setTimeLimit(0);
-        level_5.disableTile(2,1);
-        level_5.disableTile(4,1);
-        level_5.disableTile(1,4);
-        level_5.disableTile(5,4);
-        level_5.setDefaultGate(3,2,"NOT");
-        level_5.setAvailableGates(3,2,new String[] {"NOT","AND","NULL"});
-        level_5.setDefaultGate(4,3,"AND");
-        level_5.setAvailableGates(4,3,new String[] {"AND"});
+        level_5.setTimeLimit(10);
         level_5.setTruthTable(new boolean[] {true,false});
 
         Level level_6 = new Level();
-        level_6.setLevelName("Bomb Squad - NOT Gate");
+        //level_6.setLevelName("Bomb Squad - Elite");
+        level_6.setLevelName("Level 6");
         level_6.setSwitchesAmount(1);
-        level_6.setTimeLimit(10);
-        level_6.setTruthTable(new boolean[] {true,false});
-
-        Level level_7 = new Level();
-        level_7.setLevelName("Bomb Squad - Elite");
-        level_7.setSwitchesAmount(1);
-        level_7.setTimeLimit(30);
-        level_7.setTruthTable(Logic.randLevel(1));
+        level_6.setTimeLimit(30);
+        level_6.setTruthTable(Logic.randLevel(1));
 
         //Code to select one of the possible tiles randomly:
         //21, 41
@@ -113,31 +144,32 @@ public class LevelManager {
         /*
         for (int x=1;x<=5;x++){
             for (int y=1;y<=4;y++) {
-                level_7.disableTile(x,y);
+                level_6.disableTile(x,y);
             }
         }
         */
         for(int y=1; y<=4; y++){
             if((y % 2) == 0){
-                level_7.disableTile(1,y);
-                level_7.disableTile(3,y);
-                level_7.disableTile(5,y);
+                level_6.disableTile(1,y);
+                level_6.disableTile(3,y);
+                level_6.disableTile(5,y);
             }else{
-                level_7.disableTile(2,y);
-                level_7.disableTile(4,y);
+                level_6.disableTile(2,y);
+                level_6.disableTile(4,y);
             }
         }
 
-        level_7.enableTile(x1,y1);
-        level_7.enableTile(x2,y2);
+        level_6.enableTile(x1,y1);
+        level_6.enableTile(x2,y2);
 
+        levels.add(level_0);
         levels.add(level_1);
         levels.add(level_2);
         levels.add(level_3);
         levels.add(level_4);
         levels.add(level_5);
         levels.add(level_6);
-        levels.add(level_7);
+
     }
 
     //===================================      GETTERS      ========================================

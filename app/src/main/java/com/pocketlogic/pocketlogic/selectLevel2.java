@@ -2,22 +2,55 @@ package com.pocketlogic.pocketlogic;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.pocketlogic.pocketlogic.PocketLogic.LevelManager;
 
 /**
  * Created by Vitaliy Six on 2018/3/10.
  */
 
 public class selectLevel2 extends AppCompatActivity {
+    String levelName;
+    int levelNum;
+    final LevelManager levelManager = new LevelManager();
+
+    Button hardButton;
+    Button normalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addListeners();
+
+        Intent intent = getIntent();
+        if(intent.getExtras() != null){
+            //alt for if is 0, then do "tutorial"
+            //levelName = intent.getExtras().getString("levelName");
+            levelNum = intent.getExtras().getInt("levelNum");
+            levelName = "Level " + levelNum;
+        }else{
+            levelName = "Level K";
+            levelNum = -1;
+        }
+
+        TextView title = findViewById(R.id.levelTitle);
+        title.setText(levelName);
+
+        hardButton = (Button) findViewById(R.id.hardModeButton);
+        normalButton = (Button) findViewById(R.id.easyModeButton);
+
+
+
+        //addListeners();
     }
 
     public void addListeners() {
@@ -38,8 +71,61 @@ public class selectLevel2 extends AppCompatActivity {
             public void onClick(View v) {
                // Intent intent = new Intent(context, selectLevel.class);
                // startActivity(intent);
-                finish();
+                Intent intent = new Intent(context, selectLevel.class);
+                intent.putExtra("levelNum", levelNum);
+                startActivity(intent);
+                overridePendingTransition(0,0);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+
+                //finish();
             }
         });
+    }
+
+    public void play(View imgView){
+        //code to select level for director here
+        final Context context = this;
+        if(levelName.equals("Level K")){
+            levelName = "Level 1";
+        }
+
+        Intent intent = new Intent(context, GameScene.class);
+        intent.putExtra("levelName", levelName);
+        startActivity(intent);
+
+    }
+
+    public void returnToMainMenu(View imgView){
+        final Context context = this;
+
+        Intent intent = new Intent(context, selectLevel.class);
+        intent.putExtra("levelNum", levelNum);
+        startActivity(intent);
+        overridePendingTransition(0,0);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+    }
+
+    public void setHardMode(View imgView){
+        levelManager.getLevel(levelName).setTimeLimit(60);
+
+        setButtonActiveColors(hardButton);
+        setButtonInactiveColors(normalButton);
+    }
+
+    public void setNormalMode(View imgView){
+        levelManager.getLevel(levelName).setTimeLimit(0);
+
+        setButtonInactiveColors(hardButton);
+        setButtonActiveColors(normalButton);
+    }
+
+    public void setButtonInactiveColors(Button button){
+        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.buttonGreen)));
+        button.setTextColor(getResources().getColor(R.color.white));
+    }
+
+    public void setButtonActiveColors(Button button){
+        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+        button.setTextColor(getResources().getColor(R.color.buttonGreen));
     }
 }
