@@ -36,7 +36,10 @@ public class QuitConfirmPopupActivity extends Activity {
             @Override
             public void onClick(View view){
                 //finish();
+                Intent thisIntent = getIntent();
+                int levelNum = thisIntent.getExtras().getInt("levelNum");
                 Intent restart = new Intent(getApplicationContext(), selectLevel.class);
+                restart.putExtra("levelNum", levelNum);
                 startActivity(restart);
                 overridePendingTransition(0,0);
                 restart.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

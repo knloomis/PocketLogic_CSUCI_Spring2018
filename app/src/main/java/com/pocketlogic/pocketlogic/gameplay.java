@@ -19,12 +19,11 @@ import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 /*
-//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occurr...
+//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occur...
 
 import android.content.Context;
 import android.view.View;
@@ -403,7 +402,7 @@ public class gameplay extends AppCompatActivity {
     }
     public int getGateResourceID(int num){
         switch(num){
-            case 0:
+        /*    case 0:
                 return R.id.C0;
             case 1:
                 return R.id.C1;
@@ -414,55 +413,55 @@ public class gameplay extends AppCompatActivity {
             case 4:
                 return R.id.C4;
             case 5:
-                return R.id.tile_11;
+                return R.id.C5;
             case 6:
-                return R.id.tile_21;
+                return R.id.C6;
             case 7:
-                return R.id.tile_31;
+                return R.id.C7;
             case 8:
-                return R.id.tile_41;
+                return R.id.C8;
             case 9:
                 return R.id.C9;
             case 10:
                 return R.id.C10;
             case 11:
-                return R.id.C11;
+                return R.id.tile_32;
             case 12:
                 return R.id.C12;
             case 13:
                 return R.id.C13;
             case 14:
-                return R.id.tile_12;
+                return R.id.C14;
             case 15:
-                return R.id.tile_22;
+                return R.id.C15;
             case 16:
-                return R.id.tile_32;
+                return R.id.C16;
             case 17:
-                return R.id.tile_42;
+                return R.id.C17;
             case 18:
                 return R.id.C18;
             case 19:
-                return R.id.C19;
+                return R.id.tile_23;
             case 20:
                 return R.id.C20;
             case 21:
-                return R.id.C21;
+                return R.id.tile_43;
             case 22:
                 return R.id.C22;
             case 23:
-                return R.id.tile_22;
+                return R.id.C15;
             case 24:
-                return R.id.tile_23;
+                return R.id.C24;
             case 25:
-                return R.id.tile_33;
+                return R.id.C25;
             case 26:
-                return R.id.tile_43;
+                return R.id.C26;
             case 27:
-                return R.id.C27;
+                return R.id.tile_14;
             case 28:
                 return R.id.C28;
             case 29:
-                return R.id.C29;
+                return R.id.tile_34;
             case 30:
                 return R.id.C30;
             case 31:
@@ -475,7 +474,7 @@ public class gameplay extends AppCompatActivity {
                 return R.id.D16;
             case 35:
                 return R.id.D17;
-            default:
+           */ default:
                 return 0;
         }
     }

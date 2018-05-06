@@ -32,6 +32,7 @@
             android:name=".QuitConfirmPopupActivity"
             android:theme="@style/AppTheme.PopUp" />
         <activity android:name=".gameplay"></activity>
+        <activity android:name=".GameScene"></activity>
     </application>
 
 </manifest>
