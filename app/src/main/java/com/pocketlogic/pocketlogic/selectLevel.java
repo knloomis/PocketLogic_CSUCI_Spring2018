@@ -18,6 +18,8 @@ public class selectLevel extends AppCompatActivity {
 
     Context context;
     ImageView imageCard;
+    Button next;
+    Button prev;
 
     int curr_level_highlighted;
 //POTENTIAL ISSUE: current version has creating possibly infinite stack of activities, since return not "finish" the activity
@@ -42,7 +44,10 @@ public class selectLevel extends AppCompatActivity {
         imageCard = findViewById(R.id.level_card);
         imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
 
+        next = (Button) findViewById(R.id.nextLevelButton);
+        prev = (Button) findViewById(R.id.prevLevelButton);
 
+        setButtonsVisibility();
 
         Log.d("mine","selectLevel Triggered");
 
@@ -162,6 +167,7 @@ public class selectLevel extends AppCompatActivity {
         if(curr_level_highlighted < numLevels){
             curr_level_highlighted++;
             imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
+            setButtonsVisibility();
         }
     }
 
@@ -169,6 +175,26 @@ public class selectLevel extends AppCompatActivity {
         if(curr_level_highlighted > 0){
             curr_level_highlighted--;
             imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
+            setButtonsVisibility();
+        }
+    }
+
+    public void hidePrevButton(){
+        prev.setVisibility(View.GONE);
+    }
+
+    public void hideNextButton(){
+        next.setVisibility(View.GONE);
+    }
+
+    public void setButtonsVisibility(){
+        if(curr_level_highlighted == 0){
+            hidePrevButton();
+        }else if(curr_level_highlighted == numLevels){
+            hideNextButton();
+        }else{
+            prev.setVisibility(View.VISIBLE);
+            next.setVisibility(View.VISIBLE);
         }
     }
 }
