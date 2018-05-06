@@ -9,16 +9,41 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.pocketlogic.pocketlogic.PocketLogic.LevelManager;
 
 public class selectLevel extends AppCompatActivity {
-    Context context;
+    int numLevels = 6;
 
+    Context context;
+    ImageView imageCard;
+
+    int curr_level_highlighted;
+//POTENTIAL ISSUE: current version has creating possibly infinite stack of activities, since return not "finish" the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        Intent menuIntent = getIntent();
+        //Bundle extras = getIntent().getExtras();
+        if(menuIntent.getExtras() != null){
+            //something to set curr_level_selected to num passed
+            curr_level_highlighted = menuIntent.getExtras().getInt("levelNum");
+            if(curr_level_highlighted == -1){
+                curr_level_highlighted = 0;
+            }else if(curr_level_highlighted > numLevels){
+                curr_level_highlighted = numLevels;
+            }
+        }else{
+            curr_level_highlighted = 0;
+        }
+        imageCard = findViewById(R.id.level_card);
+        imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
+
+
+
         Log.d("mine","selectLevel Triggered");
 
         //IMPORTANT!
@@ -102,5 +127,44 @@ public class selectLevel extends AppCompatActivity {
             }
         });
 
+    }
+
+    public int getCardDrawable(int numInList){
+        switch(numInList){
+            case 0: return R.drawable.level0_image;
+            case 1: return R.drawable.level1_image;
+            case 2: return R.drawable.level2_image;
+            case 3: return R.drawable.level3_image;
+            case 4: return R.drawable.level4_image;
+            case 5: return R.drawable.level5_image;
+            case 6: return R.drawable.level6_image;
+            case 7: return R.drawable.level7_image;
+            case 8: return R.drawable.level8_image;
+            case 9: return R.drawable.level9_image;
+            case 10: return R.drawable.level10_image;
+            default: return R.drawable.mascot_0;
+        }
+    }
+
+    public void levelSelect(View cardView){
+        //String levelName = "Level " + curr_level_highlighted;
+        Intent play = new Intent(context, selectLevel2.class);
+        play.putExtra("levelNum", curr_level_highlighted);
+        startActivity(play);
+
+    }
+
+    public void showNextLevel(View cardView){
+        if(curr_level_highlighted < numLevels){
+            curr_level_highlighted++;
+            imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
+        }
+    }
+
+    public void showPreviousLevel(View cardView){
+        if(curr_level_highlighted > 0){
+            curr_level_highlighted--;
+            imageCard.setImageResource(getCardDrawable(curr_level_highlighted));
+        }
     }
 }

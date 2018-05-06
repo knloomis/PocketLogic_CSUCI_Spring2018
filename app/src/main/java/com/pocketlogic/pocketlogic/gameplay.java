@@ -23,7 +23,7 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 
 /*
-//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occurr...
+//COMMENT: when I was going to commit on gitkraken, it claimed some of these were removed. Saving them here in case problems occur...
 
 import android.content.Context;
 import android.view.View;

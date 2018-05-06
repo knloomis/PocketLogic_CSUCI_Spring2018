@@ -8,7 +8,7 @@
     android:background="#222">
 
     <Button
-        android:id="@+id/leftButton2"
+        android:id="@+id/nextLevelButton"
         android:layout_width="31dp"
         android:layout_height="35dp"
         android:layout_marginBottom="8dp"
@@ -17,6 +17,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/forward_button"
         android:fontFamily="@font/roboto"
+        android:onClick="showNextLevel"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/leftButton"
+        android:id="@+id/prevLevelButton"
         android:layout_width="31dp"
         android:layout_height="35dp"
         android:layout_marginBottom="8dp"
@@ -32,6 +33,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/back_button"
         android:fontFamily="@font/roboto"
+        android:onClick="showPreviousLevel"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +115,7 @@
         app:layout_constraintVertical_bias="0.9" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/logoImage"
         android:layout_width="367dp"
         android:layout_height="129dp"
         android:layout_marginBottom="8dp"
@@ -130,7 +132,7 @@
         app:srcCompat="@drawable/pocketlogic_logo_low_res" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/level_card"
         android:layout_width="310dp"
         android:layout_height="442dp"
         android:layout_marginBottom="8dp"
@@ -139,13 +141,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="levelSelect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.315"
-        app:srcCompat="@drawable/mascot_0" />
+        app:srcCompat="@drawable/level0_image" />
 
 
 </android.support.constraint.ConstraintLayout>
