@@ -58,8 +58,14 @@ public class GameScene extends AppCompatActivity {
         public void exitGame(View view){
      //Toast.makeText(this, "levelNum: " + levelNum, Toast.LENGTH_SHORT).show();
             String gameResult = director.getGameResult(); //Win or Lose
+            int nextLevelNum;
+            if(gameResult.equals("Win")){
+                nextLevelNum = getNextLevelNum();
+            }else{
+                nextLevelNum = levelNum;
+            }
             Intent intent = new Intent(this, selectLevel.class);
-            intent.putExtra("levelNum", getNextLevelNum());
+            intent.putExtra("levelNum", nextLevelNum);
             startActivity(intent);
         }
 
