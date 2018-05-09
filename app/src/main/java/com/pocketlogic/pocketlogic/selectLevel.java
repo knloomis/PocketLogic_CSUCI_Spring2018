@@ -118,15 +118,6 @@ public class selectLevel extends AppCompatActivity {
 
         */
 
-        Button btn_scores= (Button) this.findViewById(R.id.btn_main_scores);
-        btn_scores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, highscores.class);
-                startActivity(intent);
-            }
-        });
-
         Button btn_help= (Button) this.findViewById(R.id.btn_main_help);
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override

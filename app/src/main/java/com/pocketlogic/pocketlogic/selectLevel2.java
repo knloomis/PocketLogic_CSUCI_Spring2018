@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.pocketlogic.pocketlogic.PocketLogic.LevelManager;
 
+import static com.pocketlogic.pocketlogic.selectLevel2.difficulty.EASY;
+import static com.pocketlogic.pocketlogic.selectLevel2.difficulty.HARD;
+
 /**
  * Created by Vitaliy Six on 2018/3/10.
  */
@@ -25,6 +28,10 @@ public class selectLevel2 extends AppCompatActivity {
 
     Button hardButton;
     Button normalButton;
+
+    enum difficulty{ EASY, HARD}
+
+    difficulty mode = EASY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +103,13 @@ public class selectLevel2 extends AppCompatActivity {
             levelName = "Level 0";
         }
 
+        if(mode == EASY){
+            levelName += " Easy";
+
+        }else{
+            levelName += " Hard";
+        }
+
         Intent intent = new Intent(context, GameScene.class);
         intent.putExtra("levelName", levelName);
         startActivity(intent);
@@ -113,14 +127,16 @@ public class selectLevel2 extends AppCompatActivity {
     }
 
     public void setHardMode(View imgView){
-        levelManager.getLevel(levelName).setTimeLimit(60);
+        //levelManager.getLevel(levelName).setTimeLimit(60);
+        mode = HARD;
 
         setButtonActiveColors(hardButton);
         setButtonInactiveColors(normalButton);
     }
 
     public void setNormalMode(View imgView){
-        levelManager.getLevel(levelName).setTimeLimit(0);
+       // levelManager.getLevel(levelName).setTimeLimit(0);
+        mode = EASY;
 
         setButtonInactiveColors(hardButton);
         setButtonActiveColors(normalButton);

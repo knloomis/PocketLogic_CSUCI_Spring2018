@@ -51,62 +51,119 @@ public class LevelManager {
 
         /****examples***/
 
-        Level level_0 = new Level();
+        Level level_0_easy = new Level();
         //level_0.setLevelName("Connor's random level (1 Switch)");
-        level_0.setLevelName("Level 0");
-        level_0.setSwitchesAmount(1);
-        level_0.setTimeLimit(0);
-        level_0.setTruthTable(Logic.randLevel(1));
+        level_0_easy.setLevelName("Level 0 Easy");
+        level_0_easy.setSwitchesAmount(1);
+        level_0_easy.setTimeLimit(0);
+        level_0_easy.setTruthTable(Logic.randLevel(1));
 
-        Level level_1 = new Level();
+        Level level_0_hard = new Level();
+        //level_0.setLevelName("Connor's random level (1 Switch)");
+        level_0_hard.setLevelName("Level 0 Hard");
+        level_0_hard.setSwitchesAmount(1);
+        level_0_hard.setTimeLimit(60);
+        level_0_hard.setTruthTable(Logic.randLevel(1));
+
+        Level level_1_easy = new Level();
         //level_1.setLevelName("Connor's random level (2 Switch)");
-        level_1.setLevelName("Level 1");
-        level_1.setSwitchesAmount(2);
-        level_1.setTimeLimit(0);
-        level_1.setTruthTable(Logic.randLevel(2));
+        level_1_easy.setLevelName("Level 1 Easy");
+        level_1_easy.setSwitchesAmount(2);
+        level_1_easy.setTimeLimit(0);
+        level_1_easy.setTruthTable(Logic.randLevel(2));
 
-        Level level_2 = new Level();
+        Level level_1_hard = new Level();
+        //level_1.setLevelName("Connor's random level (2 Switch)");
+        level_1_hard.setLevelName("Level 1 Hard");
+        level_1_hard.setSwitchesAmount(2);
+        level_1_hard.setTimeLimit(60);
+        level_1_hard.setTruthTable(Logic.randLevel(2));
+
+        Level level_2_easy = new Level();
         //level_2.setLevelName("Connor's random level (3 Switch)");
-        level_2.setLevelName("Level 2");
-        level_2.setSwitchesAmount(3);
-        level_2.setTimeLimit(0);
-        level_2.setTruthTable(Logic.randLevel(3));
+        level_2_easy.setLevelName("Level 2 Easy");
+        level_2_easy.setSwitchesAmount(3);
+        level_2_easy.setTimeLimit(0);
+        level_2_easy.setTruthTable(Logic.randLevel(3));
 
-        Level level_3 = new Level();
+        Level level_2_hard = new Level();
+        //level_2.setLevelName("Connor's random level (3 Switch)");
+        level_2_hard.setLevelName("Level 2 Hard");
+        level_2_hard.setSwitchesAmount(3);
+        level_2_hard.setTimeLimit(60);
+        level_2_hard.setTruthTable(Logic.randLevel(3));
+
+        Level level_3_easy = new Level();
         //level_3.setLevelName("Connor's random level (4 Switch)");
-        level_3.setLevelName("Level 3");
-        level_3.setSwitchesAmount(4);
-        level_3.setTimeLimit(0);
-        level_3.setTruthTable(Logic.randLevel(4));
+        level_3_easy.setLevelName("Level 3 Easy");
+        level_3_easy.setSwitchesAmount(4);
+        level_3_easy.setTimeLimit(0);
+        level_3_easy.setTruthTable(Logic.randLevel(4));
 
-        Level level_4 = new Level();
+        Level level_3_hard = new Level();
+        //level_3.setLevelName("Connor's random level (4 Switch)");
+        level_3_hard.setLevelName("Level 3 Hard");
+        level_3_hard.setSwitchesAmount(4);
+        level_3_hard.setTimeLimit(60);
+        level_3_hard.setTruthTable(Logic.randLevel(4));
+
+        Level level_4_easy = new Level();
         //level_4.setLevelName("Limitations");
-        level_4.setLevelName("Level 4");
-        level_4.setSwitchesAmount(1);
-        level_4.setTimeLimit(0);
-        level_4.disableTile(2,1);
-        level_4.disableTile(4,1);
-        level_4.disableTile(1,4);
-        level_4.disableTile(5,4);
-        level_4.setDefaultGate(3,2,"NOT");
-        level_4.setAvailableGates(3,2,new String[] {"NOT","AND","NULL"});
-        level_4.setDefaultGate(4,3,"AND");
-        level_4.setAvailableGates(4,3,new String[] {"AND"});
-        level_4.setTruthTable(new boolean[] {true,false});
+        level_4_easy.setLevelName("Level 4 Easy");
+        level_4_easy.setSwitchesAmount(1);
+        level_4_easy.setTimeLimit(0);
+        level_4_easy.disableTile(2,1);
+        level_4_easy.disableTile(4,1);
+        level_4_easy.disableTile(1,4);
+        level_4_easy.disableTile(5,4);
+        level_4_easy.setDefaultGate(3,2,"NOT");
+        level_4_easy.setAvailableGates(3,2,new String[] {"NOT","AND","NULL"});
+        level_4_easy.setDefaultGate(4,3,"AND");
+        level_4_easy.setAvailableGates(4,3,new String[] {"AND"});
+        level_4_easy.setTruthTable(new boolean[] {true,false});
 
-        Level level_5 = new Level();
+        Level level_4_hard = new Level();
+        //level_4.setLevelName("Limitations");
+        level_4_hard.setLevelName("Level 4 Hard");
+        level_4_hard.setSwitchesAmount(1);
+        level_4_hard.setTimeLimit(60);
+        level_4_hard.disableTile(2,1);
+        level_4_hard.disableTile(4,1);
+        level_4_hard.disableTile(1,4);
+        level_4_hard.disableTile(5,4);
+        level_4_hard.setDefaultGate(3,2,"NOT");
+        level_4_hard.setAvailableGates(3,2,new String[] {"NOT","AND","NULL"});
+        level_4_hard.setDefaultGate(4,3,"AND");
+        level_4_hard.setAvailableGates(4,3,new String[] {"AND"});
+        level_4_hard.setTruthTable(new boolean[] {true,false});
+
+        Level level_5_easy = new Level();
         //level_5.setLevelName("Bomb Squad - NOT Gate");
-        level_5.setLevelName("Level 5");
-        level_5.setSwitchesAmount(1);
-        level_5.setTimeLimit(10);
-        level_5.setTruthTable(new boolean[] {true,false});
+        level_5_easy.setLevelName("Level 5 Easy");
+        level_5_easy.setSwitchesAmount(1);
+        level_5_easy.setTimeLimit(0);
+        level_5_easy.setTruthTable(new boolean[] {true,false});
 
-        Level level_6 = new Level();
+        Level level_5_hard = new Level();
+        //level_5.setLevelName("Bomb Squad - NOT Gate");
+        level_5_hard.setLevelName("Level 5 Hard");
+        level_5_hard.setSwitchesAmount(1);
+        level_5_hard.setTimeLimit(10);
+        level_5_hard.setTruthTable(new boolean[] {true,false});
+
+        Level level_6_easy = new Level();
         //level_6.setLevelName("Bomb Squad - Elite");
-        level_6.setLevelName("Level 6");
-        level_6.setSwitchesAmount(1);
-        level_6.setTimeLimit(30);
-        level_6.setTruthTable(Logic.randLevel(1));
+        level_6_easy.setLevelName("Level 6 Easy");
+        level_6_easy.setSwitchesAmount(1);
+        level_6_easy.setTimeLimit(0);
+        level_6_easy.setTruthTable(Logic.randLevel(1));
+
+        Level level_6_hard = new Level();
+        //level_6.setLevelName("Bomb Squad - Elite");
+        level_6_hard.setLevelName("Level 6 Hard");
+        level_6_hard.setSwitchesAmount(1);
+        level_6_hard.setTimeLimit(30);
+        level_6_hard.setTruthTable(Logic.randLevel(1));
 
         //Code to select one of the possible tiles randomly:
         //21, 41
@@ -150,25 +207,39 @@ public class LevelManager {
         */
         for(int y=1; y<=4; y++){
             if((y % 2) == 0){
-                level_6.disableTile(1,y);
-                level_6.disableTile(3,y);
-                level_6.disableTile(5,y);
+                level_6_easy.disableTile(1,y);
+                level_6_easy.disableTile(3,y);
+                level_6_easy.disableTile(5,y);
+                level_6_hard.disableTile(1,y);
+                level_6_hard.disableTile(3,y);
+                level_6_hard.disableTile(5,y);
             }else{
-                level_6.disableTile(2,y);
-                level_6.disableTile(4,y);
+                level_6_easy.disableTile(2,y);
+                level_6_easy.disableTile(4,y);
+                level_6_hard.disableTile(2,y);
+                level_6_hard.disableTile(4,y);
             }
         }
 
-        level_6.enableTile(x1,y1);
-        level_6.enableTile(x2,y2);
+        level_6_easy.enableTile(x1,y1);
+        level_6_easy.enableTile(x2,y2);
+        level_6_hard.enableTile(x1,y1);
+        level_6_hard.enableTile(x2,y2);
 
-        levels.add(level_0);
-        levels.add(level_1);
-        levels.add(level_2);
-        levels.add(level_3);
-        levels.add(level_4);
-        levels.add(level_5);
-        levels.add(level_6);
+        levels.add(level_0_easy);
+        levels.add(level_0_hard);
+        levels.add(level_1_easy);
+        levels.add(level_1_hard);
+        levels.add(level_2_easy);
+        levels.add(level_2_hard);
+        levels.add(level_3_easy);
+        levels.add(level_3_hard);
+        levels.add(level_4_easy);
+        levels.add(level_4_hard);
+        levels.add(level_5_easy);
+        levels.add(level_5_hard);
+        levels.add(level_6_easy);
+        levels.add(level_6_hard);
 
     }
 
