@@ -36,7 +36,12 @@ public class selectLevel2 extends AppCompatActivity {
             //alt for if is 0, then do "tutorial"
             //levelName = intent.getExtras().getString("levelName");
             levelNum = intent.getExtras().getInt("levelNum");
-            levelName = "Level " + levelNum;
+            if(levelNum == 0){
+                levelName = "Tutorial";
+            }else{
+                levelName = "Level " + levelNum;
+            }
+
         }else{
             levelName = "Level K";
             levelNum = -1;
@@ -87,6 +92,8 @@ public class selectLevel2 extends AppCompatActivity {
         final Context context = this;
         if(levelName.equals("Level K")){
             levelName = "Level 1";
+        }else if(levelName.equals("Tutorial")){
+            levelName = "Level 0";
         }
 
         Intent intent = new Intent(context, GameScene.class);
@@ -120,12 +127,12 @@ public class selectLevel2 extends AppCompatActivity {
     }
 
     public void setButtonInactiveColors(Button button){
-        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.buttonGreen)));
-        button.setTextColor(getResources().getColor(R.color.white));
+        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.grey)));
+       // button.setTextColor(getResources().getColor(R.color.white));
     }
 
     public void setButtonActiveColors(Button button){
-        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
-        button.setTextColor(getResources().getColor(R.color.buttonGreen));
+        button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.buttonGreen)));
+       // button.setTextColor(getResources().getColor(R.color.grey));
     }
 }
