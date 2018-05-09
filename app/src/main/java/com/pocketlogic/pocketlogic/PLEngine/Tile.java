@@ -111,7 +111,7 @@ public class Tile {
     // XY[0] = X; XY[1] = Y
     public void setXY(int[] originXY){
 
-        final int Y_OFFSET = 140;                       //offset pixels
+        final int Y_OFFSET = 160;                       //offset pixels
 
         this.originXY[0] = originXY[0];
         this.originXY[1] = originXY[1];
