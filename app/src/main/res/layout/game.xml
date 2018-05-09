@@ -26,6 +26,7 @@
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/Layer1_Tiles_and_Menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#222">
@@ -44,15 +45,15 @@
 
             <ImageView
                 android:id="@+id/tile_34"
-                android:onClick="tileClick"
-                android:tag="tile_34"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_34"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/C24"
@@ -74,15 +75,15 @@
 
             <ImageView
                 android:id="@+id/tile_21"
-                android:onClick="tileClick"
-                android:tag="tile_21"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="40dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_21"
                 app:layout_constraintBottom_toTopOf="@+id/C10"
                 app:layout_constraintStart_toStartOf="@+id/C18"
                 app:srcCompat="@drawable/hexagon" />
@@ -93,8 +94,8 @@
                 android:layout_height="94dp"
 
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/C10"
@@ -105,26 +106,26 @@
                 android:id="@+id/switch_1"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:onClick="tileClick"
-                android:tag="switch_1"
                 android:layout_marginBottom="40dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="switch_1"
                 app:layout_constraintBottom_toTopOf="@+id/C5"
                 app:layout_constraintStart_toStartOf="@+id/C5"
                 app:srcCompat="@drawable/switch_0" />
 
             <ImageView
                 android:id="@+id/tile_41"
-                android:onClick="tileClick"
-                android:tag="tile_41"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="40dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_41"
                 app:layout_constraintBottom_toTopOf="@+id/C10"
                 app:layout_constraintStart_toStartOf="@+id/C20"
                 app:srcCompat="@drawable/hexagon" />
@@ -135,8 +136,8 @@
                 android:layout_height="94dp"
 
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/C10"
@@ -145,14 +146,15 @@
 
             <ImageView
                 android:id="@+id/tile_14"
-                android:onClick="tileClick"
-                android:tag="tile_14"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_14"
                 app:layout_constraintEnd_toEndOf="@+id/C28"
                 app:layout_constraintTop_toTopOf="@+id/C24"
                 app:srcCompat="@drawable/hexagon" />
@@ -188,7 +190,8 @@
                 android:id="@+id/C28"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:layout_marginTop="70dp"
 
                 android:cropToPadding="false"
@@ -202,7 +205,8 @@
                 android:id="@+id/C30"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
 
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
@@ -213,16 +217,16 @@
 
             <ImageView
                 android:id="@+id/tile_54"
-                android:onClick="tileClick"
-                android:tag="tile_54"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
-
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
+
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_54"
                 app:layout_constraintStart_toStartOf="@+id/C30"
                 app:layout_constraintTop_toTopOf="@+id/C24"
                 app:srcCompat="@drawable/hexagon" />
@@ -245,16 +249,16 @@
 
             <ImageView
                 android:id="@+id/tile_43"
-                android:onClick="tileClick"
-                android:tag="tile_43"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
+
                 android:layout_marginTop="120dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_43"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/C20"
                 app:layout_constraintTop_toTopOf="parent"
@@ -262,16 +266,16 @@
 
             <ImageView
                 android:id="@+id/tile_23"
-                android:onClick="tileClick"
-                android:tag="tile_23"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-
                 android:layout_marginEnd="80dp"
                 android:layout_marginRight="80dp"
+
                 android:layout_marginTop="120dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_23"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/C20"
                 app:layout_constraintTop_toTopOf="parent"
@@ -310,7 +314,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="40dp" android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/C20"
@@ -335,7 +340,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/C20"
@@ -347,7 +353,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="40dp" android:layout_marginLeft="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/C20"
@@ -358,7 +365,8 @@
                 android:id="@+id/C24"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginEnd="40dp" android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
@@ -383,7 +391,8 @@
                 android:id="@+id/C25"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
@@ -395,7 +404,8 @@
                 android:id="@+id/C26"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginTop="70dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
@@ -444,29 +454,30 @@
 
             <ImageView
                 android:id="@+id/tile_12"
-                android:onClick="tileClick"
-                android:tag="tile_12"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
                 android:layout_marginEnd="80dp"
                 android:layout_marginRight="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_12"
                 app:layout_constraintBottom_toBottomOf="@+id/C15"
                 app:layout_constraintEnd_toEndOf="@+id/C10"
                 app:srcCompat="@drawable/hexagon" />
 
             <ImageView
                 android:id="@+id/tile_32"
-                android:onClick="tileClick"
-                android:tag="tile_32"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_32"
                 app:layout_constraintBottom_toBottomOf="@+id/C15"
                 app:layout_constraintStart_toStartOf="@+id/C10"
                 app:srcCompat="@drawable/hexagon" />
@@ -476,7 +487,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/C15"
@@ -485,15 +497,15 @@
 
             <ImageView
                 android:id="@+id/tile_52"
-                android:onClick="tileClick"
-                android:tag="tile_52"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="tile_52"
                 app:layout_constraintBottom_toBottomOf="@+id/C15"
                 app:layout_constraintStart_toStartOf="@+id/C12"
                 app:srcCompat="@drawable/hexagon" />
@@ -503,7 +515,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="40dp" android:layout_marginLeft="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_32"
@@ -515,7 +528,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_32"
@@ -527,7 +541,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_32"
@@ -539,7 +554,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_32"
@@ -551,7 +567,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_32"
@@ -615,11 +632,12 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginStart="80dp" android:layout_marginLeft="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
-                app:layout_constraintTop_toTopOf="@+id/C24"
                 app:layout_constraintStart_toStartOf="@+id/C26"
+                app:layout_constraintTop_toTopOf="@+id/C24"
                 app:srcCompat="@drawable/hexagon" />
 
             <ImageView
@@ -639,7 +657,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/tile_23"
@@ -651,7 +670,8 @@
                 android:layout_width="82dp"
                 android:layout_height="94dp"
                 android:layout_marginBottom="70dp"
-                android:layout_marginEnd="80dp" android:layout_marginRight="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="@+id/C28"
@@ -686,13 +706,13 @@
                 android:id="@+id/switch_2"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:onClick="tileClick"
-                android:tag="switch_2"
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="switch_2"
                 app:layout_constraintBottom_toTopOf="@+id/D6"
                 app:layout_constraintStart_toStartOf="@+id/switch_1"
                 app:srcCompat="@drawable/switch_0" />
@@ -701,13 +721,13 @@
                 android:id="@+id/switch_3"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:onClick="tileClick"
-                android:tag="switch_3"
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="switch_3"
                 app:layout_constraintBottom_toTopOf="@+id/D6"
                 app:layout_constraintStart_toStartOf="@+id/switch_2"
                 app:srcCompat="@drawable/switch_0" />
@@ -716,13 +736,13 @@
                 android:id="@+id/switch_4"
                 android:layout_width="82dp"
                 android:layout_height="94dp"
-                android:onClick="tileClick"
-                android:tag="switch_4"
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
+                android:onClick="tileClick"
                 android:scaleType="fitXY"
+                android:tag="switch_4"
                 app:layout_constraintBottom_toTopOf="@+id/D6"
                 app:layout_constraintStart_toStartOf="@+id/switch_3"
                 app:srcCompat="@drawable/switch_0" />
@@ -733,8 +753,8 @@
                 android:layout_height="47dp"
 
                 android:layout_marginBottom="40dp"
-                android:layout_marginStart="80dp"
                 android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
                 android:cropToPadding="false"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/D6"
@@ -756,6 +776,7 @@
                 app:layout_constraintTop_toTopOf="@+id/C2"
                 app:layout_constraintVertical_bias="0.943"
                 app:srcCompat="@drawable/separator" />
+
             <ImageView
                 android:id="@+id/topSeparator"
                 android:layout_width="wrap_content"
@@ -764,12 +785,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/switch_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@+id/switch_1"
                 app:srcCompat="@drawable/separator" />
-
 
 
             <ImageView
@@ -779,16 +799,16 @@
                 android:layout_marginTop="65dp"
                 android:contentDescription="lightbulb"
                 android:onClick="tileClick"
-                android:tag="light_1"
                 android:scaleType="fitXY"
+                android:tag="light_1"
                 app:layout_constraintEnd_toEndOf="@+id/tile_34"
                 app:layout_constraintStart_toStartOf="@+id/tile_34"
                 app:layout_constraintTop_toTopOf="@+id/bottomSeparator"
                 app:srcCompat="@drawable/lightbulb_0_unlit" />
 
-            <include layout="@layout/top_menu"
-                android:id="@+id/top_menu_ingame"/>
-
+            <include
+                android:id="@+id/top_menu_ingame"
+                layout="@layout/top_menu" />
 
 
             <android.support.constraint.ConstraintLayout
