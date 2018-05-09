@@ -113,6 +113,8 @@ public class selectLevel2 extends AppCompatActivity {
         Intent intent = new Intent(context, GameScene.class);
         intent.putExtra("levelName", levelName);
         startActivity(intent);
+        overridePendingTransition(0,0);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
     }
 

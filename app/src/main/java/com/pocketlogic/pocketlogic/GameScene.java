@@ -67,6 +67,8 @@ public class GameScene extends AppCompatActivity {
             Intent intent = new Intent(this, selectLevel.class);
             intent.putExtra("levelNum", nextLevelNum);
             startActivity(intent);
+            overridePendingTransition(0,0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         }
 
     public void helpPopup(View tileImgView){

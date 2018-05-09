@@ -151,6 +151,8 @@ public class selectLevel extends AppCompatActivity {
         Intent play = new Intent(context, selectLevel2.class);
         play.putExtra("levelNum", curr_level_highlighted);
         startActivity(play);
+        overridePendingTransition(0,0);
+        play.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
     }
 
