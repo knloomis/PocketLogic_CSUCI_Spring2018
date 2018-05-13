@@ -130,8 +130,8 @@ public class TileManager{
 
     }
 
-    //Debug for XY offset
-    //Will draw a line for each tile from top to bottom.
+    // Debug for XY offset
+    // Will draw a line for each tile from top to bottom.
     private void drawLineAcrossTiles(){
         LineDrawer lineDrawer = new LineDrawer((ImageView) this.activity.findViewById(R.id.superCanvas));
         lineDrawer.newPaint();
