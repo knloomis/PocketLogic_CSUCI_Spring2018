@@ -1046,7 +1046,7 @@ public class Director{
                 if (!tiles[i].getInput(j).equals("NULL")) {
 
                     //Get Input's XY and CurrentNode's XY
-                    Tile srcTile = tiles[i];
+                    Tile srcTile = tiles[i]; //
                     Tile tgtTile = tileManager.findTileById(tiles[i].getInput(j));
 
                     int srcXY[] = srcTile.getTopXY();
@@ -1065,9 +1065,9 @@ public class Director{
                         drawColor = Color.argb(255,152,120,219);
                     }
 
-                    //If Node is evaluated to FALSE, color = GREEN
+                    //If Node is evaluated to FALSE, color = YELLOW
                     else {
-                        drawColor = Color.argb(255,58,219,134);
+                        drawColor = Color.argb(255,217,186,72);
                     }
 
                     //Draw a Line
