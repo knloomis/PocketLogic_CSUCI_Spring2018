@@ -92,10 +92,10 @@ public class TileManager{
 
     private void loadCoordinates(){
         //Switches XY
-        tileLibrary[0].setXY(new int [] {305,240});
-        tileLibrary[1].setXY(new int [] {585,240});
-        tileLibrary[2].setXY(new int [] {865,240});
-        tileLibrary[3].setXY(new int [] {1145,240});
+        tileLibrary[0].setXY(new int [] {295,210});
+        tileLibrary[1].setXY(new int [] {575,210});
+        tileLibrary[2].setXY(new int [] {855,210});
+        tileLibrary[3].setXY(new int [] {1135,210});
 
         //Tile_11 - Tile_51 XY
         //tileLibrary[4].setXY(new int [] {165,685});
