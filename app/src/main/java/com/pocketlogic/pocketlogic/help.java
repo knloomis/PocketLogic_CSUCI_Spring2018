@@ -5,11 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 
 /**
  * Created by Vitaliy Six on 2018/3/10.
@@ -18,14 +23,21 @@ import android.widget.Button;
 public class help extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_screen);
 
+        TextView textView = findViewById(R.id.playInfoText);
+        textView.setMovementMethod(new ScrollingMovementMethod());
+        //textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.xor, 0, 0, 0);
+
         Button btn_close = (Button) findViewById(R.id.btn_help_back);
-        btn_close.setOnClickListener(new View.OnClickListener() {
+        btn_close.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view){
+            public void onClick(View view)
+            {
                 finish();
             }
         });

@@ -2,4 +2,124 @@
     <string name="app_name">PocketLogic!</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="help_text">
+        <b><u>Introduction\n</u></b>
+        <p>
+            \t\tPocketLogic is a puzzle game that will test your critical thinking skills in a way that many people haven’t been tested before.
+            Unlike Sudoku or a crossword, this set of puzzles will test you on your boolean logic skills.  What is a boolean? Think of it as a type of number.
+            A number can be anything from zero to infinity (and even more), however a boolean can only be a \'1\' or a \'0\'.
+            And while this seems like a very limited set of values to use, it is the exact set that every single computer in the world uses;  and they can do some crazy things.
+            The reason computer use boolean values is because a computer a computer is made up of many electrical components; and electricity can either be ON or OFF.
+            A \'1\' means ON and a \'0\' means OFF.  That is the language of the computer.
+            \n\t\tBut how does a computer do anything with just ones and zeros? Well, that is where that Boolean logic comes in.
+            Just with real numbers that have many operations that can be used on them such as Algebra and Calculus, these 1’s and 0’s have Boolean Functions.
+            But don’t let a big word like Calculus scare you.  Boolean functions are simple and easy to understand.\n
+        </p>
+
+        <b><u>\nFunctions\n</u></b>
+        <p>
+            \t\tThere are three basic Boolean functions.
+            With these three alone, in theory, any computer can be built.
+            That is if there is enough of them strung together!
+            When these functions are turned into physical devices, they are called gates.
+            They are called this because they control the flow of data; they can let a signal pass through (1 or ON) or they can stop a signal (0 or OFF) based on some simple criteria.
+            One other important concept to understand about logic gates is they all have one or more inputs and ALL of them have one output.
+            These inputs and outputs can have one of two values, a 1 or a 0. These inputs come from other logic gates in the computer.
+            This means that depending on how the inputs and outputs are connected, different outcomes will occur.
+            An example of an outcome would be anything your computer does.  Your laptop, smartphone, even you microwave use these logic circuits.
+            They are all around you.\n
+        </p>
+
+        <b><u>\nThe Gates\n</u></b>
+        <p>
+            \t\tLet\'s start with the easiest to understand, the NOT gate.  This is the only logic gate to only have a single input.  Its name almost gives away its function too!
+            Simply put, if its input is 1 then its output is 0; if its input is 0, then its output is 1.  That’s all there is to it!  Can you see why it’s called a NOT gate?
+            Another name for it is an inverter, because it always outputs the opposite of the input it’s given.
+            \n\t\tNext up is the OR gate.  This is our first gate to use two inputs (and so will the rest).  Again this gate almost gives away its function from its name.
+            For the output of this gate to be a 1, then “either or” of the inputs must be a 1.  So, for example, if one input is a 1 and the other is a 0, then the output is 1.
+            Now lets say both inputs are a 1.  The output is still 1.  The only time an OR gate is outputting a 0 is when both inputs are 0.
+            \n\t\tNow for the final of the basic gates, the AND gate.  This is considered the complement of the OR function.
+            Where OR was “either or” the AND function is only outputting a 1 if both inputs are a 1, hence the “and”.  The AND gate is great for testing if two other signals are both 1’s.
+            It will output a 0 if any of its inputs are a 0, no matter what the other is.\n
+        </p>
+
+        <b><u>\n‘Complex Gates’\n</u></b>
+        <p>
+            \t\tDon\’t let the name scare you; these aren\’t any more difficult that the previous three.  Actually, all of the \‘complex gates\’ are combinations of AND, OR, and NOT.
+            \n\t\tThe first of these is the NAND gate.  Looking at the name we can almost decipher what this gate is doing.  Let\'s split its name into two parts: the “N” and the “AND”.
+            This can be interpreted as a NOT and an AND gate.  So, a NAND gate is just an AND gate with a NOT gate attached to its output.  This means that whatever a normal AND gate would have outputted is inverted to the opposite.
+            For example, a NAND gate with two 1\’s for inputs will output a 0.  If any of its inputs is a 0, no matter what the other is, it will output a 1.  It\'s just an opposite AND gate!
+            \n\t\tThe next is NOR.  And yes, you guessed it!  It\’s the opposite of an OR gate!  So, if a NOR gate has at least a single 1 for any of its inputs, it will output a 0.
+            A great application of this gate is to test if all of its inputs are a 0, then it will output a 1; otherwise it will always output a 0.\n
+        </p>
+
+        <b><u>\nThe Final Gate\n</u></b>
+        <p>
+            \t\tThere is one final boolean function, and it is arguably one of the more important because it is one of the more commonly used gates because of its ability to simplify logic circuits.
+            It actually the main function used for adding numbers in a computer.
+            \n\t\tThis function is called the XOR gate.  Just like with NAND and NOR, let\’s split the name into an “X” and an “OR”.
+            While the “N” from the other simply meant to invert (or NOT) the output, the “X” is a little different.  While the OR gate was considered ‘either or’, the “X” makes the XOR gate an ‘exclusive or’.
+            How does this work?  Instead of outputting a 1 if one or more or its inputs is 1 (like OR), it will output 1 only if one of its inputs is a 1!
+            For example, if an XOR gate has an input of a 1 and a 0, the output is a 1.  If its inputs are both 1 or both 0, then its output is a 0.
+            An easy way to remember this is an XOR gate will always output a 1 if its two input are opposite of each other.  If both inputs are the same, it will output a 0.
+            \n\t\tThere is one last gate, the XNOR.  It is the opposite of the XOR where if both inputs are the same, it will output a 1.  If both inputs are opposite, it will output a 0.\n
+        </p>
+
+        <b><u>\nSymbolizing the Gates\n</u></b>
+        <p>
+            \t\tBecause no one wants to write out AND, NOT, or XNOR all of the logic gates have symbols associated with them.
+            This makes circuit diagrams simpler and easier to read and understand; especially if there are more than just a handful of gates.
+            PocketLogic also uses these symbols in gate.  But don’t fret, the will have the names on them as well.
+            Bellow is a list of all the Logic Gates along with their Logic Symbol.
+            \n(NEED PICTURES)\n
+            \n
+        </p>
+
+        <b><u>\nA Visual Approach to Functions (Truth Tables)\n</u></b>
+        <p>
+            \t\tAt first these functions can be a little confusing and just a bit hard to keep their functions straight in your head.
+            All of these logic functions can be visualized in something called a truth table.  These are simple tables that list all possible inputs along with the output those inputs would give,
+            based on the function.  For these tables the two inputs will be represented with A and B.  The outputs will be represented as an X.  This provides a quick and easy way to lookup a gates function.
+            \n(NEED PICTURES)\n
+            \n
+        </p>
+
+        <b><u>\nThe Gameplay\n</u></b>
+        <p>
+            \t\tPocketLogic takes a slightly different approach to building logic circuits.  This is because of its nature as a puzzle game.  The player is given a truth table, much like the tables representing the logic gates.
+            The main difference is, to complete the table, a string of gates must be put together.  The tables inputs, which can range from one to four inputs, will represented by the switches at the top of the Play Area,
+            and the output of the table will be a light bulb at the bottom.  In other words, the table’s logic cannot be completed with a single gate in most cases.
+            This table will be displayed at the start of each level and can be access at anytime from the table icon in the bottom right of the puzzle area.
+            \n(NEED PICTURES)\n
+            From there the player must build the logic circuit.  To do this the player will tap on predefined ‘tile spaces’.
+            \n(NEED PICTURES)\n
+            Whenever a tile space is selected the Gate Menu will appear.  This menu contains all the gates needed to complete the circuit.  In some cases the difficulty will restrict certain gates from being used.
+            To place a new gate simply tap the gate desired and it will be filled into the Tile Space previously selected.
+            If a gate is wished to be changed, tapping the gate will reopen the Gate Menu and a new gate can be selected to replace it.
+            \n(NEED PICTURES)\n
+
+            \n
+        </p>
+
+        <b><u>\n\n</u></b>
+        <p>
+            \t\t
+            \n
+        </p>
+
+        <b><u>\n\n</u></b>
+        <p>
+            \t\t
+            \n
+        </p>
+
+        <b><u>\n\n</u></b>
+        <p>
+            \t\t
+            \n
+        </p>
+
+        \n\n\n\n\n
+
+    </string>
 </resources>

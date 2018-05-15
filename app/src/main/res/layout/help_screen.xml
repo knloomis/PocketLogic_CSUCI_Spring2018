@@ -9,7 +9,6 @@
         android:id="@+id/btn_help_back"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/close2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +30,7 @@
         <LinearLayout
             android:id="@+id/playLayout"
             android:layout_width="350dp"
-            android:layout_height="134dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
             android:layout_weight="1"
@@ -45,60 +44,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:fontFamily="@font/aclonica"
-                android:text="How to Play"
+                android:text="Welcome to PocketLogic!"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="115dp"
-                tools:layout_editor_absoluteY="93dp" />
+                tools:layout_editor_absoluteY="80dp" />
 
             <TextView
                 android:id="@+id/playInfoText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="Nullam laoreet nulla id volutpat pharetra. Phasellus sit amet ante inte risus elementum pellentesque. Morbi commodo diam tellus, vel hendrerit ipsum laoreet at. Sed tempor leo vel volutpat fringilla. Nulla tellus ligula, rutrum vitae tempus eget, euismod in nulla. "
-
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="45dp"
-                tools:layout_editor_absoluteY="123dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/gatesLayout"
-            android:layout_width="350dp"
-            android:layout_height="134dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="301dp">
-
-            <TextView
-                android:id="@+id/referenceText"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:fontFamily="@font/aclonica"
-                android:text="Logic Gates Guide"
-                android:textColor="@color/colorAccent"
-                android:textSize="24sp"
-                tools:layout_editor_absoluteX="115dp"
-                tools:layout_editor_absoluteY="93dp" />
-
-            <TextView
-                android:id="@+id/referenceInfoText"
-                android:layout_width="wrap_content"
-                android:layout_height="261dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="Nullam laoreet nulla id volutpat pharetra. Phasellus sit amet ante inte risus elementum pellentesque. Morbi commodo diam tellus, vel hendrerit ipsum laoreet at. Sed tempor leo vel volutpat fringilla. Nulla tellus ligula, rutrum vitae tempus eget, euismod in nulla. "
-
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="45dp"
-                tools:layout_editor_absoluteY="123dp" />
+                android:scrollbars="vertical"
+                android:layout_margin="16dp"
+                android:text="@string/help_text"
+                />
 
         </LinearLayout>
 

@@ -128,14 +128,15 @@ public class selectLevel extends AppCompatActivity {
         });
 
         Button btn_help= (Button) this.findViewById(R.id.btn_main_help);
-        btn_help.setOnClickListener(new View.OnClickListener() {
+        btn_help.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(context, help.class);
                 startActivity(intent);
             }
         });
-
     }
 
     public int getCardDrawable(int numInList){
