@@ -1102,6 +1102,66 @@ public class Director{
             }
         }
 
+        //Draw active outline for tile, if there exists one.
+        if(this.linkingMode){
+            Tile activeTile = tileManager.findTileById(clickedTile_ID);
+            if(activeTile.getType().equals("switch")){
+
+                int drawColor = Color.WHITE;
+                int offset = 20;
+                int width = 110;
+                int height = 90;
+
+                int[] middleXY = activeTile.getOriginXY();
+                int[] savedBottomXY = activeTile.getBottomXY();
+
+                int[] bottomXY = new int[] {savedBottomXY[0], savedBottomXY[1] + 130};
+
+                int[] topLineLeftXY = new int[] {middleXY[0] - width + offset, middleXY[1]};
+                int[] topLineRightXY = new int[] {middleXY[0] + width - offset, middleXY[1]};
+
+                int[] topRightXY = new int[] {middleXY[0] + width + 30, middleXY[1] + 40};
+                int[] topLeftXY = new int[] {middleXY[0] - width - 30, middleXY[1] + 40};
+                int[] bottomRightXY = new int[] {bottomXY[0] + width + offset + 10, bottomXY[1] - height};
+                int[] bottomLeftXY = new int[] {bottomXY[0] - width - offset - 10, bottomXY[1] - height};
+
+                lineDrawer.drawLine(topLineLeftXY[0], topLineLeftXY[1], topLineRightXY[0], topLineRightXY[1], drawColor);
+                lineDrawer.drawLine(topLineLeftXY[0], topLineLeftXY[1], topLeftXY[0], topLeftXY[1], drawColor);
+                lineDrawer.drawLine(topLineRightXY[0], topLineRightXY[1], topRightXY[0], topRightXY[1], drawColor);
+                lineDrawer.drawLine(bottomXY[0], bottomXY[1], bottomRightXY[0], bottomRightXY[1], drawColor);
+                lineDrawer.drawLine(bottomXY[0], bottomXY[1], bottomLeftXY[0], bottomLeftXY[1], drawColor);
+                lineDrawer.drawLine(bottomRightXY[0], bottomRightXY[1], topRightXY[0], topRightXY[1], drawColor);
+                lineDrawer.drawLine(bottomLeftXY[0], bottomLeftXY[1], topLeftXY[0], topLeftXY[1], drawColor);
+
+            }else if(activeTile.getType().equals("tile")){
+                if(activeTile != null){
+                    int drawColor = Color.WHITE;
+                    int[] savedTopXY = activeTile.getTopXY();
+                    int[] savedBottomXY = activeTile.getBottomXY();
+
+                    int offset = 10;
+
+                    int[] topXY = new int[] {savedTopXY[0], savedTopXY[1] - offset};
+                    int[] bottomXY = new int[]{savedBottomXY[0], savedBottomXY[1] + offset};
+                    int width = 142;
+                    int height = 90;
+                    int[] topRightXY = new int[] {topXY[0] + width, topXY[1] + height};
+                    int[] bottomRightXY = new int[] {bottomXY[0] + width, bottomXY[1] - height};
+                    int[] topLeftXY = new int[] {topXY[0] - width, topXY[1] + height};
+                    int[] bottomLeftXY = new int[] {bottomXY[0] - width, bottomXY[1] - height};
+
+                    lineDrawer.drawLine(topXY[0], topXY[1], topRightXY[0], topRightXY[1], drawColor);
+                    lineDrawer.drawLine(topXY[0], topXY[1], topLeftXY[0], topLeftXY[1], drawColor);
+                    lineDrawer.drawLine(bottomXY[0], bottomXY[1], bottomLeftXY[0], bottomLeftXY[1], drawColor);
+                    lineDrawer.drawLine(bottomXY[0], bottomXY[1], bottomRightXY[0], bottomRightXY[1], drawColor);
+                    lineDrawer.drawLine(bottomRightXY[0], bottomRightXY[1], topRightXY[0], topRightXY[1], drawColor);
+                    lineDrawer.drawLine(bottomLeftXY[0], bottomLeftXY[1], topLeftXY[0], topLeftXY[1], drawColor);
+
+
+                }
+            }
+        }
+
         //Pen down all those lines
         lineDrawer.renderLines();
     }
