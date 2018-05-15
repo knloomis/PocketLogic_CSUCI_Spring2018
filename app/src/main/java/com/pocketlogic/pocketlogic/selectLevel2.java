@@ -60,6 +60,8 @@ public class selectLevel2 extends AppCompatActivity {
         hardButton = (Button) findViewById(R.id.hardModeButton);
         normalButton = (Button) findViewById(R.id.easyModeButton);
 
+        setDisplayedGates();
+
 
 
         //addListeners();
@@ -152,5 +154,28 @@ public class selectLevel2 extends AppCompatActivity {
     public void setButtonActiveColors(Button button){
         button.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.buttonGreen)));
        // button.setTextColor(getResources().getColor(R.color.grey));
+    }
+
+    private void setDisplayedGates(){
+        ImageView and = findViewById(R.id.and_gate);
+        ImageView or = findViewById(R.id.or_gate);
+        ImageView xor = findViewById(R.id.xor_gate);
+        ImageView not = findViewById(R.id.not_gate);
+        ImageView nor = findViewById(R.id.nor_gate);
+        ImageView xnor = findViewById(R.id.xnor_gate);
+        ImageView nand = findViewById(R.id.nand_gate);
+
+        if(levelNum == 5){
+            and.setImageResource(R.drawable.locked_grid);
+            or.setImageResource(R.drawable.locked_grid);
+            xor.setImageResource(R.drawable.locked_grid);
+            not.setImageResource(R.drawable.locked_grid);
+            nor.setImageResource(R.drawable.locked_grid);
+            xnor.setImageResource(R.drawable.locked_grid);
+        }else if(levelNum == 6){
+            and.setImageResource(R.drawable.locked_grid);
+            or.setImageResource(R.drawable.locked_grid);
+        }
+
     }
 }
