@@ -1060,14 +1060,14 @@ public class Director{
                         drawColor = Color.WHITE;
                     }
 
-                    //If Node is evaluated to TRUE, color = PURPLE
+                    //If Node is evaluated to TRUE, color = YELLOW
                     else if (tgtTile.getEvalValue().equals("ON")) {
-                        drawColor = Color.argb(255,152,120,219);
+                        drawColor = Color.argb(255,217,186,72);
                     }
 
-                    //If Node is evaluated to FALSE, color = YELLOW
+                    //If Node is evaluated to FALSE, color = PURPLE
                     else {
-                        drawColor = Color.argb(255,217,186,72);
+                        drawColor = Color.argb(255,152,120,219);
                     }
 
                     //Draw a Line
