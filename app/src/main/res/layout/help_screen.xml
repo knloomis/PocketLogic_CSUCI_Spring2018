@@ -18,7 +18,7 @@
     <LinearLayout
         android:id="@+id/fullLayout"
         android:layout_width="338dp"
-        android:layout_height="494dp"
+        android:layout_height="620dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:fontFamily="@font/aclonica"
-                android:text="Welcome to PocketLogic!"
+                android:text=" Welcome to PocketLogic!"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="115dp"
@@ -54,10 +54,10 @@
                 android:id="@+id/playInfoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="vertical"
                 android:layout_margin="16dp"
+                android:scrollbars="vertical"
                 android:text="@string/help_text"
-                />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
