@@ -37,75 +37,73 @@
         android:text="Gates Available:"
         android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/availableGatesGrid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/scoresTitle"
+        android:id="@+id/difficultyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/roboto"
-        android:text="Personal High Score:"
-        android:textColor="@android:color/white"
+        android:text="Level Mode:"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main2_play"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.679" />
-
-    <Button
-        android:id="@+id/btn_main2_play"
-        android:onClick="play"
-        android:layout_width="159dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="@android:color/white"
-        android:fontFamily="@font/roboto"
-        android:text="Play"
-        android:textColor="#222"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/easyModeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/easyModeButton"
-        android:onClick="setNormalMode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginStart="120dp"
-        android:backgroundTint="@color/white"
+        android:id="@+id/btn_main2_play"
+        android:layout_width="159dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/white"
         android:fontFamily="@font/roboto"
-        android:text="Normal"
-        android:textColor="#59a47d"
+        android:onClick="play"
+        android:text="Play"
+        android:textColor="@color/buttonGreen"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/hardModeButton"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easyModeButton" />
+
+    <Button
+        android:id="@+id/easyModeButton"
+        android:layout_width="105dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="180dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:backgroundTint="@color/buttonGreen"
+        android:fontFamily="@font/roboto"
+        android:onClick="setNormalMode"
+        android:text="Normal"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/hardModeButton"
-        android:onClick="setHardMode"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:backgroundTint="#59a47d"
+        android:layout_width="105dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="@color/grey"
         android:fontFamily="@font/roboto"
+        android:onClick="setHardMode"
         android:text="Insane"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.716" />
+        app:layout_constraintTop_toTopOf="@+id/easyModeButton" />
 
     <Button
         android:id="@+id/btn_main2_back"
@@ -123,17 +121,15 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/availableGatesGrid"
         android:layout_width="312dp"
         android:layout_height="362dp"
-        android:layout_marginBottom="25dp"
         android:src="@drawable/available_gates_grid"
-        app:layout_constraintBottom_toTopOf="@+id/easyModeButton"
+        app:layout_constraintBottom_toBottomOf="@+id/nand_gate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/and_gate" />
 
     <ImageView
         android:id="@+id/xnor_gate"
@@ -142,7 +138,7 @@
         android:src="@drawable/xnor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintHorizontal_bias="0.665"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.515" />
@@ -169,7 +165,7 @@
         app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.385" />
 
     <ImageView
         android:id="@+id/not_gate"
@@ -180,7 +176,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.385" />
 
     <ImageView
         android:id="@+id/xor_gate"
@@ -189,10 +185,10 @@
         android:src="@drawable/xor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.385" />
 
     <ImageView
         android:id="@+id/or_gate"
@@ -201,10 +197,10 @@
         android:src="@drawable/or"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintHorizontal_bias="0.665"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <ImageView
         android:id="@+id/and_gate"
@@ -216,7 +212,7 @@
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.253" />
 
 
 </android.support.constraint.ConstraintLayout>

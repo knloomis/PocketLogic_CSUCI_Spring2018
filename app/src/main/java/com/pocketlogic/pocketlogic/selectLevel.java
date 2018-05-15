@@ -118,15 +118,6 @@ public class selectLevel extends AppCompatActivity {
 
         */
 
-        Button btn_scores= (Button) this.findViewById(R.id.btn_main_scores);
-        btn_scores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, highscores.class);
-                startActivity(intent);
-            }
-        });
-
         Button btn_help= (Button) this.findViewById(R.id.btn_main_help);
         btn_help.setOnClickListener(new View.OnClickListener()
         {
@@ -161,6 +152,8 @@ public class selectLevel extends AppCompatActivity {
         Intent play = new Intent(context, selectLevel2.class);
         play.putExtra("levelNum", curr_level_highlighted);
         startActivity(play);
+        overridePendingTransition(0,0);
+        play.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
     }
 

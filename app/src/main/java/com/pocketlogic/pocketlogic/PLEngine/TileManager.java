@@ -92,46 +92,46 @@ public class TileManager{
 
     private void loadCoordinates(){
         //Switches XY
-        tileLibrary[0].setXY(new int [] {305,250});
-        tileLibrary[1].setXY(new int [] {585,250});
-        tileLibrary[2].setXY(new int [] {865,250});
-        tileLibrary[3].setXY(new int [] {1145,250});
+        tileLibrary[0].setXY(new int [] {295,210});
+        tileLibrary[1].setXY(new int [] {575,210});
+        tileLibrary[2].setXY(new int [] {855,210});
+        tileLibrary[3].setXY(new int [] {1135,210});
 
         //Tile_11 - Tile_51 XY
         //tileLibrary[4].setXY(new int [] {165,685});
-        tileLibrary[4].setXY(new int [] {445,685});
+        tileLibrary[4].setXY(new int [] {443,572});
         //tileLibrary[6].setXY(new int [] {725,685});
-        tileLibrary[5].setXY(new int [] {1005,685});
+        tileLibrary[5].setXY(new int [] {1003,572});
         //tileLibrary[8].setXY(new int [] {1285,685});
 
         //Tile_12 - Tile_52 XY
-        tileLibrary[6].setXY(new int [] {165,1120});
+        tileLibrary[6].setXY(new int [] {161,1070});
         //tileLibrary[10].setXY(new int [] {445,1120});
-        tileLibrary[7].setXY(new int [] {725,1120});
+        tileLibrary[7].setXY(new int [] {721,1070});
         //tileLibrary[12].setXY(new int [] {1005,1120});
-        tileLibrary[8].setXY(new int [] {1285,1120});
+        tileLibrary[8].setXY(new int [] {1282,1070});
 
         //Tile_13 - Tile_53 XY
         //tileLibrary[14].setXY(new int [] {165,1550});
-        tileLibrary[9].setXY(new int [] {445,1550});
+        tileLibrary[9].setXY(new int [] {443,1577});
         //tileLibrary[16].setXY(new int [] {725,1550});
-        tileLibrary[10].setXY(new int [] {1005,1550});
+        tileLibrary[10].setXY(new int [] {999,1577});
         //tileLibrary[18].setXY(new int [] {1285,1550});
 
         //Tile_14 - Tile_54 XY
-        tileLibrary[11].setXY(new int [] {165,1985});
+        tileLibrary[11].setXY(new int [] {162,2082});
         //tileLibrary[20].setXY(new int [] {445,1985});
-        tileLibrary[12].setXY(new int [] {725,1985});
+        tileLibrary[12].setXY(new int [] {721,2082});
         //tileLibrary[22].setXY(new int [] {1005,1985});
-        tileLibrary[13].setXY(new int [] {1285,1985});
+        tileLibrary[13].setXY(new int [] {1282,2082});
 
         //light_1 XY
-        tileLibrary[14].setXY(new int [] {735,2435});
+        tileLibrary[14].setXY(new int [] {721,2530});
 
     }
 
-    //Debug for XY offset
-    //Will draw a line for each tile from top to bottom.
+    // Debug for XY offset
+    // Will draw a line for each tile from top to bottom.
     private void drawLineAcrossTiles(){
         LineDrawer lineDrawer = new LineDrawer((ImageView) this.activity.findViewById(R.id.superCanvas));
         lineDrawer.newPaint();

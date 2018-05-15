@@ -46,7 +46,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="225dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_marginBottom="92dp"
         android:layout_marginEnd="8dp"
@@ -55,21 +55,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btn_main_scores"
-            android:layout_width="100dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:backgroundTint="#59a47d"
-            android:fontFamily="@font/roboto"
-            android:text="Scores"
-            android:textColor="@android:color/white"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="531dp" />
 
         <TextView
             android:id="@+id/buttonSpacingText"
@@ -80,15 +65,16 @@
 
         <Button
             android:id="@+id/btn_main_help"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="55dp"
+            android:layout_gravity="center"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:backgroundTint="#59a47d"
             android:fontFamily="@font/roboto"
             android:text="Help"
             android:textColor="@android:color/white"
-            android:textSize="17sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="527dp" />
@@ -123,17 +109,14 @@
         android:id="@+id/logoImage"
         android:layout_width="367dp"
         android:layout_height="129dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_main_select"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/pocketlogic_logo_low_res" />
 
     <ImageView

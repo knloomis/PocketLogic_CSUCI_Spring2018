@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import com.pocketlogic.pocketlogic.R;
 import com.pocketlogic.pocketlogic.PLEngine.*;
 
+import java.util.Arrays;
+
 /*========================================   USER MANUAL   =========================================
 
 PLEngine Version 1.0.0000
@@ -35,6 +37,9 @@ void load(Level map)                                                 <- Loads le
 void tileClick(String tileID)                                        <- When a tile is clicked
 void tileSelect(String choice)                                       <- When a tile selection is made
 void switchToggle(String index)                                      <- When a switch toggle is clicked
+
+==========   Light Control   ===========
+void updateLight()                                                   <- Light ON\OFF control
 
 ========   TruthTable Control   ========
 void openTruthTable()                                                <- Bring up truth table
@@ -69,8 +74,8 @@ public class Director{
     private Activity activity;
 
     // Version Control
-    final String PLENGINE_VERSION = "1.0.0000";
-    final String DIRECTOR_VERSION = "1.1.0000";
+    final String PLENGINE_VERSION = "1.1.0000";
+    final String DIRECTOR_VERSION = "1.2.0000";
 
     // PLEngine
     private TileManager tileManager;    // The data structure which stores all Tiles
@@ -156,6 +161,7 @@ public class Director{
     // Hook your plugin functions here
     public void gameInit(){
         gameResult = "Progress";
+        updateLight();
     }
 
     //===============   gameStart()   ===============
@@ -303,13 +309,7 @@ public class Director{
                 }
                 //If clicked tile is a LIGHT
                 else {
-                    //Alternate light ON and OFF
-                    Tile light = tileManager.findTileById(tileID);
-                    if (light.getValue().startsWith("ON")) {
-                        light.setValue("OFF-");
-                    } else {
-                        light.setValue("ON-");
-                    }
+                    say("Light toggle has been disabled in Director 1.2",true);
                 }
             }
 
@@ -479,6 +479,90 @@ public class Director{
             //Turn it On
             tileManager.findTileById("switch_" + index).setValue("ON");
         }
+
+        updateLight();
+    }
+
+    //====================================   LIGHT CONTROLLER   ====================================
+
+
+    /*=====================   updateLight()   ====================
+    Trigger: When switch clicks
+    Feature: Change light corresponding to truth table
+
+    Logic:
+        Change switches to int array ex. "{0,1},{0,1,1}"
+        Determine corresponding truth table index.
+        Update light with corresponding truth table value.
+    =============================================================*/
+    public void updateLight(){
+
+        //Director V1.2 Patch
+        //Light value = truthTable
+        final int switchesUsed = this.map.getSwitchesAmount();
+        Tile switches[] = new Tile[switchesUsed];
+        int inputs[] = new int[switchesUsed];
+        for (int i=0;i<switchesUsed;i++) {
+            switches[i] = tileManager.findTileById("switch_" + Integer.toString(i+1));
+            inputs[i] = (switches[i].getValue().startsWith("ON")) ? 1 : 0;
+        }
+        int truthTablePtr = -1;
+        int targetPtr = -1;
+
+        if (switchesUsed==1) {
+            for (int i=0;i<2;i++) {
+                truthTablePtr++;
+                if (i==inputs[0]) {
+                    targetPtr=truthTablePtr;
+                }
+            }
+        } else if (switchesUsed==2) {
+            for (int i=0;i<2;i++) {
+                for (int j=0;j<2;j++) {
+                    truthTablePtr++;
+                    if (i==inputs[0] && j==inputs[1]) {
+                        targetPtr=truthTablePtr;
+                    }
+                }
+            }
+        } else if (switchesUsed==3) {
+            for (int i=0;i<2;i++) {
+                for (int j=0;j<2;j++) {
+                    for (int k=0;k<2;k++) {
+                        truthTablePtr++;
+                        if (i==inputs[0] && j==inputs[1] && k==inputs[2]) {
+                            targetPtr=truthTablePtr;
+                        }
+                    }
+                }
+            }
+        } else if (switchesUsed==4) {
+            for (int i=0;i<2;i++) {
+                for (int j=0;j<2;j++) {
+                    for (int k=0;k<2;k++) {
+                        for (int l=0;l<2;l++) {
+                            truthTablePtr++;
+                            if (i==inputs[0] && j==inputs[1] && k==inputs[2] && l==inputs[3]) {
+                                targetPtr=truthTablePtr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (targetPtr==-1)
+            say("updateLight()::Can't find corresponding light in truthtable",true);
+        else {
+            boolean lightValue = this.map.getTruthTable()[targetPtr];
+            Tile light = tileManager.findTileById("light_1");
+            say(Boolean.toString(lightValue),false);
+            if (lightValue == true){
+                light.setValue("ON-");
+            } else {
+                light.setValue("OFF-");
+            }
+        }
+
         renderGraphics();
     }
 
@@ -962,7 +1046,7 @@ public class Director{
                 if (!tiles[i].getInput(j).equals("NULL")) {
 
                     //Get Input's XY and CurrentNode's XY
-                    Tile srcTile = tiles[i];
+                    Tile srcTile = tiles[i]; //
                     Tile tgtTile = tileManager.findTileById(tiles[i].getInput(j));
 
                     int srcXY[] = srcTile.getTopXY();
@@ -976,14 +1060,14 @@ public class Director{
                         drawColor = Color.WHITE;
                     }
 
-                    //If Node is evaluated to TRUE, color = PURPLE
+                    //If Node is evaluated to TRUE, color = YELLOW
                     else if (tgtTile.getEvalValue().equals("ON")) {
-                        drawColor = Color.argb(255,152,120,219);
+                        drawColor = Color.argb(255,217,186,72);
                     }
 
-                    //If Node is evaluated to FALSE, color = GREEN
+                    //If Node is evaluated to FALSE, color = PURPLE
                     else {
-                        drawColor = Color.argb(255,58,219,134);
+                        drawColor = Color.argb(255,152,120,219);
                     }
 
                     //Draw a Line
@@ -1006,6 +1090,15 @@ public class Director{
                 light.setValue("ON-");
             } else {
                 light.setValue("OFF+");
+            }
+        }
+
+        //If light hasn't been connected, or connected tile is NULL, ON-, OFF-
+        if (light.getInput(0).equals("NULL") || tileManager.findTileById(light.getInput(0)).getEvalValue().equals("NULL")){
+            if (light.getValue().startsWith("ON")) {
+                light.setValue("ON-");
+            } else {
+                light.setValue("OFF-");
             }
         }
 
