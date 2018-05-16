@@ -3,6 +3,8 @@ package com.pocketlogic.pocketlogic;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
@@ -49,13 +51,15 @@ public class help extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.9), (int) (height *.9));
+        getWindow().setLayout((int) (width*.95), (int) (height *.92));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
         params.x=0;
         params.y=-20;
         getWindow().setAttributes(params);
+
+       //getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 /*
     public void addListeners() {
