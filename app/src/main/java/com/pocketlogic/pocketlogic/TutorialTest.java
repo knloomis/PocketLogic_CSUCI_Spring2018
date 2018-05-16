@@ -15,16 +15,22 @@ public class TutorialTest extends AppCompatActivity {
     VideoView videoView;
     ImageView forward;
     ImageView backward;
+    ImageView imageCard;
     Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial_test);
+        int current_screen = 1;
+
 
         videoView = (VideoView) findViewById(R.id.tutorialTestVideoView);
         forward = (ImageView) findViewById(R.id.tutorialTestForward);
         backward = (ImageView) findViewById(R.id.tutorialTestBack);
+
+
+       // imageCard.setImageResource(getCardDrawable(current_screen));
 
         setButtonsVisibility();
         animate();
@@ -39,10 +45,18 @@ public class TutorialTest extends AppCompatActivity {
     }
 
     private int getAnimResource(int num){
+        imageCard = findViewById(R.id.caption);
+
         switch(num){
-            case 1: return R.raw.step1;
-            case 2: return R.raw.step2;
-            case 3: return R.raw.step3;
+            case 1:
+                imageCard.setImageResource(R.drawable.caption_1);
+                return R.raw.step1;
+            case 2:
+                imageCard.setImageResource(R.drawable.caption_2);
+                return R.raw.step2;
+            case 3:
+                imageCard.setImageResource(R.drawable.caption_3);
+                return R.raw.step3;
             /*
             case 4: return R.raw.explode;
             case 5: return R.raw.explode;
@@ -53,6 +67,23 @@ public class TutorialTest extends AppCompatActivity {
             case 10: return R.raw.explode;
             */
             default: return R.raw.explode;
+        }
+    }
+
+    public int getCardDrawable(int numInList){
+        imageCard = findViewById(R.id.caption);
+
+        switch(numInList){
+            case 0:
+                imageCard.setImageResource(R.drawable.caption_1);
+                return R.drawable.caption_1;
+            case 1:
+                imageCard.setImageResource(R.drawable.caption_2);
+                return R.drawable.caption_2;
+            case 2:
+                imageCard.setImageResource(R.drawable.caption_3);
+                return R.drawable.caption_3;
+            default: return R.drawable.mascot_0;
         }
     }
 
