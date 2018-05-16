@@ -72,7 +72,7 @@ public class Tile {
         this.index = tileIMG.getTag().toString().split("_")[1];    //ex. 43
 
         if (this.type.equals("switch")) {
-            this.value = "ON";
+            this.value = "OFF";
         } else if (this.type.equals("tile")) {
             this.value = "NULL";
         } else if (this.type.equals("light")) {
