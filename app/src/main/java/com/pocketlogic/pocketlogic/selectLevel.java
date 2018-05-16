@@ -149,8 +149,13 @@ public class selectLevel extends AppCompatActivity {
 
     public void levelSelect(View cardView){
         //String levelName = "Level " + curr_level_highlighted;
-        Intent play = new Intent(context, selectLevel2.class);
-        play.putExtra("levelNum", curr_level_highlighted);
+        Intent play;
+        if(curr_level_highlighted != 0){
+            play = new Intent(context, selectLevel2.class);
+            play.putExtra("levelNum", curr_level_highlighted);
+        }else{
+            play = new Intent(context, TutorialTest.class);
+        }
         startActivity(play);
         overridePendingTransition(0,0);
         play.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
