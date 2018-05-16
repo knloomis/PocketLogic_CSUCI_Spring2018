@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.VideoView;
 
 public class TutorialTest extends AppCompatActivity {
-    int num_animations = 10;
+    int num_animations = 3;
     int curr_num = 1;
     VideoView videoView;
     ImageView forward;
@@ -40,9 +40,10 @@ public class TutorialTest extends AppCompatActivity {
 
     private int getAnimResource(int num){
         switch(num){
-            case 1: return R.raw.explode;
-            case 2: return R.raw.explode;
-            case 3: return R.raw.explode;
+            case 1: return R.raw.step1;
+            case 2: return R.raw.step2;
+            case 3: return R.raw.step3;
+            /*
             case 4: return R.raw.explode;
             case 5: return R.raw.explode;
             case 6: return R.raw.explode;
@@ -50,6 +51,7 @@ public class TutorialTest extends AppCompatActivity {
             case 8: return R.raw.explode;
             case 9: return R.raw.explode;
             case 10: return R.raw.explode;
+            */
             default: return R.raw.explode;
         }
     }

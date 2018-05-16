@@ -11,15 +11,16 @@
         android:layout_width="473dp"
         android:layout_height="800dp"
         android:clickable="false"
+        android:background="#222"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tilemenu_bg" />
+         />
 
     <VideoView
         android:id="@+id/tutorialTestVideoView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginStart="0dp"
@@ -63,7 +64,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Tutorial!"
+        android:text="Tutorial"
         android:textColor="@color/white"
         android:textSize="42sp"
         app:fontFamily="@font/roboto"
@@ -82,9 +83,9 @@
         android:layout_marginStart="8dp"
         android:background="@color/buttonGreen"
         android:onClick="quitTutorialTest"
-        android:text="Main Menu"
+        android:text="Back to Main Menu"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
