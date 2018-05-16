@@ -51,7 +51,7 @@ public class help extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.95), (int) (height *.92));
+        getWindow().setLayout((int) (width*.95), (int) (height *.95));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;

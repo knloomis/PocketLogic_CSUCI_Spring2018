@@ -21,7 +21,7 @@
         <activity android:name=".evaluation" />
         <activity
             android:name=".help"
-            android:theme="@style/AppTheme.PopUp" />
+            android:theme="@style/AppTheme.HelpPopUp" />
         <activity android:name=".highscores" />
         <activity android:name=".ingameMenu" />
         <activity android:name=".winScreen" />
