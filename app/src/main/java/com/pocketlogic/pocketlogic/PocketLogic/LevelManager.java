@@ -85,7 +85,7 @@ public class LevelManager {
         //level_1.setLevelName("Connor's random level (2 Switch)");
         level_1_hard.setLevelName("Level 1 Hard");
         level_1_hard.setSwitchesAmount(1);
-        level_1_hard.setTimeLimit(60);
+        level_1_hard.setTimeLimit(10);
         //level_1_hard.setTruthTable(Logic.randLevel(2));
         level_1_hard.setTruthTable(level_1_table);
 
@@ -101,7 +101,7 @@ public class LevelManager {
         //level_2.setLevelName("Connor's random level (3 Switch)");
         level_2_hard.setLevelName("Level 2 Hard");
         level_2_hard.setSwitchesAmount(2);
-        level_2_hard.setTimeLimit(60);
+        level_2_hard.setTimeLimit(10);
         //level_2_hard.setTruthTable(Logic.randLevel(3));
         level_2_hard.setTruthTable(level_2_table);
 
